@@ -1,0 +1,129 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0px auto;
+    margin-top: 30px;
+    /* border: 1px solid gold; */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: 95%;
+    /* border: 1px solid magenta; */
+}
+
+.title {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.suggestion {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    /* font-size: 1.2rem; */
+    color: rgba(255, 255, 255, 0.75);
+
+}
+
+.success {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #32ff95;
+}
+
+.error {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fa4e4e;
+}
+
+.suggestion:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.label {
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.subtitle {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.link:hover {
+    color: #A0A0A0;
+}
+
+.messageInput,
+.returnEmailAddressInput {
+    min-width: 95%;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    background-color: #202020;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.returnEmailAddressInput {
+
+}
+
+.messageInput {
+    min-height: 150px;
+}
+
+.button {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    margin-top: 15px;
+}
+
+.hr {
+    width: 95%;
+    max-width: 500px;
+    margin-top: 0px;
+    margin-bottom: 7.5px;
+}
+
+.dividerOr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 10px;
+    max-width: 500px;
+}

@@ -1,14 +1,23 @@
+import { useState, useRef } from 'react'
+
+import { GlobalContext } from '@/common/context/GlobalContext'
 import Header from '@/top-level/Header/Header'
-import styles from './App.module.css'
-import { useState } from 'react'
 import NavMenu from '@/top-level/NavMenu/NavMenu'
 import Body from '@/top-level/Body/Body'
 import Footer from '@/top-level/Footer/Footer'
-import { GlobalContext } from '@/common/context/GlobalContext'
+
+import styles from './App.module.css'
 
 const App = () => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
-  const [isVet, setIsVet] = useState<boolean>(false)
+
+  const introRef = useRef<HTMLDivElement>(null)
+  const experienceRef = useRef<HTMLDivElement>(null)
+  const entrepreneurshipRef = useRef<HTMLDivElement>(null)
+  const qualificationsRef = useRef<HTMLDivElement>(null)
+  const personalityRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+  const resourcesRef = useRef<HTMLDivElement>(null)
 
   const toggleNav = () => {
       setIsNavOpen(prevNav => !prevNav)
@@ -22,8 +31,13 @@ const App = () => {
     <div className={styles.app}>
       <GlobalContext.Provider
         value={{
-          isVet,
-          setIsVet
+          introRef,
+          experienceRef,
+          entrepreneurshipRef,
+          qualificationsRef,
+          personalityRef,
+          contactRef,
+          resourcesRef
         }}
       >
         <Header

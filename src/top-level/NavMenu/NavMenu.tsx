@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './NavMenu.module.css'
+import { useGlobalContext } from '@/common/context/GlobalContext'
 
 interface Props {
     toggleNav: () => void
@@ -8,13 +9,19 @@ interface Props {
 const NavMenu = ({
     toggleNav
 }: Props) => {
-    const goToWebApp = () => {
-        window.open('https://app.phauna.io', '_blank')
-    }
+    const {
+        introRef,
+        experienceRef,
+        entrepreneurshipRef,
+        personalityRef,
+        qualificationsRef,
+        contactRef,
+        resourcesRef,
+    } = useGlobalContext()
 
     const onSignInClick = () => {
         toggleNav()
-        goToWebApp()
+        experienceRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
 
     return (

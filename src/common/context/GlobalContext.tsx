@@ -1,18 +1,32 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 
+type SectionRef = React.RefObject<HTMLDivElement | null>;
+
 export interface GlobalContextProps {
-    isVet: boolean;
-    setIsVet: (isVet: boolean) => void;
+    introRef: SectionRef;
+    experienceRef: SectionRef;
+    entrepreneurshipRef: SectionRef;
+    qualificationsRef: SectionRef;
+    personalityRef: SectionRef;
+    contactRef: SectionRef;
+    resourcesRef: SectionRef;
 }
 
 export const GlobalContext = createContext<GlobalContextProps | undefined>(undefined);
 
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [isVet, setIsVet] = useState<boolean>(false);
+
+    const introRef = React.useRef<HTMLDivElement>(null);
+    const experienceRef = React.useRef<HTMLDivElement>(null);
+    const entrepreneurshipRef = React.useRef<HTMLDivElement>(null);
+    const qualificationsRef = React.useRef<HTMLDivElement>(null);
+    const personalityRef = React.useRef<HTMLDivElement>(null);
+    const contactRef = React.useRef<HTMLDivElement>(null);
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
 
     return (
-        <GlobalContext.Provider value={{ isVet, setIsVet }}>
+        <GlobalContext.Provider value={{ introRef, experienceRef, entrepreneurshipRef, qualificationsRef, personalityRef, contactRef, resourcesRef }}>
             {children}
         </GlobalContext.Provider>
     );

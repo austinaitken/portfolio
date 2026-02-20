@@ -5,6 +5,7 @@ import App from '@/top-level/App/App'
 
 // import '@/index.css'
 import '@/common/styles/text.css'
+import '@/common/styles/svg.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

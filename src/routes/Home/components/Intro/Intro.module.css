@@ -1,0 +1,147 @@
+.profilePicture {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.containerTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+    /* border: 1px solid red; */
+}
+
+.containerBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.containerTopLeft {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerTopRight {
+    flex: 1;
+}
+
+.title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+}
+
+.description {
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.profilePicture {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.firstName,
+.firstNameCrossA,
+.firstNameCrossT,
+.firstNameDotI,
+.lastName,
+.lastNameCrossA,
+.lastNameCrossT,
+.lastNameDotI {
+    fill: none;
+    stroke: #32ff95;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-width: 20;
+    animation-name: write;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.firstName {
+  stroke-dasharray: 5011.005859375;
+  stroke-dashoffset: 5011.005859375;
+  animation-duration: 1.5s;
+}
+
+.lastName {
+  stroke-dasharray: 6094.48193359375;
+  stroke-dashoffset: 6094.48193359375;
+  animation-delay: 1.55s;
+  animation-duration: 1.5s;
+}
+
+.firstNameCrossA {
+  stroke-dasharray: 354.93035888671875;
+  stroke-dashoffset: 354.93035888671875;
+  animation-duration: 0.2s;
+  animation-delay: 3s;
+}
+
+.firstNameCrossT {
+  stroke-dasharray: 258.6890869140625;
+  stroke-dashoffset: 258.6890869140625;
+  animation-duration: 0.2s;
+  animation-delay: 3.25s;
+}
+
+.firstNameDotI {
+  stroke-dasharray: 8.62419605255127;
+  stroke-dashoffset: 8.62419605255127;
+  animation-duration: 0.01s;
+  animation-delay: 3.5s;
+}
+
+.lastNameCrossA {
+  stroke-dasharray: 389.9130859375;
+  stroke-dashoffset: 389.9130859375;
+  animation-delay: 3.55s;
+  animation-duration: 0.1s;
+}
+
+.lastNameCrossT {
+  stroke-dasharray: 230.09910583496094;
+  stroke-dashoffset: 230.09910583496094;
+  animation-delay: 3.7s;
+  animation-duration: 0.2s;
+}
+
+.lastNameDotI {
+  stroke-dasharray: 7.812191963195801;
+  stroke-dashoffset: 7.812191963195801;
+  animation-delay: 3.95s;
+  animation-duration: 0.01s;
+}
+
+@keyframes write {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Desktop Size */
+@media only screen and (min-width: 1200px) {
+    
+}

@@ -13,6 +13,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 10px 0px;
+    /* border: 1px solid red; */
 }
 
 .introContainerBottom {
@@ -20,6 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid red; */
 }
 
 .introContainerTopLeft {
@@ -34,8 +37,14 @@
 }
 
 .introTitle {
+    margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 10px;
+}
+
+.introDescription {
+    margin: 0px;
+    margin-bottom: 20px;
 }
 
 .introNameContainer {

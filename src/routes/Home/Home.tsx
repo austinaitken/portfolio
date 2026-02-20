@@ -1,13 +1,13 @@
-import { useContext, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { GlobalContext } from '@/common/context/GlobalContext'
+// import { GlobalContext } from '@/common/context/GlobalContext'
 import logo from '@/assets/images/profile_pic_1080.png'
 
 import styles from './Home.module.css'
 
 const Home = () => {
     const navigate = useNavigate()
-    const context = useContext(GlobalContext)
+    // const context = useContext(GlobalContext)
     const firstNamePathRef = useRef<SVGPathElement>(null);
     const firstNameCrossAPathRef = useRef<SVGPathElement>(null);
     const firstNameCrossTPathRef = useRef<SVGPathElement>(null);
@@ -96,7 +96,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.introContainerBottom}>
-                    <p className={styles.introDescription} style={{marginTop: '0px'}}>
+                    <p className={styles.introDescription}>
                         An experienced software developer with an entrepreneurial spirit.
                     </p>
                     <button

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import styles from './Footer.module.css'
 
@@ -6,7 +6,7 @@ interface Props {
     setNavOpen: (openNav: boolean) => void
 }
 
-const Footer = ({ setNavOpen }: Props) => {
+const Footer = ({}: Props) => {
     const currentYear = new Date().getFullYear();
 
     return (

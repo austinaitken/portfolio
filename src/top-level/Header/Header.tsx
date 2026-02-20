@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '@/assets/images/logo.jpg'
+// import logo from '@/assets/images/logo.jpg'
 
 import styles from './Header.module.css'
 
@@ -89,7 +89,7 @@ const Header = ({ isNavOpen, toggleNav, setNavOpen }: Props) => {
                     </button>
                     <button
                         className={styles.navButton}
-                        style={{ transform: isNavOpen ? 'rotate(90deg)' : 'none' }}
+                        style={{ transform: !isNavOpen ? 'rotate(90deg)' : 'none' }}
                         onClick={toggleNav}
                     >
                         <p>|||</p>

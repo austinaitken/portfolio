@@ -1,15 +1,18 @@
-import { useState, ChangeEvent, FormEventHandler, FormEvent } from 'react'
+import { useState } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
 import styles from './ContactUs.module.css'
 
-enum UserType {
-    Veterinarian = 'veterinarian',
-    PetOwner = 'petOwner',
-}
+// const UserType = {
+//     Veterinarian: 'veterinarian',
+//     PetOwner: 'petOwner',
+// } as const
+
+// type UserType = typeof UserType[keyof typeof UserType]
 
 const ContactUs = () => {
     const [message, setMessage] = useState<string>('')
     const [emailAddress, setEmailAddress] = useState<string>('')
-    const [userType, setUserType] = useState<UserType>(UserType.PetOwner)
+    // const [userType, setUserType] = useState<UserType>(UserType.PetOwner)
     const [hasSentMessage, setHasSentMessage] = useState<boolean>(false)
     const [hasError, setHasError] = useState<boolean>(false)
 
@@ -21,9 +24,9 @@ const ContactUs = () => {
         setEmailAddress(e.currentTarget.value)
     }
 
-    const handleUserTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        setUserType(e.currentTarget.value as UserType)
-    }
+    // const handleUserTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    //     setUserType(e.currentTarget.value as UserType)
+    // }
 
     const isValidForm = (): boolean => {
         return isValidEmail(emailAddress) && isValidMessage(message)
@@ -67,11 +70,11 @@ const ContactUs = () => {
                 // console.log('Failed to send message')
             }
         })
-        .catch(error => {
-            // Handle network error
-            setHasError(true)
-            // console.log('Network error:', error)
-        }) 
+        // .catch(error => {
+        //     // Handle network error
+        //     setHasError(true)
+        //     // console.log('Network error:', error)
+        // }) 
     }
 
     const goToWebApp = () => {

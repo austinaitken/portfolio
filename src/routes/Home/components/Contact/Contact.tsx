@@ -16,10 +16,10 @@ const Contact = () => {
             </h1>
             <div className={styles.buttonsContainer}>
                 <button onClick={handleEmailClick}>
-                    Email
+                    📧 austinlaitken@gmail.com
                 </button>
                 <button onClick={handleCallClick}>
-                    Call
+                    📞 1 (709) 770-3770
                 </button>
             </div>
         </div>

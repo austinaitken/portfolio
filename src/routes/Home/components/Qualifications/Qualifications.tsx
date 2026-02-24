@@ -1,5 +1,5 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
-import logo from '@/assets/images/profile_pic_1080.png'
+import cardImage from '@/assets/images/Austin_Aitken_Graduation_Trading_Card.png'
 import styles from './Qualifications.module.css'
 
 const Qualifications = () => {
@@ -14,8 +14,8 @@ const Qualifications = () => {
             <p>This is a very long description about the qualifications and achievements.</p>
             <img
                 style={{ width: '100%' }}
-                src={logo}
-                alt="Austin Aitken's profile picture"
+                src={cardImage}
+                alt="Austin Aitken's Graduation Trading Card"
             />
         </section>
     )

@@ -7,8 +7,7 @@ import styles from './Intro.module.css'
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 const Intro = () => {
-    const { introRef } = useGlobalContext()
-    const navigate = useNavigate()
+    const { introRef, scrollToContact } = useGlobalContext()
     // const context = useContext(GlobalContext)
     const firstNamePathRef = useRef<SVGPathElement>(null);
     const firstNameCrossAPathRef = useRef<SVGPathElement>(null);
@@ -62,10 +61,6 @@ const Intro = () => {
         console.log('Last Name Dot I Path length:', lastNameDotILength);
     }, []);
 
-    const goToContactUs = () => {
-        navigate('')
-    }
-
     return (
         <section
             className={styles.container}
@@ -105,7 +100,7 @@ const Intro = () => {
                 </p>
                 <button
                     className={styles.button}
-                    onClick={goToContactUs}
+                    onClick={scrollToContact}
                 >
                     Reach Out
                 </button>

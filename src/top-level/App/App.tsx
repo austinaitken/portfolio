@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import Header from '@/top-level/Header/Header'
@@ -9,6 +10,24 @@ import styles from './App.module.css'
 
 const App = () => {
     const { isNavOpen } = useGlobalContext();
+
+    useEffect(() => {
+        const previousBodyOverflow = document.body.style.overflow;
+        const previousHtmlOverflow = document.documentElement.style.overflow;
+
+        if (isNavOpen) {
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = previousBodyOverflow;
+            document.documentElement.style.overflow = previousHtmlOverflow;
+        }
+
+        return () => {
+            document.body.style.overflow = previousBodyOverflow;
+            document.documentElement.style.overflow = previousHtmlOverflow;
+        };
+    }, [isNavOpen]);
     
     return (
         <div className={styles.app}>

@@ -2,11 +2,7 @@
 
 import styles from './Footer.module.css'
 
-interface Props {
-    setNavOpen: (openNav: boolean) => void
-}
-
-const Footer = ({}: Props) => {
+const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (

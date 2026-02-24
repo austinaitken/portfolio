@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import logo from '@/assets/images/profile_pic_1080.png'
 
 import styles from './Intro.module.css'
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 const Intro = () => {
+    const { introRef } = useGlobalContext()
     const navigate = useNavigate()
     // const context = useContext(GlobalContext)
     const firstNamePathRef = useRef<SVGPathElement>(null);
@@ -65,7 +67,10 @@ const Intro = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <section
+            className={styles.container}
+            ref={introRef}
+        >
             <div className={styles.containerTop}>
                 <div className={styles.containerTopLeft}>
                     <h1 className={styles.title}>
@@ -105,7 +110,7 @@ const Intro = () => {
                     Reach Out
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

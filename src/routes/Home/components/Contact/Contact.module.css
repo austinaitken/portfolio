@@ -1,3 +1,6 @@
+.container {
+}
+
 .buttonsContainer {
     display: flex;
     flex-direction: row;

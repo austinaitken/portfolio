@@ -1,6 +1,8 @@
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 import styles from './Contact.module.css'
 
 const Contact = () => {
+    const { contactRef } = useGlobalContext()
     const handleEmailClick = () => {
         window.location.href = 'mailto:austinlaitken@gmail.com'
     }
@@ -10,7 +12,10 @@ const Contact = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <section
+            className={styles.container}
+            ref={contactRef}
+        >
             <h1 className={styles.title}>
                 Reach Out Today
             </h1>
@@ -22,7 +27,7 @@ const Contact = () => {
                     📞 1 (709) 770-3770
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

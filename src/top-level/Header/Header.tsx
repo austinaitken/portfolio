@@ -1,38 +1,89 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 // import logo from '@/assets/images/logo.jpg'
 
 import styles from './Header.module.css'
 
-interface Props {
-    toggleNav: () => void,
-    setNavOpen: (openNav: boolean) => void,
-    isNavOpen: boolean
-}
+const Header = () => {
+    const { scrollToIntro, scrollToExperience, scrollToEntrepreneurship, scrollToPersonality, scrollToQualifications, scrollToResources, scrollToContact, isNavOpen, toggleNav } = useGlobalContext()
+    const headerRef = useRef<HTMLElement>(null)
 
-const Header = ({ isNavOpen, toggleNav, setNavOpen }: Props) => {
-    const navigate = useNavigate()
+    useEffect(() => {
+        const header = headerRef.current
+        if (!header) return
+
+        const rootStyle = document.documentElement.style
+        const previousOffset = rootStyle.getPropertyValue('--header-scroll-offset')
+
+        const updateHeaderOffset = () => {
+            const height = Math.ceil(header.getBoundingClientRect().height)
+            rootStyle.setProperty('--header-scroll-offset', `${height}px`)
+        }
+
+        updateHeaderOffset()
+
+        const resizeObserver = new ResizeObserver(updateHeaderOffset)
+        resizeObserver.observe(header)
+
+        return () => {
+            resizeObserver.disconnect()
+            if (previousOffset.trim().length > 0) {
+                rootStyle.setProperty('--header-scroll-offset', previousOffset)
+            } else {
+                rootStyle.removeProperty('--header-scroll-offset')
+            }
+        }
+    }, [])
     
-    const handleClick = () => {
-        setNavOpen(false)
-        navigate('/')
-    }
-
-    const getStarted = () => {
-        setNavOpen(false)
-    }
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} ref={headerRef}>
             <div className={styles.innerHeaderContainer}>
                 <div className={styles.leftButtonContainer}>
                     <button
                         className={styles.logoButton}
-                        onClick={handleClick}
+                        onClick={scrollToIntro}
                     >
                         {/* <img className={styles.logo} src={logo} alt='Austin Aitken profile picture'/> */}
                         <p className={styles.name}>Austin Aitken</p>
                     </button>
                 </div>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToExperience}
+                >
+                    Experience
+                </button>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToEntrepreneurship}
+                >
+                    Entrepreneurship
+                </button>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToPersonality}
+                >
+                    Personality
+                </button>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToQualifications}
+                >
+                    Qualifications
+                </button>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToResources}
+                >
+                    Resources
+                </button>
+                <button
+                    className={styles.sectionButton}
+                    onClick={scrollToContact}
+                >
+                    Contact Me
+                </button>
                 {/* <Link
                     className={styles.link}
                     to='/'
@@ -40,7 +91,7 @@ const Header = ({ isNavOpen, toggleNav, setNavOpen }: Props) => {
                 >
                     Overview
                 </Link> */}
-                <Link
+                {/* <Link
                     className={styles.link}
                     to='/how-it-works'
                     onClick={() => {setNavOpen(false)}}
@@ -78,21 +129,21 @@ const Header = ({ isNavOpen, toggleNav, setNavOpen }: Props) => {
                     to='/contact-us'
                 >
                     Resources
-                </Link>
+                </Link> */}
                 
                 <div className={styles.rightButtonContainer}>
-                    <button
+                    {/* <button
                         className={styles.getStartedButton}
                         onClick={getStarted}
                     >
                         Contact Me
-                    </button>
+                    </button> */}
                     <button
                         className={styles.navButton}
                         style={{ transform: !isNavOpen ? 'rotate(90deg)' : 'none' }}
                         onClick={toggleNav}
                     >
-                        <p>|||</p>
+                        <p style={{color: 'black'}}>|||</p>
                     </button>
                 </div>
                 

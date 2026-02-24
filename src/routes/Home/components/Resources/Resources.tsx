@@ -1,6 +1,9 @@
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 import styles from './Resources.module.css'
 
 const Resources = () => {
+    const { resourcesRef } = useGlobalContext()
+    
     const handleResumeDownload = () => {
         const link = document.createElement('a')
         link.href = '/pdfs/Austin_Aitken_Resume.pdf'
@@ -20,7 +23,10 @@ const Resources = () => {
     const handleLinkedInRedirect = () => window.open('https://www.linkedin.com/in/austin-aitken', '_blank')
 
     return (
-        <div className={styles.container}>
+        <section
+            className={styles.container}
+            ref={resourcesRef}
+        >
             <h1 className={styles.title}>
                 Resources
             </h1>
@@ -42,7 +48,7 @@ const Resources = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

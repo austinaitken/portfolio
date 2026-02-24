@@ -1,9 +1,8 @@
 
 .body {
     display: flex;
+    justify-content: center;
     flex-grow: 1;
     width: 95%;
     max-width: 1200px;
-    margin: 0 20px;
-    /* border: 1px solid red; */
 }

@@ -1,52 +1,69 @@
-import { Link } from 'react-router-dom'
 import styles from './NavMenu.module.css'
-import { useGlobalContext } from '@/common/context/GlobalContext'
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 
-interface Props {
-    toggleNav: () => void
-}
-
-const NavMenu = ({
-    toggleNav
-}: Props) => {
+const NavMenu = () => {
     const {
-        introRef,
-        experienceRef,
-        entrepreneurshipRef,
-        personalityRef,
-        qualificationsRef,
-        contactRef,
-        resourcesRef,
+        scrollToIntro,
+        scrollToExperience,
+        scrollToEntrepreneurship,
+        scrollToPersonality,
+        scrollToQualifications,
+        scrollToContact,
+        scrollToResources,
     } = useGlobalContext()
-
-    const onSignInClick = () => {
-        toggleNav()
-        experienceRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }
 
     return (
         <div className={styles.navMenu}>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/contact-us' onClick={toggleNav}>Contact Me</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToIntro}
+            >
+                Introduction
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/' onClick={onSignInClick}>Experience</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToExperience}
+            >
+                Experience
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/' onClick={toggleNav}>Entrepreneurship</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToEntrepreneurship}
+            >
+                Entrepreneurship
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/how-it-works' onClick={toggleNav}>Personality</Link>
-            {/* <hr className={styles.hr}/>
-            <Link className={styles.link} to='/pricing' onClick={toggleNav}>Pricing</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToPersonality}
+            >
+                Personality
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/faq' onClick={toggleNav}>FAQ</Link> */}
-            {/* <hr className={styles.hr}/>
-            <Link className={styles.link} to='/about-us' onClick={toggleNav}>About Us</Link> */}
+            <button
+                className={styles.navButton}
+                onClick={scrollToQualifications}
+            >
+                Qualifications
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/contact-us' onClick={toggleNav}>Qualifications</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToResources}
+            >
+                Resources
+            </button>
             <hr className={styles.hr}/>
-            <Link className={styles.link} to='/contact-us' onClick={toggleNav}>Resources</Link>
+            <button
+                className={styles.navButton}
+                onClick={scrollToContact}
+            >
+                Contact Me
+            </button>
             <hr className={styles.hr}/>
-            {/* <Link className={styles.link} to='/veterinarians' onClick={toggleNav}>Veterinarians</Link>
-            <hr className={styles.hr}/> */}
         </div>
     )
 }

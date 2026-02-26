@@ -12,14 +12,8 @@ const Qualifications = () => {
             <h1>A Qualified Problem Solver</h1>
             <h2>Bachelor of Engineering - (Computer Engineering)</h2>
             <h2>Excellence Awarded.</h2>
-            <img
-                src={munLogo}
-                alt="Memorial University of Newfoundland Logo"
-            />
-            <img
-                src={graduationCard}
-                alt="Austin Aitken's Graduation Trading Card"
-            />
+            <img src={munLogo} alt="Memorial University of Newfoundland Logo" />
+            <img src={graduationCard} alt="Austin Aitken's Graduation Trading Card" />
         </section>
     )
 }

@@ -1,7 +1,7 @@
 :root {
-  --header-scroll-offset: clamp(80px, 10vh, 100px);
+    --header-scroll-offset: clamp(80px, 10vh, 100px);
 }
 
 html {
-  scroll-padding-top: var(--header-scroll-offset);
+    scroll-padding-top: var(--header-scroll-offset);
 }

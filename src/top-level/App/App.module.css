@@ -1,40 +1,40 @@
 .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  isolation: isolate;
-  /* min-width: 340px; */
-  max-width: 100vw;
-  min-height: 100vh;
-  background-color: black;
-  margin: 0px auto;
-  padding: 0px;
-  /* border: 1px solid magenta; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+    /* min-width: 340px; */
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    margin: 0px auto;
+    padding: 0px;
+    /* border: 1px solid magenta; */
 }
 
 .contentArea {
-  position: relative;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-grow: 1;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .navOverlay {
-  position: fixed;
-  top: var(--header-scroll-offset, 0px);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100vw;
-  height: calc(100vh - var(--header-scroll-offset, 0px));
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  background-color: black;
+    position: fixed;
+    top: var(--header-scroll-offset, 0px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    height: calc(100vh - var(--header-scroll-offset, 0px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background-color: black;
 }

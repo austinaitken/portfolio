@@ -10,11 +10,11 @@ import '@/common/styles/text.css'
 import '@/common/styles/image.css'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Router>
-      <GlobalProvider>
-        <App />
-      </GlobalProvider>
-    </Router>
-  </StrictMode>
+    <StrictMode>
+        <Router>
+            <GlobalProvider>
+                <App />
+            </GlobalProvider>
+        </Router>
+    </StrictMode>
 )

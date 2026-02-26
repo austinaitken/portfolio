@@ -8,22 +8,22 @@ import Footer from '@/top-level/Footer/Footer'
 import styles from './App.module.css'
 
 const App = () => {
-  const { isNavOpen } = useGlobalContext()
+    const { isNavOpen } = useGlobalContext()
 
-  return (
-    <div className={styles.app}>
-      <Header />
-      <div className={styles.contentArea}>
-        <Body />
-        {isNavOpen && (
-          <div className={styles.navOverlay}>
-            <NavMenu />
-          </div>
-        )}
-      </div>
-      <Footer />
-    </div>
-  )
+    return (
+        <div className={styles.app}>
+            <Header />
+            <div className={styles.contentArea}>
+                <Body />
+                {isNavOpen && (
+                    <div className={styles.navOverlay}>
+                        <NavMenu />
+                    </div>
+                )}
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default App

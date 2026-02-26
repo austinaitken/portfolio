@@ -23,9 +23,9 @@ const Experience = () => {
             <p>Catching Fraud for the Largest Institutions in North America</p>
             <h2>Protecting You in Real-Time.</h2>
             <p></p>
-            <h2>Training Crime Fighters.</h2>
-            <p></p>
             <h2>Big Data for Big Results.</h2>
+            <p></p>
+            <h2>Training Crime Fighters.</h2>
             <p></p>
             <h2>Heroism Recognized.</h2>
             <p></p>

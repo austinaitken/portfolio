@@ -6,7 +6,7 @@ import phaunaLogoRightText from '@/assets/images/phauna/Phauna_Logo_Right_Text.p
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
-import fhirLogo from '@/assets/images/Hl7_FHIR_Logo.png'
+import fhirLogo from '@/assets/images/HL7_FHIR_Logo.webp'
 
 const screenshotItems = [
     { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },

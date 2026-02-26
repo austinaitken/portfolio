@@ -2,176 +2,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: black;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .sectionButton {
-    background-color: transparent;
-    color: rgb(171, 171, 171);
-    font-size: 1rem;
-    border: none;
-    display: none;
+  background-color: transparent;
+  color: rgb(171, 171, 171);
+  font-size: 1rem;
+  border: none;
+  display: none;
 }
 
 .logo {
-    height: 75px;
-    margin-right: 10px;
+  height: 75px;
+  margin-right: 10px;
 }
 
 .innerHeaderContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
 }
 
 .name {
-    margin: 0px;
-    padding: 0px;
-    /* font-size: 2.4rem; */
-    /* font-family: 'Marck Script', cursive; */
-    color: #32ff95;
-    cursor: pointer;
-    text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  /* font-size: 2.4rem; */
+  /* font-family: 'Marck Script', cursive; */
+  color: #32ff95;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .logoButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border: none;
-    cursor: pointer;
-    padding: 0px;
-    margin: 0px;
-    /* border: 3px solid magenta; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  /* border: 3px solid magenta; */
 }
 
 .linkContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-grow: 1;
 }
 
 .bars {
-    font-size: 1.3rem;
-    padding: 0.2rem;
-    animation: fadeInAnimation ease 3s;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  animation: fadeInAnimation ease 3s;
 }
 
 .close {
-    font-size: 1.3rem;
-    padding: 0.2rem;
-    animation: fadeInAnimation ease 3s;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  animation: fadeInAnimation ease 3s;
 }
 
 .link {
-    display: none;
-    font-size: 1.1rem;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+  display: none;
+  font-size: 1.1rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 .navButton {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .getStartedButton {
-    display: none;
-    cursor: pointer;
-    background-color: #32ff95;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 0.9rem;
+  display: none;
+  cursor: pointer;
+  background-color: #32ff95;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
 }
 
 .leftButtonContainer {
-    /* width: 220px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-
+  /* width: 220px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 
 .rightButtonContainer {
-    /* width: 215px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
+  /* width: 215px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
 }
 
 .vetButton {
-    background-color: black;
-    padding: 10px 15px;
-    /* padding: 10px 15px;
+  background-color: black;
+  padding: 10px 15px;
+  /* padding: 10px 15px;
     border: none;
     cursor: pointer; */
-    
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    border-radius: 10px;
-    /* width: 120px; */
-    margin-right: 10px;
-    background-color: #202020;
-    color: rgba(255, 255, 255, 0.75);
+
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  /* width: 120px; */
+  margin-right: 10px;
+  background-color: #202020;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Desktop Size */
 @media only screen and (min-width: 1100px) {
-    .sectionButton {
-        display: inline;
-        text-decoration: none;
-    }
+  .sectionButton {
+    display: inline;
+    text-decoration: none;
+  }
 
-    .sectionButton:hover {
-        color: #999999;
-    }
+  .sectionButton:hover {
+    color: #999999;
+  }
 
-    .navButton {
-        display: none;
-    }
+  .navButton {
+    display: none;
+  }
 
-    .getStartedButton {
-        display: inline;
-    }
+  .getStartedButton {
+    display: inline;
+  }
 
-    /* .vetButton {
+  /* .vetButton {
         display: inline;
     } */
 }

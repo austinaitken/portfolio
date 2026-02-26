@@ -3,13 +3,13 @@
 import styles from './Footer.module.css'
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
-    return (
-        <footer className={styles.footer}>
-            <p className={styles.year}>Copyright &copy; {currentYear} Austin Aitken</p>
-        </footer>
-    )
+  return (
+    <footer className={styles.footer}>
+      <p className={styles.year}>Copyright &copy; {currentYear} Austin Aitken</p>
+    </footer>
+  )
 }
 
 export default Footer

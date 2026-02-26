@@ -1,68 +1,68 @@
 .profilePicture {
-    width: 100%;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
 }
 
 .containerTop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0px;
-    /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  /* border: 1px solid red; */
 }
 
 .containerBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 .containerTopLeft {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* min-height: 100%; */
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* min-height: 100%; */
 }
 
 .containerTopRight {
-    flex: 1;
+  flex: 1;
 }
 
 .title {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
 }
 
 .description {
-    margin: 0px;
-    margin-bottom: 20px;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 .nameContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid magenta; */
-    width: 100%;
-    /* height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid magenta; */
+  width: 100%;
+  /* height: 50px;
     min-height: 50px; */
 }
 
 .profilePicture {
-    width: 100%;
-    border-radius: 50%;
-    max-width: 200px;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 200px;
 }
 
 .firstName,
@@ -73,15 +73,15 @@
 .lastNameCrossA,
 .lastNameCrossT,
 .lastNameDotI {
-    fill: none;
-    stroke: #32ff95;
-    stroke-miterlimit: 10;
-    stroke-linecap: round;
-    stroke-width: 20;
-    animation-name: write;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  fill: none;
+  stroke: #32ff95;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-width: 20;
+  animation-name: write;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .firstName {
@@ -147,7 +147,7 @@
 
 /* Desktop Size */
 @media only screen and (min-width: 1200px) {
-    .containerTop {
-      flex-direction: row;
+  .containerTop {
+    flex-direction: row;
   }
 }

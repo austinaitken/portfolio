@@ -8,15 +8,16 @@ import Resources from './components/Resources/Resources'
 
 import styles from './Home.module.css'
 
-const Home = () =>
-    <div className={styles.container}>
-        <Intro />
-        <Experience />
-        <Entrepreneurship />
-        <Personality />
-        <Qualifications />
-        <Contact />
-        <Resources />
-    </div>
+const Home = () => (
+  <div className={styles.container}>
+    <Intro />
+    <Experience />
+    <Entrepreneurship />
+    <Qualifications />
+    <Personality />
+    <Resources />
+    <Contact />
+  </div>
+)
 
 export default Home

@@ -1,27 +1,27 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
-import logo from '@/assets/images/profile_pic_1080.png'
+
+import verafinLogo from '@/assets/images/verafin/Nasdaq_Verafin_Logo.png'
 
 import styles from './Experience.module.css'
 
 const Experience = () => {
-    const { experienceRef } = useGlobalContext()
-    return (
-        <section
-            className={styles.container}
-            ref={experienceRef}
-        >
-            <h1 className={styles.title}>
-                An Experienced Professional
-            </h1>
-            <p>Tagline</p>
-            <p>This is a very long description about the professional journey and achievements.</p>
-            <img
-                style={{ width: '100%' }}
-                src={logo}
-                alt="Austin Aitken's profile picture"
-            />
-        </section>
-    )
+  const { experienceRef } = useGlobalContext()
+
+  return (
+    <section className={styles.container} ref={experienceRef}>
+        <h1 className={styles.title}>An Experienced Professional</h1>
+        <img src={verafinLogo} alt="Verafin Logo" />
+        <p>Catching Fraud for the Largest Institutions in North America</p>
+        <h2>Protecting You in Real-Time.</h2>
+        <p></p>
+        <h2>Training Crime Fighters.</h2>
+        <p></p>
+        <h2>Big Data for Big Results.</h2>
+        <p></p>
+        <h2>Heroism Recognized.</h2>
+        <p></p>
+    </section>
+  )
 }
 
 export default Experience

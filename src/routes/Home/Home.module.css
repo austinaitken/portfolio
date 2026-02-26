@@ -1,68 +1,69 @@
 .container {
   /* margin: 0px auto; */
+  width: 100%;
 }
 
 .introProfilePicture {
-    width: 100%;
+  width: 100%;
 }
 
 .introContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
 }
 
 .introContainerTop {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px 0px;
-    /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+  /* border: 1px solid red; */
 }
 
 .introContainerBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 .introContainerTopLeft {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .introContainerTopRight {
-    flex: 1;
+  flex: 1;
 }
 
 .introTitle {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
 }
 
 .introDescription {
-    margin: 0px;
-    margin-bottom: 20px;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 .introNameContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 100%;
 }
 
 .introProfilePicture {
-    width: 100%;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .firstName,
@@ -73,15 +74,15 @@
 .lastNameCrossA,
 .lastNameCrossT,
 .lastNameDotI {
-    fill: none;
-    stroke: #32ff95;
-    stroke-miterlimit: 10;
-    stroke-linecap: round;
-    stroke-width: 20;
-    animation-name: write;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  fill: none;
+  stroke: #32ff95;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-width: 20;
+  animation-name: write;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .firstName {
@@ -147,5 +148,4 @@
 
 /* Desktop Size */
 @media only screen and (min-width: 1200px) {
-    
 }

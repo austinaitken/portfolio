@@ -17,6 +17,13 @@ const screenshotItems = [
 ]
 
 const Mdium = () => {
+    const handleNewspaperClick = () => {
+        window.open(
+            'https://www.saltwire.com/nova-scotia/st-johns-startup-focused-on-secure-online-transfer-of-large-files-545266/',
+            '_blank'
+        )
+    }
+
     return (
         <div className={styles.container}>
             <img src={mdiumLogoRightText} alt="The Mdium Logo with Right Text" />
@@ -29,7 +36,12 @@ const Mdium = () => {
             <h2>Making Headlines.</h2>
             <p>From NTV News to the front page of the Business page, Mdium was making waves.</p>
             <div className={styles.newsMediaContainer}>
-                <img src={mdiumNewspaper} alt="The Mdium Newspaper" />
+                <img
+                    className={`clickable ${styles.newspaper}`}
+                    src={mdiumNewspaper}
+                    alt="The Mdium Newspaper"
+                    onClick={handleNewspaperClick}
+                />
                 <YouTubeVideo videoId="HqyS-xeRvQw" />
             </div>
             <h2>Satisfying Customers.</h2>

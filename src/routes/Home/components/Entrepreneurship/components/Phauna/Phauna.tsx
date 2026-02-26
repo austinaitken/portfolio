@@ -15,6 +15,10 @@ const screenshotItems = [
 ]
 
 const Phauna = () => {
+    const handleFhirLogoClick = () => {
+        window.open('https://hl7.org/fhir/', '_blank')
+    }
+
     return (
         <div className={styles.container}>
             <img src={phaunaLogoRightText} alt="The Phauna Logo with Right Text" />
@@ -23,7 +27,12 @@ const Phauna = () => {
             <h2>AI Potential Maximized.</h2>
             <h2>Virtual Exams Reinvented.</h2>
             <h2>Clinical Data Driven.</h2>
-            <img src={fhirLogo} alt="HL7 FHIR Logo" />
+            <img
+                className={`clickable ${styles.fhirLogo}`}
+                src={fhirLogo}
+                alt="HL7 FHIR Logo"
+                onClick={handleFhirLogoClick}
+            />
         </div>
     )
 }

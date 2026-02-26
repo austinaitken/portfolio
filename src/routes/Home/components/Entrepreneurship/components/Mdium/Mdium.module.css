@@ -5,6 +5,10 @@
     gap: 20px;
 }
 
+.newspaper {
+    cursor: pointer;
+}
+
 /* Desktop Size */
 @media only screen and (min-width: 1200px) {
     .newsMediaContainer {

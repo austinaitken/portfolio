@@ -4,3 +4,7 @@ svg {
     height: 100%;
     border-radius: 25px;
 }
+
+.clickable {
+    cursor: pointer;
+}

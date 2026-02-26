@@ -7,10 +7,19 @@ import styles from './Experience.module.css'
 const Experience = () => {
     const { experienceRef } = useGlobalContext()
 
+    const handleVerafinLogoClick = () => {
+        window.open('https://verafin.com/canada/', '_blank')
+    }
+
     return (
         <section className={styles.container} ref={experienceRef}>
             <h1 className={styles.title}>An Experienced Professional</h1>
-            <img src={verafinLogo} alt="Verafin Logo" />
+            <img
+                className="clickable"
+                src={verafinLogo}
+                alt="Verafin Logo"
+                onClick={handleVerafinLogoClick}
+            />
             <p>Catching Fraud for the Largest Institutions in North America</p>
             <h2>Protecting You in Real-Time.</h2>
             <p></p>

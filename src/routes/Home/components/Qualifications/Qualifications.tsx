@@ -7,6 +7,10 @@ import styles from './Qualifications.module.css'
 
 const Qualifications = () => {
     const { qualificationsRef } = useGlobalContext()
+    const handleMunLogoClick = () => {
+        window.open('https://www.mun.ca/engineering/', '_blank')
+    }
+
     return (
         <section className={styles.container} ref={qualificationsRef}>
             <h1>A Qualified Problem Solver</h1>
@@ -16,7 +20,12 @@ const Qualifications = () => {
                 Earned the Director's Award for Exemplary Work Terms by achieving an Outstanding
                 with Distinction on all 5 engineering work terms. A rare and prestigious award.{' '}
             </p>
-            <img src={munLogo} alt="Memorial University of Newfoundland Logo" />
+            <img
+                className={`clickable ${styles.munLogo}`}
+                src={munLogo}
+                alt="Memorial University of Newfoundland Logo"
+                onClick={handleMunLogoClick}
+            />
             <img src={graduationCard} alt="Austin Aitken's Graduation Trading Card" />
         </section>
     )

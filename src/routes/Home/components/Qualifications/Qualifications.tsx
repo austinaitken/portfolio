@@ -1,27 +1,31 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png'
-import munLogo from '@/assets/images/university/MUN_Logo.png'
+// import munLogo from '@/assets/images/university/MUN_Logo.png'
 import trophyImage from '@/assets/images/university/Work_Term_Award.png'
 
 import styles from './Qualifications.module.css'
 
 const Qualifications = () => {
     const { qualificationsRef } = useGlobalContext()
-    const handleMunLogoClick = () => {
-        window.open('https://www.mun.ca/engineering/', '_blank')
-    }
+    // const handleMunLogoClick = () => {
+    //     window.open('https://www.mun.ca/engineering/', '_blank')
+    // }
 
     return (
         <section className={styles.container} ref={qualificationsRef}>
             <h1>A Qualified Problem Solver</h1>
-            <h2>Bachelor of Engineering (Computer)</h2>
+            <h2 style={{ marginBottom: '20px' }}>Bachelor of Engineering (Computer)</h2>
             {/* <p>
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
-            <img src={graduationCard} alt="Austin Aitken's Graduation Trading Card" />
-            <h2>Excellence Awarded</h2>
-            <p className="largeDescription">
+            <img
+                style={{ marginBottom: '40px' }}
+                src={graduationCard}
+                alt="Austin Aitken's Graduation Trading Card"
+            />
+            <h2 style={{ marginBottom: '10px' }}>Excellence Awarded</h2>
+            <p style={{ marginBottom: '30px' }} className="largeDescription">
                 Achieved the highest performance on all engineering work terms.
             </p>
             <img
@@ -29,8 +33,8 @@ const Qualifications = () => {
                 src={trophyImage}
                 alt="The trophy for the Director's Award for Exemplary Work Terms"
             />
-            <h2>Academically Proven</h2>
-            <p className="largeDescription">
+            <h2 style={{ marginBottom: '10px' }}>Academically Proven</h2>
+            <p style={{ marginBottom: '20px' }} className="largeDescription">
                 A top performer in the most advanced computer engineering courses.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>

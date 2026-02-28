@@ -16,7 +16,8 @@
     max-height: 300px;
     width: auto;
     height: auto;
-    margin: 20px auto;
+    margin: 0px auto;
+    margin-bottom: 40px;
     /* border: 1px solid #ccc; */
     border-radius: 8px;
 }

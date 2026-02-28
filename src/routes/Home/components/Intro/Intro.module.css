@@ -5,7 +5,7 @@
     justify-content: space-evenly;
     /* border: 1px solid cyan; */
     /* margin: 10px 0px; */
-    height: 100vh;
+    height: calc(100vh - var(--header-scroll-offset));
     max-height: 600px;
 }
 
@@ -71,7 +71,7 @@
     /* max-width: 200px; */
     max-width: 250px;
     max-height: 250px;
-    /* margin: 20px 0px; */
+    margin: 20px 0px;
 }
 
 .button {

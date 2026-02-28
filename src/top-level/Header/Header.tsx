@@ -17,7 +17,6 @@ const Header = () => {
         toggleNav,
     } = useGlobalContext()
     const headerRef = useRef<HTMLElement>(null)
-
     useEffect(() => {
         const header = headerRef.current
         if (!header) return
@@ -49,7 +48,10 @@ const Header = () => {
         <header className={styles.header} ref={headerRef}>
             <div className={styles.innerHeaderContainer}>
                 <div className={styles.leftButtonContainer}>
-                    <button className={styles.logoButton} onClick={scrollToIntro}>
+                    <button
+                        className={`${styles.logoButton} ${styles.cascadeItem} ${styles.fadeOrder0}`}
+                        onClick={scrollToIntro}
+                    >
                         {/* <img
                             className={styles.logo}
                             src={logo}
@@ -58,19 +60,34 @@ const Header = () => {
                         <p className={styles.name}>Austin Aitken</p>
                     </button>
                 </div>
-                <button className={styles.sectionButton} onClick={scrollToExperience}>
+                <button
+                    className={`${styles.sectionButton} ${styles.cascadeItem} ${styles.fadeOrder1}`}
+                    onClick={scrollToExperience}
+                >
                     Experience
                 </button>
-                <button className={styles.sectionButton} onClick={scrollToEntrepreneurship}>
+                <button
+                    className={`${styles.sectionButton} ${styles.cascadeItem} ${styles.fadeOrder2}`}
+                    onClick={scrollToEntrepreneurship}
+                >
                     Entrepreneurship
                 </button>
-                <button className={styles.sectionButton} onClick={scrollToQualifications}>
+                <button
+                    className={`${styles.sectionButton} ${styles.cascadeItem} ${styles.fadeOrder3}`}
+                    onClick={scrollToQualifications}
+                >
                     Qualifications
                 </button>
-                <button className={styles.sectionButton} onClick={scrollToPersonality}>
+                <button
+                    className={`${styles.sectionButton} ${styles.cascadeItem} ${styles.fadeOrder4}`}
+                    onClick={scrollToPersonality}
+                >
                     Personality
                 </button>
-                <button className={styles.sectionButton} onClick={scrollToResources}>
+                <button
+                    className={`${styles.sectionButton} ${styles.cascadeItem} ${styles.fadeOrder5}`}
+                    onClick={scrollToResources}
+                >
                     Resources
                 </button>
                 {/* <button
@@ -127,11 +144,14 @@ const Header = () => {
                 </Link> */}
 
                 <div className={styles.rightButtonContainer}>
-                    <button className={styles.getStartedButton} onClick={scrollToContact}>
+                    <button
+                        className={`${styles.getStartedButton} ${styles.cascadeItem} ${styles.fadeOrder6}`}
+                        onClick={scrollToContact}
+                    >
                         Contact Me
                     </button>
                     <button
-                        className={styles.navButton}
+                        className={`${styles.navButton} ${styles.cascadeItem} ${styles.fadeOrder7}`}
                         style={{ transform: !isNavOpen ? 'rotate(90deg)' : 'none' }}
                         onClick={toggleNav}
                     >

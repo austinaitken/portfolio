@@ -15,6 +15,46 @@
     /* border: 1px solid magenta; */
 }
 
+.cascadeItem {
+    opacity: 0;
+    transform: translate(-12px, -12px);
+    transform-origin: top left;
+    animation: cascadeFadeIn 550ms ease-out forwards;
+    animation-delay: calc(var(--fade-order, 0) * 90ms);
+}
+
+.fadeOrder0 {
+    --fade-order: 0;
+}
+
+.fadeOrder1 {
+    --fade-order: 1;
+}
+
+.fadeOrder2 {
+    --fade-order: 2;
+}
+
+.fadeOrder3 {
+    --fade-order: 3;
+}
+
+.fadeOrder4 {
+    --fade-order: 4;
+}
+
+.fadeOrder5 {
+    --fade-order: 5;
+}
+
+.fadeOrder6 {
+    --fade-order: 6;
+}
+
+.fadeOrder7 {
+    --fade-order: 7;
+}
+
 .sectionButton {
     background-color: transparent;
     color: rgb(171, 171, 171);
@@ -153,6 +193,25 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes cascadeFadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-12px, -12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cascadeItem {
+        opacity: 1;
+        transform: none;
+        animation: none;
     }
 }
 

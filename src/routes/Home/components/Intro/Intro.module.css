@@ -6,7 +6,7 @@
     /* border: 1px solid cyan; */
     /* margin: 10px 0px; */
     height: calc(100vh - var(--header-scroll-offset));
-    max-height: 700px;
+    max-height: 650px;
 }
 
 .containerTop {
@@ -54,7 +54,7 @@
 
 .description {
     margin: 10px 0px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.7rem;
     color: #cfcfcf;
     /* margin-bottom: 20px; */
@@ -79,7 +79,7 @@
 }
 
 .button {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .firstName,

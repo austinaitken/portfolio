@@ -152,10 +152,11 @@ const Header = () => {
                     </button>
                     <button
                         className={`${styles.navButton} ${styles.cascadeItem} ${styles.fadeOrder7}`}
-                        style={{ transform: !isNavOpen ? 'rotate(90deg)' : 'none' }}
                         onClick={toggleNav}
                     >
-                        <p style={{ color: 'black' }}>|||</p>
+                        <p style={{ color: 'black', transform: 'rotate(90deg)' }}>
+                            {isNavOpen ? '>' : '|||'}{' '}
+                        </p>
                     </button>
                 </div>
             </div>

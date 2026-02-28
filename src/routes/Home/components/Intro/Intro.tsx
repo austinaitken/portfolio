@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 // import { GlobalContext } from '@/common/context/GlobalContext'
-import logo from '@/assets/images/profile_pic_1080.png'
+import logo from '@/assets/images/profile_pic_1080.webp'
 
 import styles from './Intro.module.css'
 import { useGlobalContext } from '@/common/context/useGlobalContext'
@@ -117,6 +117,11 @@ const Intro = () => {
                         className={styles.profilePicture}
                         src={logo}
                         alt="Austin Aitken's profile picture"
+                        width={1080}
+                        height={1080}
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
                     />
                 </div>
             </div>

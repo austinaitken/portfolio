@@ -7,6 +7,8 @@
     /* margin: 10px 0px; */
     min-height: 400px;
     height: calc(100vh - var(--header-scroll-offset));
+    height: calc(100svh - var(--header-scroll-offset));
+    height: calc(100dvh - var(--header-scroll-offset));
     max-height: 650px;
 }
 
@@ -56,7 +58,8 @@
 .description {
     margin: 10px 0px;
     font-size: 1.3rem;
-    line-height: 1.7rem;
+    line-height: 1.8rem;
+    font-weight: 300;
     color: #cfcfcf;
     /* margin-bottom: 20px; */
 }
@@ -167,5 +170,44 @@
 @media only screen and (min-width: 1200px) {
     .containerTop {
         flex-direction: row;
+    }
+}
+
+@media only screen and (max-height: 520px) and (orientation: landscape) {
+    .container {
+        min-height: calc(100svh - var(--header-scroll-offset));
+        min-height: calc(100dvh - var(--header-scroll-offset));
+        max-height: none;
+        justify-content: space-between;
+    }
+
+    .containerTop {
+        justify-content: center;
+    }
+
+    .containerTopRight {
+        width: 120px;
+        height: 120px;
+        margin: 8px 0;
+    }
+
+    .title {
+        font-size: 1.45rem;
+    }
+
+    .description {
+        margin: 6px 0;
+        font-size: 0.95rem;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .button {
+        margin-top: 8px;
+    }
+
+    .nameContainer svg {
+        max-width: 42vw;
+        height: auto;
     }
 }

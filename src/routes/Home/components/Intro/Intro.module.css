@@ -6,7 +6,7 @@
     /* border: 1px solid cyan; */
     /* margin: 10px 0px; */
     height: calc(100vh - var(--header-scroll-offset));
-    max-height: 600px;
+    max-height: 700px;
 }
 
 .containerTop {
@@ -20,8 +20,10 @@
 
 .containerBottom {
     display: flex;
+    /* flex: 1;
+    max-height: 150px; */
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
     /* border: 1px solid red; */
@@ -51,7 +53,7 @@
 }
 
 .description {
-    margin: 0px;
+    margin: 10px 0px;
     font-size: 1.2rem;
     line-height: 1.7rem;
     color: #cfcfcf;
@@ -77,7 +79,7 @@
 }
 
 .button {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .firstName,

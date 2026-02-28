@@ -1,21 +1,21 @@
-.profilePicture {
-    width: 100%;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 20px;
-    border: 1px solid cyan;
+    justify-content: space-evenly;
+    /* border: 1px solid cyan; */
+    /* margin: 10px 0px; */
+    height: 100vh;
+    max-height: 600px;
 }
 
 .containerTop {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0px;
-    border: 1px solid magenta;
+    justify-content: space-evenly;
+    /* border: 1px solid magenta; */
 }
 
 .containerBottom {
@@ -23,21 +23,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .containerTopLeft {
-    flex: 2;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* min-height: 100%; */
 }
 
 .containerTopRight {
-    flex: 1;
-    border: 1px solid blue;
+    /* flex: 1; */
+    /* border: 1px solid blue; */
 }
 
 .title {
@@ -48,7 +48,10 @@
 
 .description {
     margin: 0px;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #cfcfcf;
+    /* margin-bottom: 20px; */
 }
 
 .nameContainer {
@@ -65,7 +68,14 @@
 .profilePicture {
     width: 100%;
     border-radius: 50%;
-    max-width: 200px;
+    /* max-width: 200px; */
+    max-width: 250px;
+    max-height: 250px;
+    /* margin: 20px 0px; */
+}
+
+.button {
+    margin-top: 30px;
 }
 
 .firstName,

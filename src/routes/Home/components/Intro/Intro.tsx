@@ -66,7 +66,7 @@ const Intro = () => {
                 <div className={styles.containerTopLeft}>
                     <h1 className={styles.title}>Hello, I'm</h1>
                     <div className={styles.nameContainer}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900">
                             <path
                                 ref={firstNamePathRef}
                                 className={styles.firstName}
@@ -88,7 +88,7 @@ const Intro = () => {
                                 d="M1253.5 457.5L1251.81 449.043"
                             />
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900">
                             <path
                                 ref={lastNamePathRef}
                                 className={styles.lastName}

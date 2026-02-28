@@ -1,7 +1,7 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import verafinLogo from '@/assets/images/verafin/Nasdaq_Verafin_Logo.png'
-import goldMedal from '@/assets/images/verafin/Gold_Medal.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 
 import styles from './Experience.module.css'
 

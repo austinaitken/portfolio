@@ -49,14 +49,14 @@ const Header = () => {
         <header className={styles.header} ref={headerRef}>
             <div className={styles.innerHeaderContainer}>
                 <div className={styles.leftButtonContainer}>
-                    {/* <button className={styles.logoButton} onClick={scrollToIntro}>
-                        <img
+                    <button className={styles.logoButton} onClick={scrollToIntro}>
+                        {/* <img
                             className={styles.logo}
                             src={logo}
                             alt="Austin Aitken profile picture"
-                        />
+                        /> */}
                         <p className={styles.name}>Austin Aitken</p>
-                    </button> */}
+                    </button>
                 </div>
                 <button className={styles.sectionButton} onClick={scrollToExperience}>
                     Experience

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     /* margin: 10px 0px; */
     min-height: 400px;
     height: calc(100vh - var(--header-scroll-offset));
@@ -86,6 +86,39 @@
     margin-top: 20px;
 }
 
+.title,
+.nameContainer,
+.containerTopRight,
+.description,
+.button {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation-name: introFadeIn;
+    animation-duration: 0.55s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.title {
+    animation-delay: 0.05s;
+}
+
+.nameContainer {
+    animation-delay: 0.25s;
+}
+
+.containerTopRight {
+    animation-delay: 0.45s;
+}
+
+.description {
+    animation-delay: 0.65s;
+}
+
+.button {
+    animation-delay: 0.85s;
+}
+
 .firstName,
 .firstNameCrossA,
 .firstNameCrossT,
@@ -163,6 +196,30 @@
 @keyframes write {
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes introFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .title,
+    .nameContainer,
+    .containerTopRight,
+    .description,
+    .button {
+        opacity: 1;
+        transform: none;
+        animation: none;
     }
 }
 

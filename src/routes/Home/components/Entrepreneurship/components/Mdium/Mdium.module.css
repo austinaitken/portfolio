@@ -9,6 +9,119 @@
     cursor: pointer;
 }
 
+.starPath {
+    fill: none;
+    stroke: #32ff95;
+    stroke-width: 50;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.starFillPath {
+    fill: transparent;
+    stroke: none;
+    clip-path: inset(0 100% 0 0);
+}
+
+.starPathAnimate {
+    animation-name: write;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starFillAnimate {
+    animation-name: fillStar;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starFillAnimatePartial {
+    animation-name: fillStarPartial;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+/* .starSvg {
+    width: 32px;
+    height: 32px;
+} */
+
+.starDelay1 {
+    animation-delay: 0s;
+}
+
+.starDelay2 {
+    animation-delay: 0.4s;
+}
+
+.starDelay3 {
+    animation-delay: 0.8s;
+}
+
+.starDelay4 {
+    animation-delay: 1.2s;
+}
+
+.starDelay5 {
+    animation-delay: 1.6s;
+}
+
+.starFillDelay1 {
+    animation-delay: 2s;
+}
+
+.starFillDelay2 {
+    animation-delay: 2.25s;
+}
+
+.starFillDelay3 {
+    animation-delay: 2.5s;
+}
+
+.starFillDelay4 {
+    animation-delay: 2.75s;
+}
+
+.starFillDelay5 {
+    animation-delay: 3s;
+}
+
+@keyframes write {
+    to {
+        stroke-dashoffset: 2;
+    }
+}
+
+@keyframes fillStar {
+    to {
+        fill: #32ff95;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes fillStarPartial {
+    to {
+        fill: #32ff95;
+        clip-path: inset(0 40% 0 0);
+    }
+}
+
 /* Desktop Size */
 @media only screen and (min-width: 1200px) {
     .newsMediaContainer {

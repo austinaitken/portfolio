@@ -1,5 +1,7 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
-import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
+
+import Amello from './components/Amello/Amello'
+import DmvSimulator from './components/DmvSimulator/DmvSimulator'
 
 import styles from './Personality.module.css'
 
@@ -9,11 +11,8 @@ const Personality = () => {
     return (
         <section className={styles.container} ref={personalityRef}>
             <h1>A Light in the Dark</h1>
-            <p></p>
-            <div>
-                <YouTubeVideo videoId="fppS6ddagRo" />
-            </div>
-            <YouTubeVideo videoId="a5QZmygubM8" />
+            <Amello />
+            <DmvSimulator />
         </section>
     )
 }

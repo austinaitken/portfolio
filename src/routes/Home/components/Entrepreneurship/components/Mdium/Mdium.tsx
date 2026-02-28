@@ -64,11 +64,15 @@ const Mdium = () => {
     return (
         <div className={styles.container}>
             <img src={mdiumLogoRightText} alt="The Mdium Logo with Right Text" />
-            <h2>Send Files Anywhere.</h2>
-            <p>Transfer large files through emails, links, or short-lived codes.</p>
+            {/* <h2>Send Files Anywhere</h2> */}
+            <p className="largeDescription">
+                Transfer large files through emails, links, or short-lived codes.
+            </p>
             <TrioAppScreenshots screenshots={screenshotItems} />
-            <h2>Making Headlines.</h2>
-            <p>From NTV News to the Business front page, Mdium was making waves.</p>
+            <h2 style={{ marginTop: '40px', marginBottom: '10px' }}>Making Headlines</h2>
+            <p className="largeDescription" style={{ marginBottom: '20px' }}>
+                From NTV News to the Business front page, Mdium was making waves.
+            </p>
             <div className={styles.newsMediaContainer}>
                 <img
                     className={`clickable ${styles.newspaper}`}
@@ -78,10 +82,10 @@ const Mdium = () => {
                 />
                 <YouTubeVideo videoId="HqyS-xeRvQw" />
             </div>
-            <h2>Satisfying Customers.</h2>
-            <p>
-                Reaching over 30k users with more than 140k file transfers, customers rated Mdium an
-                outstanding 4.6 / 5.
+            <h2 style={{ marginTop: '40px', marginBottom: '10px' }}>Satisfying Customers</h2>
+            <p className="largeDescription" style={{ marginBottom: '20px' }}>
+                Reached over 30k users with 140k+ file transfers achieving an outstanding 4.6/5
+                rating.
             </p>
             <div ref={starsContainerRef} className={styles.starsContainer}>
                 {[0, 1, 2, 3, 4].map((starIndex) => (

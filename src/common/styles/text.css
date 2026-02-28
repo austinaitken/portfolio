@@ -9,7 +9,7 @@ input,
 label,
 ul,
 li {
-    color: white;
+    color: #dfdfdf;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -57,4 +57,13 @@ button {
     border-radius: 10px;
     color: black;
     padding: 0.5em 1em;
+}
+
+.largeDescription {
+    margin: 10px 0px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    color: #cfcfcf;
+    /* margin-bottom: 20px; */
 }

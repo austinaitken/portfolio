@@ -126,7 +126,7 @@ const Intro = () => {
                 </div>
             </div>
             <div className={styles.containerBottom}>
-                <p className={styles.description}>
+                <p className={`largeDescription ${styles.description}`}>
                     An experienced software developer with an entrepreneurial spirit.
                 </p>
                 <button className={styles.button} onClick={scrollToContact}>

@@ -4,7 +4,7 @@ import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
 
 import mdiumLogoRightText from '@/assets/images/mdium/Mdium_Logo_Right_Text.png'
-import mdiumNewspaper from '@/assets/images/mdium/Mdium_Newspaper 2.jpg'
+import mdiumNewspaper from '@/assets/images/mdium/Mdium_Newspaper 3.jpg'
 // import mdiumLogoBeach from '@/assets/images/mdium/Mdium_Logo_Beach.png'
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'

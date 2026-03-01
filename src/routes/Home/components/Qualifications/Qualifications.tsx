@@ -14,13 +14,17 @@ const Qualifications = () => {
 
     return (
         <section className={styles.container} ref={qualificationsRef}>
-            <h1>A Qualified Problem Solver</h1>
+            <h1>
+                A Qualified
+                <br />
+                Problem Solver
+            </h1>
             <h2 style={{ marginBottom: '20px' }}>Bachelor of Engineering (Computer)</h2>
             {/* <p>
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
             <img
-                style={{ marginBottom: '40px' }}
+                style={{ marginBottom: '40px', maxHeight: '600px', width: 'auto' }}
                 src={graduationCard}
                 alt="Austin Aitken's Graduation Trading Card"
             />
@@ -33,7 +37,7 @@ const Qualifications = () => {
                 src={trophyImage}
                 alt="The trophy for the Director's Award for Exemplary Work Terms"
             />
-            <h2 style={{ marginBottom: '10px' }}>Academically Proven</h2>
+            {/* <h2 style={{ marginBottom: '10px' }}>Academically Proven</h2>
             <p style={{ marginBottom: '20px' }} className="largeDescription">
                 A top performer in the most advanced computer engineering courses.
             </p>
@@ -78,7 +82,7 @@ const Qualifications = () => {
                         </p>
                     </div>
                 </div>
-                {/* <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <div
                         style={{
                             display: 'flex',
@@ -109,8 +113,8 @@ const Qualifications = () => {
                             Architecture
                         </p>
                     </div>
-                </div> */}
-            </div>
+                </div>
+            </div> */}
             {/* <img
                 className={`clickable ${styles.munLogo}`}
                 src={munLogo}

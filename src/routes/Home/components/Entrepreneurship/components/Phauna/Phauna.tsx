@@ -21,7 +21,11 @@ const Phauna = () => {
 
     return (
         <div className={styles.container}>
-            <img src={phaunaLogoRightText} alt="The Phauna Logo with Right Text" />
+            <img
+                style={{ maxWidth: '400px' }}
+                src={phaunaLogoRightText}
+                alt="The Phauna Logo with Right Text"
+            />
             <p>This is a concise and intriguing description of the Phauna app.</p>
             <TrioAppScreenshots screenshots={screenshotItems} />
             <h2>Cases Automated</h2>

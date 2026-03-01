@@ -225,9 +225,9 @@
 
 /* Desktop Size */
 @media only screen and (min-width: 1200px) {
-    .containerTop {
+    /* .containerTop {
         flex-direction: row;
-    }
+    } */
 }
 
 @media only screen and (max-height: 520px) and (orientation: landscape) {

@@ -24,7 +24,12 @@ const Qualifications = () => {
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
             <img
-                style={{ marginBottom: '40px', maxHeight: '600px', width: 'auto' }}
+                style={{
+                    marginBottom: '40px',
+                    maxHeight: '600px',
+                    maxWidth: '100%',
+                    width: 'auto',
+                }}
                 src={graduationCard}
                 alt="Austin Aitken's Graduation Trading Card"
             />

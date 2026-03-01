@@ -1,6 +1,12 @@
 .container {
 }
 
+.title {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+}
+
 .fLetterStroke1,
 .fLetterStroke2,
 .fLetterStroke3,

@@ -39,7 +39,7 @@ const Entrepreneurship = () => {
 
     return (
         <section className={styles.container} ref={entrepreneurshipRef}>
-            <h1>An Entrepreneural</h1>
+            <h1 className={styles.title}>An Entrepreneural</h1>
             <svg
                 height="768.0pt"
                 viewBox="0 0 1920 768"

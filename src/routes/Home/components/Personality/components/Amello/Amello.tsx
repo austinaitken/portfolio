@@ -16,7 +16,12 @@ const screenshotItems = [
 const Amello = () => {
     return (
         <div className={styles.container}>
-            <TrioAppScreenshots screenshots={screenshotItems} />
+            <h2>Say Hello to Amello!</h2>
+            <p className="mediumDescription">Play interest-based games with new friends.</p>
+            <p>Interest-based Matching</p>
+            <p>Peer-to-Peer WebRTC Video Calls</p>
+            <p>Custom Interest-Based Games.</p>
+            {/* <TrioAppScreenshots screenshots={screenshotItems} /> */}
             <YouTubeVideo videoId="fppS6ddagRo" />
         </div>
     )

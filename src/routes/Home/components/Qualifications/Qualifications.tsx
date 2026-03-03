@@ -19,14 +19,18 @@ const Qualifications = () => {
                 <br />
                 Problem Solver
             </h1>
-            <h2 style={{ marginBottom: '20px' }}>Bachelor of Engineering (Computer)</h2>
+            {/* <h2 style={{ marginBottom: '20px' }}>Bachelor of Engineering (Computer)</h2> */}
             {/* <p>
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
+            <p className="largeDescription" style={{ marginBottom: '40px' }}>
+                A Bachelor of Engineering (Computer) graduate with academic and work term
+                distinction.
+            </p>
             <img
                 style={{
                     marginBottom: '40px',
-                    maxHeight: '600px',
+                    maxHeight: '350px',
                     maxWidth: '100%',
                     width: 'auto',
                 }}
@@ -34,16 +38,16 @@ const Qualifications = () => {
                 alt="Austin Aitken's Graduation Trading Card"
             />
             <h2 style={{ marginBottom: '10px' }}>Excellence Awarded</h2>
-            <p style={{ marginBottom: '30px' }} className="largeDescription">
-                Achieved the highest performance on all engineering work terms.
+            <p style={{ marginBottom: '30px' }} className="mediumDescription">
+                Achieved an Outstanding with Distinction on all engineering work terms.
             </p>
             <img
                 className={styles.trophyImage}
                 src={trophyImage}
                 alt="The trophy for the Director's Award for Exemplary Work Terms"
             />
-            {/* <h2 style={{ marginBottom: '10px' }}>Academically Proven</h2>
-            <p style={{ marginBottom: '20px' }} className="largeDescription">
+            <h2 style={{ marginBottom: '10px' }}>Academically Proven</h2>
+            <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 A top performer in the most advanced computer engineering courses.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
@@ -54,7 +58,7 @@ const Qualifications = () => {
                             flexDirection: 'column',
                             flex: 1,
                             aspectRatio: '1',
-                            border: '1px solid #32ff95',
+                            // border: '1px solid #32ff95',
                             justifyContent: 'center',
                             alignItems: 'center',
                             borderRadius: '30px',
@@ -75,7 +79,7 @@ const Qualifications = () => {
                             alignItems: 'center',
                             flex: 1,
                             aspectRatio: '1',
-                            border: '1px solid #32ff95',
+                            // border: '1px solid #32ff95',
                             borderRadius: '30px',
                         }}
                     >
@@ -87,7 +91,7 @@ const Qualifications = () => {
                         </p>
                     </div>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                {/* <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <div
                         style={{
                             display: 'flex',
@@ -118,8 +122,8 @@ const Qualifications = () => {
                             Architecture
                         </p>
                     </div>
-                </div>
-            </div> */}
+                </div> */}
+            </div>
             {/* <img
                 className={`clickable ${styles.munLogo}`}
                 src={munLogo}

@@ -7,14 +7,16 @@
 
 .title {
     margin-top: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-right: 0px;
+    /* border: 1px solid magenta; */
 }
 
 .goldMedal {
     max-height: 200px;
     width: auto;
     height: auto;
+    margin-bottom: 30px;
 }
 
 .pLetterStroke1,

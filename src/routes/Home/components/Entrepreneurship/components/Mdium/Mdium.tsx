@@ -70,7 +70,7 @@ const Mdium = () => {
             </p>
             <TrioAppScreenshots screenshots={screenshotItems} />
             <h2 style={{ marginTop: '40px', marginBottom: '10px' }}>Making Headlines</h2>
-            <p className="largeDescription" style={{ marginBottom: '20px' }}>
+            <p className="mediumDescription" style={{ marginBottom: '20px' }}>
                 From NTV News to the Business front page, Mdium was making waves.
             </p>
             <div className={styles.newsMediaContainer}>
@@ -83,7 +83,7 @@ const Mdium = () => {
                 <YouTubeVideo videoId="HqyS-xeRvQw" />
             </div>
             <h2 style={{ marginTop: '40px', marginBottom: '10px' }}>Satisfying Customers</h2>
-            <p className="largeDescription" style={{ marginBottom: '20px' }}>
+            <p className="mediumDescription" style={{ marginBottom: '20px' }}>
                 Reached over 30k users with 140k+ file transfers achieving an outstanding 4.6/5
                 rating.
             </p>

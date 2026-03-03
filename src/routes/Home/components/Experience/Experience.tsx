@@ -51,8 +51,9 @@ const Experience = () => {
                 width="1920.0pt"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{
-                    // border: '1px solid red',
-                    maxWidth: '100%',
+                    maxWidth: '600px',
+                    maxHeight: '100px',
+                    width: '100%',
                     height: 'auto',
                     marginBottom: '20px',
                 }}
@@ -78,32 +79,42 @@ const Experience = () => {
                     d="M1126.85 330.48C1121.6 327.542 1122.02 328.954 1128.63 326.486"
                 />
             </svg>
+            <p className="largeDescription">
+                Catching Financial Fraud for the Largest Institutions in North America
+            </p>
             <img
                 className="clickable"
-                style={{ width: '100%', maxWidth: '400px', marginBottom: '20px' }}
+                style={{
+                    width: '100%',
+                    // maxWidth: '300px',
+                    margin: '30px auto',
+                }}
                 src={verafinLogo}
                 alt="Verafin Logo"
                 onClick={handleVerafinLogoClick}
             />
-            <p className="largeDescription">
+            {/* <p style={{ marginBottom: '30px' }} className="mediumDescription">
                 Catching Financial Fraud for the Largest Institutions in North America
-            </p>
-            <h2>Protecting You in Real-Time</h2>
-            <p className="largeDescription">
+            </p> */}
+            <h2 style={{ marginBottom: '10px' }}>Protection in Real-Time</h2>
+            <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I pioneered the company's real-time fraud detection of payment services like
                 E-Transfer and Zelle.
             </p>
-            <h2>Big Data for Big Results</h2>
-            <p className="largeDescription">
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <h2 style={{ marginBottom: '10px' }}>Big Data for Big Results</h2>
+            <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I designed, implemented, and maintained a production big data pipeline.
             </p>
-            <h2>Training Crime Fighters</h2>
-            <p className="largeDescription">
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <h2 style={{ marginBottom: '10px' }}>Training Crime Fighters</h2>
+            <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I mentored and supervised new software developers to achieve full-time employment at
                 Nasdaq Verafin.
             </p>
-            <h2>Heroism Recognized</h2>
-            <p className="largeDescription">
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <h2 style={{ marginBottom: '10px' }}>Heroism Recognized</h2>
+            <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I won the annual hackathon by detecting potential animal trafficking through banking
                 and online data.
             </p>

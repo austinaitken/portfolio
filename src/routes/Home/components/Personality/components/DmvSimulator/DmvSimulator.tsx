@@ -16,7 +16,14 @@ const screenshotItems = [
 const DmvSimulator = () => {
     return (
         <div className={styles.container}>
-            <TrioAppScreenshots screenshots={screenshotItems} />
+            <h2>Experience life on DMV Simulator</h2>
+            <p className="mediumDescription">
+                Enjoy renewing your license in this humour-based story game.
+            </p>
+            <p>3 Alternative Endings</p>
+            <p>40 Minutes of Gameplay</p>
+            <p>Built with C# on the Unity Engine</p>
+            {/* <TrioAppScreenshots screenshots={screenshotItems} /> */}
             <YouTubeVideo videoId="a5QZmygubM8" />
         </div>
     )

@@ -2,6 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
 }
 
 .resourcesContainer {
@@ -20,4 +27,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.rLetterStroke,
+.resourcesStroke {
+    fill: none;
+    stroke: #32ff95;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-width: 15;
+    animation-name: write;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.rLetterStroke {
+    stroke-dasharray: 612.421875;
+    stroke-dashoffset: 612.421875;
+    animation-duration: 0.5s;
+}
+
+.resourcesStroke {
+    stroke-dasharray: 5906.9853515625;
+    stroke-dashoffset: 5906.9853515625;
+    animation-delay: 0.6s;
+    animation-duration: 2s;
+}
+
+@keyframes write {
+    to {
+        stroke-dashoffset: 0;
+    }
 }

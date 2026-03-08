@@ -6,6 +6,7 @@ import verafinLogo from '@/assets/images/verafin/Nasdaq_Verafin_Logo_Lateral2.pn
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 
 import styles from './Experience.module.css'
+import RealtimePaymentsFraud from './components/RealtimePaymentsFraud/RealtimePaymentsFraud'
 
 const Experience = () => {
     const { experienceRef } = useGlobalContext()
@@ -80,7 +81,7 @@ const Experience = () => {
                 />
             </svg>
             <p className="largeDescription">
-                Catching Financial Fraud for the Largest Institutions in North America
+                Catching Financial Fraud for the Largest Institutions in North America.
             </p>
             <img
                 className="clickable"
@@ -101,7 +102,8 @@ const Experience = () => {
                 I pioneered the company's real-time fraud detection of payment services like
                 E-Transfer and Zelle.
             </p>
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            {/* <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" /> */}
+            <RealtimePaymentsFraud />
             <h2 style={{ marginBottom: '10px' }}>Big Data for Big Results</h2>
             <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I designed, implemented, and maintained a production big data pipeline.

@@ -45,7 +45,7 @@ const Entrepreneurship = () => {
                 viewBox="0 0 1920 768"
                 width="1920.0pt"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{ maxHeight: '100px', width: '100%', marginBottom: '30px' }}
+                style={{ height: '4.5rem' }}
             >
                 <path
                     className={styles.fLetterStroke1}

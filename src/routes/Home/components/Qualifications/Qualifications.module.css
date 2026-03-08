@@ -6,6 +6,12 @@
     margin-top: 20px;
 }
 
+.title {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
 .munLogo {
     cursor: pointer;
 }
@@ -20,4 +26,52 @@
     margin-bottom: 40px;
     /* border: 1px solid #ccc; */
     border-radius: 8px;
+}
+
+.pLetterStroke1,
+.pLetterStroke2,
+.problemStroke,
+.solverStroke {
+    fill: none;
+    stroke: #32ff95;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-width: 15;
+    animation-name: write;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.pLetterStroke1 {
+    stroke-dasharray: 785.5181274414062;
+    stroke-dashoffset: 785.5181274414062;
+    animation-duration: 0.25s;
+}
+
+.pLetterStroke2 {
+    stroke-dasharray: 1011.6213989257812;
+    stroke-dashoffset: 1011.6213989257812;
+    animation-delay: 0.35s;
+    animation-duration: 0.25s;
+}
+
+.problemStroke {
+    stroke-dasharray: 6298.89599609375;
+    stroke-dashoffset: 6298.89599609375;
+    animation-duration: 1.75s;
+    animation-delay: 0.7s;
+}
+
+.solverStroke {
+    stroke-dasharray: 6435.22412109375;
+    stroke-dashoffset: 6435.22412109375;
+    animation-duration: 1.75s;
+    animation-delay: 2.55s;
+}
+
+@keyframes write {
+    to {
+        stroke-dashoffset: 0;
+    }
 }

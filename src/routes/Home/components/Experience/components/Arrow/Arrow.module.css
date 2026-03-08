@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.arrow {
+    --arrow-grey: #909090;
+    --segment-size: 1rem;
+    --arrow-height: 1.3rem;
+    --head-size: 1.3rem;
+    --travel-duration: 2.2s;
+    display: flex;
+    align-items: center;
+    width: min(100%, 34rem);
+    height: var(--arrow-height);
+}
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--arrow-grey);
+    clip-path: polygon(
+        0 30%,
+        calc(100% - var(--head-size)) 30%,
+        calc(100% - var(--head-size)) 0,
+        100% 50%,
+        calc(100% - var(--head-size)) 100%,
+        calc(100% - var(--head-size)) 70%,
+        0 70%
+    );
+    overflow: hidden;
+}
+
+@keyframes transfer-cycle {
+    0% {
+        opacity: 1;
+        left: calc(-1 * var(--segment-size));
+    }
+
+    50% {
+        opacity: 1;
+        left: 100%;
+    }
+
+    50.01% {
+        opacity: 0;
+        left: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.highlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--segment-size);
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    animation: transfer-cycle calc(var(--travel-duration) * 2) linear infinite;
+    animation-delay: var(--transfer-delay, 0s);
+}

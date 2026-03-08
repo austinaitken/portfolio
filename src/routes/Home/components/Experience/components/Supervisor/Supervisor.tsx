@@ -2,7 +2,7 @@ import styles from './Supervisor.module.css'
 
 import superHeroHead from '@/assets/images/verafin/AustinPaymentSender.png'
 import superHeroBody from '@/assets/images/verafin/superheroBody.png'
-import sideKickBody from '@/assets/images/verafin/SidekickBody.png'
+import sideKickBody from '@/assets/images/verafin/SideKickBody.png'
 
 const Supervisor = () => {
     return (

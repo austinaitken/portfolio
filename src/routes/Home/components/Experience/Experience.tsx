@@ -7,6 +7,7 @@ import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 
 import styles from './Experience.module.css'
 import RealtimePaymentsFraud from './components/RealtimePaymentsFraud/RealtimePaymentsFraud'
+import Supervisor from './components/Supervisor/Supervisor'
 
 const Experience = () => {
     const { experienceRef } = useGlobalContext()
@@ -114,8 +115,8 @@ const Experience = () => {
                 I mentored and supervised new software developers to achieve full-time employment at
                 Nasdaq Verafin.
             </p>
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-            <h2 style={{ marginBottom: '10px' }}>Heroism Recognized</h2>
+            <Supervisor />
+            <h2 style={{ marginTop: '30px', marginBottom: '10px' }}>Heroism Recognized</h2>
             <p style={{ marginBottom: '20px' }} className="mediumDescription">
                 I won the annual hackathon by detecting potential animal trafficking through banking
                 and online data.

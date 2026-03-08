@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 250px;
+    /* border: 1px solid magenta; */
+}
+
+.figure {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex: 2;
+    /* border: 1px solid red; */
+}
+
+.superheroBody {
+    display: block;
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.sideKickFigure {
+    flex: 1;
+    position: relative;
+}
+
+.sidekickBody {
+    width: 100%;
+    height: auto;
+}
+
+.superHeroHead {
+    position: absolute;
+    top: -27%;
+    left: 54%;
+    width: 45%;
+    max-width: 70px;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.sideKickHead {
+    position: absolute;
+    top: -10%;
+    left: 32%;
+    width: 45%;
+    max-width: 70px;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 2;
+}

@@ -19,7 +19,7 @@
 
 .starPath {
     fill: none;
-    stroke: #32ff95;
+    stroke: #00b686;
     stroke-width: 50;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -118,14 +118,14 @@
 
 @keyframes fillStar {
     to {
-        fill: #32ff95;
+        fill: #00b686;
         clip-path: inset(0 0 0 0);
     }
 }
 
 @keyframes fillStarPartial {
     to {
-        fill: #32ff95;
+        fill: #00b686;
         clip-path: inset(0 40% 0 0);
     }
 }

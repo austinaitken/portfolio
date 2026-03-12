@@ -125,7 +125,7 @@ const ContactUs = () => {
                 </label>
                 <button
                     className={styles.button}
-                    style={{ backgroundColor: isValidForm() ? '#32ff95' : '#202020' }}
+                    style={{ backgroundColor: isValidForm() ? '#00b686' : '#202020' }}
                     disabled={!isValidForm()}
                 >
                     Send

@@ -45,8 +45,11 @@
 .containerTopRight {
     /* flex: 1; */
     /* border: 1px solid blue; */
-    width: 250px;
-    height: 250px;
+    width: 90%;
+    max-width: 250px;
+    max-height: 250px;
+    /* width: 250px;
+    height: 250px; */
     margin: 20px 0px;
 }
 
@@ -54,6 +57,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     margin-right: 10px;
+    /* border: 1px solid #00b686; */
 }
 
 .description {
@@ -79,12 +83,15 @@
 .profilePicture {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 25%;
     object-fit: cover;
+    /* border: 1px solid #202020; */
+    /* padding: 20px; */
 }
 
 .button {
     margin-top: 40px;
+    background-color: #00b686;
 }
 
 .title,
@@ -129,10 +136,10 @@
 .lastNameCrossT,
 .lastNameDotI {
     fill: none;
-    stroke: #32ff95;
+    stroke: #00b686;
     stroke-miterlimit: 10;
     stroke-linecap: round;
-    stroke-width: 20;
+    stroke-width: 25;
     animation-name: write;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;

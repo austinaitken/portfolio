@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 // import { GlobalContext } from '@/common/context/GlobalContext'
-import logo from '@/assets/images/profile_pic_1080.webp'
+import logo from '@/assets/images/ProfilePicNoBackground.png'
 
 import styles from './Intro.module.css'
 import { useGlobalContext } from '@/common/context/useGlobalContext'

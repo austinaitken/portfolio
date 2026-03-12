@@ -1,6 +1,10 @@
 .container {
     width: 100%;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -12,7 +16,7 @@
 .dLetterStroke,
 .darkStroke {
     fill: none;
-    stroke: #32ff95;
+    stroke: #00b686;
     stroke-miterlimit: 10;
     stroke-linecap: round;
     stroke-width: 15;

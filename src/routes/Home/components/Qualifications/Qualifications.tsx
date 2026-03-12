@@ -4,7 +4,7 @@ import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 // import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png'
 // import munLogo from '@/assets/images/university/MUN_Logo.png'
-import trophyImage from '@/assets/images/university/Work_Term_Award.png'
+// import trophyImage from '@/assets/images/university/Work_Term_Award.png'
 
 import styles from './Qualifications.module.css'
 import GraduationCard from './components/GraduationCard/GraduationCard'
@@ -123,11 +123,12 @@ const Qualifications = () => {
             {/* <p>
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
-            <p className="largeDescription" style={{ marginBottom: '40px' }}>
-                Graduated with a Bachelor of Engineering (Computer) with distinction.
-            </p>
             <GraduationCard />
-            <h2 style={{ marginBottom: '10px' }}>Excellence Awarded</h2>
+            <p className="largeDescription" style={{ marginBottom: '40px' }}>
+                A Bachelor of Engineering graduate with academic distinction.
+            </p>
+            <button>View Qualifications</button>
+            {/* <h2 style={{ marginBottom: '10px' }}>Excellence Awarded</h2>
             <p style={{ marginBottom: '30px' }} className="mediumDescription">
                 Achieved an Outstanding with Distinction on all engineering work terms.
             </p>
@@ -148,7 +149,7 @@ const Qualifications = () => {
                             flexDirection: 'column',
                             flex: 1,
                             aspectRatio: '1',
-                            // border: '1px solid #32ff95',
+                            // border: '1px solid #00b686',
                             justifyContent: 'center',
                             alignItems: 'center',
                             borderRadius: '30px',
@@ -169,7 +170,7 @@ const Qualifications = () => {
                             alignItems: 'center',
                             flex: 1,
                             aspectRatio: '1',
-                            // border: '1px solid #32ff95',
+                            // border: '1px solid #00b686',
                             borderRadius: '30px',
                         }}
                     >
@@ -181,7 +182,7 @@ const Qualifications = () => {
                         </p>
                     </div>
                 </div>
-                {/* <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <div
                         style={{
                             display: 'flex',
@@ -212,9 +213,9 @@ const Qualifications = () => {
                             Architecture
                         </p>
                     </div>
-                </div> */}
+                </div>
             </div>
-            {/* <img
+            <img
                 className={`clickable ${styles.munLogo}`}
                 src={munLogo}
                 alt="Memorial University of Newfoundland Logo"

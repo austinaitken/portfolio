@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
-import Amello from './components/Amello/Amello'
-import DmvSimulator from './components/DmvSimulator/DmvSimulator'
+// import Amello from './components/Amello/Amello'
+// import DmvSimulator from './components/DmvSimulator/DmvSimulator'
 
 import styles from './Personality.module.css'
 
@@ -52,8 +52,9 @@ const Personality = () => {
             <p className="largeDescription" style={{ marginBottom: '40px' }}>
                 Enjoy your time while blending humour with technical ability.
             </p>
-            <Amello />
-            <DmvSimulator />
+            <button>View Personality</button>
+            {/* <Amello />
+            <DmvSimulator /> */}
         </section>
     )
 }

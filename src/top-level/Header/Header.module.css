@@ -16,6 +16,117 @@
     /* border: 1px solid magenta; */
 }
 
+.logo {
+    height: 50px;
+    max-height: 50px;
+    margin-left: 5px;
+    width: auto;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid magenta; */
+    width: 100%;
+    height: 50px;
+    /* height: 50px;
+    min-height: 50px; */
+}
+
+.firstName,
+.firstNameCrossA,
+.firstNameCrossT,
+.firstNameDotI,
+.lastName,
+.lastNameCrossA,
+.lastNameCrossT,
+.lastNameDotI {
+    fill: none;
+    stroke: #00b686;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-width: 25;
+    animation-name: write;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.firstName {
+    stroke-dasharray: 5011.005859375;
+    stroke-dashoffset: 5011.005859375;
+    animation-duration: 1.5s;
+}
+
+.lastName {
+    stroke-dasharray: 6094.48193359375;
+    stroke-dashoffset: 6094.48193359375;
+    animation-delay: 1.55s;
+    animation-duration: 1.5s;
+}
+
+.firstNameCrossA {
+    stroke-dasharray: 354.93035888671875;
+    stroke-dashoffset: 354.93035888671875;
+    animation-duration: 0.2s;
+    animation-delay: 3s;
+}
+
+.firstNameCrossT {
+    stroke-dasharray: 258.6890869140625;
+    stroke-dashoffset: 258.6890869140625;
+    animation-duration: 0.2s;
+    animation-delay: 3.25s;
+}
+
+.firstNameDotI {
+    stroke-dasharray: 8.62419605255127;
+    stroke-dashoffset: 8.62419605255127;
+    animation-duration: 0.01s;
+    animation-delay: 3.5s;
+}
+
+.lastNameCrossA {
+    stroke-dasharray: 389.9130859375;
+    stroke-dashoffset: 389.9130859375;
+    animation-delay: 3.55s;
+    animation-duration: 0.1s;
+}
+
+.lastNameCrossT {
+    stroke-dasharray: 230.09910583496094;
+    stroke-dashoffset: 230.09910583496094;
+    animation-delay: 3.7s;
+    animation-duration: 0.2s;
+}
+
+.lastNameDotI {
+    stroke-dasharray: 7.812191963195801;
+    stroke-dashoffset: 7.812191963195801;
+    animation-delay: 3.95s;
+    animation-duration: 0.01s;
+}
+
+@keyframes write {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes introFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .cascadeItem {
     opacity: 0;
     transform: translate(-12px, -12px);

@@ -50,7 +50,7 @@ const Personality = () => {
                 />
             </svg>
             <p className="largeDescription" style={{ marginBottom: '40px' }}>
-                Enjoy your time while blending humour with technical ability.
+                Crafting joy in the world through humour and software.
             </p>
             <button>View Personality</button>
             {/* <Amello />

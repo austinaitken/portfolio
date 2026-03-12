@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
-import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png'
+// import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png'
 // import munLogo from '@/assets/images/university/MUN_Logo.png'
 import trophyImage from '@/assets/images/university/Work_Term_Award.png'
 

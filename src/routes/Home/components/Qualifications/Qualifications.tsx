@@ -7,6 +7,7 @@ import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_
 import trophyImage from '@/assets/images/university/Work_Term_Award.png'
 
 import styles from './Qualifications.module.css'
+import GraduationCard from './components/GraduationCard/GraduationCard'
 
 const Qualifications = () => {
     const { qualificationsRef } = useGlobalContext()
@@ -54,7 +55,7 @@ const Qualifications = () => {
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
-                    marginBottom: '40px',
+                    marginBottom: '20px',
                 }}
             >
                 {/* <svg
@@ -123,19 +124,9 @@ const Qualifications = () => {
                 Graduated with a strong foundation in computer engineering principles and practices.
             </p> */}
             <p className="largeDescription" style={{ marginBottom: '40px' }}>
-                A Bachelor of Engineering (Computer) graduate with academic and work term
-                distinction.
+                Graduated with a Bachelor of Engineering (Computer) with distinction.
             </p>
-            <img
-                style={{
-                    marginBottom: '40px',
-                    maxHeight: '350px',
-                    maxWidth: '100%',
-                    width: 'auto',
-                }}
-                src={graduationCard}
-                alt="Austin Aitken's Graduation Trading Card"
-            />
+            <GraduationCard />
             <h2 style={{ marginBottom: '10px' }}>Excellence Awarded</h2>
             <p style={{ marginBottom: '30px' }} className="mediumDescription">
                 Achieved an Outstanding with Distinction on all engineering work terms.

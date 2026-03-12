@@ -1,0 +1,66 @@
+.container {
+    margin-bottom: 39px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scene {
+    width: min(100%, 250px);
+    perspective: 1400px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 7;
+    transform-style: preserve-3d;
+    animation: revealFromBack 1.8s ease-out forwards;
+    will-change: transform;
+}
+
+.face {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow:
+        0 24px 40px rgba(0, 0, 0, 0.25),
+        0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(2px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(2px);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.back .image {
+    transform: scaleX(-1);
+}
+
+.scene:hover .card,
+.scene:focus-within .card {
+    transform: rotateY(180deg);
+    transition: transform 700ms ease;
+}
+
+@keyframes revealFromBack {
+    from {
+        transform: rotateY(720deg) rotateX(-5deg);
+    }
+
+    to {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}

@@ -8,6 +8,7 @@ import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 import styles from './Experience.module.css'
 import RealtimePaymentsFraud from './components/RealtimePaymentsFraud/RealtimePaymentsFraud'
 import Supervisor from './components/Supervisor/Supervisor'
+import BigData from './components/BigData/BigData'
 
 const Experience = () => {
     const { experienceRef } = useGlobalContext()
@@ -107,19 +108,20 @@ const Experience = () => {
             <RealtimePaymentsFraud />
             <h2 style={{ marginBottom: '10px' }}>Big Data for Big Results</h2>
             <p style={{ marginBottom: '20px' }} className="mediumDescription">
-                I designed, implemented, and maintained a production big data pipeline.
+                I designed, implemented, and maintained a production big data pipeline to analyze
+                thousands of financial institutions banking data for fraud.
             </p>
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <BigData />
             <h2 style={{ marginBottom: '10px' }}>Training Crime Fighters</h2>
             <p style={{ marginBottom: '20px' }} className="mediumDescription">
-                I mentored and supervised new software developers to achieve full-time employment at
-                Nasdaq Verafin.
+                I mentored and supervised new software developers to achieve full-time employment
+                and become top performers.
             </p>
             <Supervisor />
             <h2 style={{ marginTop: '30px', marginBottom: '10px' }}>Heroism Recognized</h2>
             <p style={{ marginBottom: '20px' }} className="mediumDescription">
-                I won the annual hackathon by detecting potential animal trafficking through banking
-                and online data.
+                I won the company's annual hackathon by detecting potential animal trafficking
+                through banking and online data.
             </p>
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         </section>

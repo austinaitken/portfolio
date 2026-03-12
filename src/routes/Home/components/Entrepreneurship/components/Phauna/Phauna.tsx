@@ -34,9 +34,9 @@ const Phauna = () => {
                 src={phaunaLogoRightText}
                 alt="The Phauna Logo with Right Text"
             />
-            <p className="mediumDescription" style={{ marginBottom: '20px' }}>
+            {/* <p className="mediumDescription" style={{ marginBottom: '20px' }}>
                 Advancing Virtual Veterinary Care with Phauna.
-            </p>
+            </p> */}
             {/* <TrioAppScreenshots screenshots={screenshotItems} /> */}
             {/* <h2>Cases Automated</h2>
             <p className="mediumDescription"></p> */}

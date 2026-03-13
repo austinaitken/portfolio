@@ -1,21 +1,26 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router'
-import { NAV_KEYS, NAV_ITEMS } from '@/common/constants/navigation'
+import { NAV_ROUTES } from '@/routes/routes'
+import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import styles from './NavMenu.module.css'
 
-const NavMenu = () => (
-    <nav className={styles.navMenuContainer}>
-        <hr />
-        {NAV_KEYS.map((key) => (
-            <Fragment key={key}>
-                <Link to={NAV_ITEMS[key].to}>
-                    {NAV_ITEMS[key].label}
-                </Link>
-                <hr />
-            </Fragment>
-        ))}
-    </nav>
-)
+const NavMenu = () => {
+    const { closeNav } = useGlobalContext()
+
+    return (
+        <nav id="mobile-nav-menu" className={styles.navMenu}>
+            <hr className={styles.hr} />
+            {NAV_ROUTES.map(({ path, label }) => (
+                <Fragment key={path}>
+                    <Link to={path} className={styles.navButton} onClick={closeNav}>
+                        {label}
+                    </Link>
+                    <hr className={styles.hr} />
+                </Fragment>
+            ))}
+        </nav>
+    )
+}
 
 export default NavMenu

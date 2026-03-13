@@ -24,10 +24,10 @@
 //                 Call, text, or email at anytime and let's discuss how I can contribute to your team
 //                 and organization.
 //             </p> */}
-//             <div className={styles.buttonsContainer}>
-//                 <button onClick={handleEmailClick}>📧 austinlaitken@gmail.com</button>
-//                 <button onClick={handleCallClick}>📞 1 (709) 770-3770</button>
-//             </div>
+//             <address className={styles.buttonsContainer}>
+//                 <a href="mailto:austinlaitken@gmail.com">📧 austinlaitken@gmail.com</a>
+//                 <a href="tel:+17097703770">📞 1 (709) 770-3770</a>
+//             </address>
 //         </section>
 //     )
 // }

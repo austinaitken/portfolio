@@ -37,4 +37,21 @@
     overflow-y: auto;
     overscroll-behavior: contain;
     background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 160ms ease;
+}
+
+.navOverlayOpen {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+@media only screen and (min-width: 1100px) {
+    .navOverlay,
+    .navOverlayOpen {
+        display: none;
+    }
 }

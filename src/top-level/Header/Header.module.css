@@ -226,12 +226,14 @@
     font-size: 1.3rem;
     padding: 0.2rem;
     animation: fadeInAnimation ease 3s;
+    color: #00b686;
 }
 
 .close {
     font-size: 1.3rem;
     padding: 0.2rem;
     animation: fadeInAnimation ease 3s;
+    color: #00b686;
 }
 
 .link {
@@ -243,6 +245,8 @@
 }
 
 .navButton {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     width: 40px;
     height: 40px;

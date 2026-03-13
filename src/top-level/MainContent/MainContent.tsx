@@ -1,20 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 
 import HomePage from '@/routes/HomePage/HomePage'
-import ExperiencePage from '@/routes/ExperiencePage/ExperiencePage'
-import EntrepreneurshipPage from '@/routes/EntrepreneurshipPage/EntrepreneurshipPage'
-import QualificationsPage from '@/routes/QualificationsPage/QualificationsPage'
-import PersonalityPage from '@/routes/PersonalityPage/PersonalityPage'
+import { APP_ROUTES } from '@/routes/routes'
 
 const MainContent = () => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/experience" element={<ExperiencePage />} />
-                <Route path="/entrepreneurship" element={<EntrepreneurshipPage />} />
-                <Route path="/qualifications" element={<QualificationsPage />} />
-                <Route path="/personality" element={<PersonalityPage />} />
+                {APP_ROUTES.map(({ path, component: PageComponent }) => (
+                    <Route key={path} path={path} element={<PageComponent />} />
+                ))}
                 <Route path="*" element={<HomePage />} />
             </Routes>
         </main>

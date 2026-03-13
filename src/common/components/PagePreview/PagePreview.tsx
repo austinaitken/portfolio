@@ -24,8 +24,8 @@ const PagePreview = ({
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
 
     return (
-        <section className={styles.sectionPreviewContainer}>
-            <div className={styles.titleBlock}>
+        <section className={styles.container}>
+            <div className={styles.titleContainer}>
                 <h1 className={styles.title} aria-label={fullTitle}>
                     {titleStart}
                     <span className={styles.visuallyHidden}> {titleEnd}</span>
@@ -38,13 +38,11 @@ const PagePreview = ({
                     />
                 </div>
             </div>
-            <div className={styles.contentBlock}>{content}</div>
-            <div className={styles.footerBlock}>
-                <p className={`largeDescription ${styles.description}`}>{description}</p>
-                <button className={styles.button} onClick={buttonAction}>
-                    {buttonLabel}
-                </button>
-            </div>
+            <div className={styles.contentContainer}>{content}</div>
+            <p className={`largeDescription ${styles.description}`}>{description}</p>
+            <button className={styles.button} onClick={buttonAction}>
+                {buttonLabel}
+            </button>
         </section>
     )
 }

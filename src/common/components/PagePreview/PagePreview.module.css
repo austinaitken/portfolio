@@ -1,50 +1,64 @@
-.sectionPreviewContainer {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: clamp(1rem, 3vh, 1.75rem);
-    align-items: center;
-    width: 100%;
-    min-height: calc(100vh - var(--header-scroll-offset, 0px));
-    min-height: calc(100svh - var(--header-scroll-offset, 0px));
-    min-height: calc(100dvh - var(--header-scroll-offset, 0px));
-    padding: clamp(1rem, 4vw, 2.25rem) clamp(1rem, 5vw, 2.5rem) clamp(1.5rem, 4vh, 2.5rem);
-    box-sizing: border-box;
-}
-
-.titleBlock {
+.container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-self: center;
-    width: min(100%, 42rem);
-    text-align: center;
-    gap: 0.35rem;
+    height: calc(100svh - var(--header-scroll-offset));
+    gap: 1.5rem;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .title {
     margin: 0;
-    line-height: 1.05;
 }
 
 .titleDrawing {
-    width: min(100%, 360px);
+    width: min(100%, 280px);
 }
 
-.contentBlock {
-    width: min(100%, 44rem);
-    margin-inline: auto;
+.contentContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex: 0 1 auto;
+    max-height: min(48svh, 32rem);
+    min-height: 0;
+    width: 90%;
 }
 
-.footerBlock {
-    width: min(100%, 42rem);
-    margin-inline: auto;
+.contentContainer > * {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.contentContainer :global(img),
+.contentContainer :global(picture),
+.contentContainer :global(video),
+.contentContainer :global(canvas),
+.contentContainer :global(svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.footerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.15rem;
+    flex: 0 0 auto;
+    gap: 1.5rem;
 }
 
 .description {
@@ -54,8 +68,9 @@
 }
 
 .button {
-    width: min(100%, 18rem);
-    background-color: #00b686;
+    width: 100%;
+    max-width: 16rem;
+    margin-bottom: 1rem;
 }
 
 .visuallyHidden {
@@ -71,7 +86,7 @@
 }
 
 @media only screen and (max-height: 520px) and (orientation: landscape) {
-    .sectionPreviewContainer {
+    .container {
         min-height: calc(100svh - var(--header-scroll-offset));
         min-height: calc(100dvh - var(--header-scroll-offset));
         gap: 0.9rem;
@@ -89,7 +104,8 @@
 }
 
 @media only screen and (min-width: 900px) {
-    .sectionPreviewContainer {
+    .container {
+        display: grid;
         grid-template-columns: minmax(18rem, 1.1fr) minmax(20rem, 1.4fr);
         grid-template-rows: auto 1fr;
         column-gap: clamp(1.5rem, 4vw, 4rem);
@@ -99,7 +115,7 @@
         margin-inline: auto;
     }
 
-    .titleBlock {
+    .titleContainer {
         grid-column: 1;
         grid-row: 1;
         align-items: flex-start;
@@ -111,15 +127,17 @@
         width: min(100%, 300px);
     }
 
-    .contentBlock {
+    .contentContainer {
         grid-column: 2;
         grid-row: 1 / span 2;
         width: 100%;
         align-self: stretch;
+        max-height: none;
+        min-height: 0;
         justify-content: center;
     }
 
-    .footerBlock {
+    .footerContainer {
         grid-column: 1;
         grid-row: 2;
         width: 100%;

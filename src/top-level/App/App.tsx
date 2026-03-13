@@ -13,7 +13,12 @@ const App = () => {
     return (
         <div className={styles.appContainer}>
             <Header />
-            {isNavOpen ? <NavMenu /> : <MainContent />}
+            <div className={styles.contentArea}>
+                <MainContent />
+            </div>
+            <div className={`${styles.navOverlay} ${isNavOpen ? styles.navOverlayOpen : ''}`}>
+                <NavMenu />
+            </div>
             <Footer />
         </div>
     )

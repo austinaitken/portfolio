@@ -2,11 +2,11 @@ import PagePreview from '@/common/components/PagePreview/PagePreview'
 import type { PagePreviewProps } from '@/common/components/PagePreview/PagePreview'
 import GraduationCard from '@/routes/Home2/components/Qualifications/components/GraduationCard/GraduationCard'
 import {
-    darkWordDrawing,
-    firstNameWordDrawing,
-    flameWordDrawing,
+    // darkWordDrawing,
+    // firstNameWordDrawing,
+    // flameWordDrawing,
     problemSolverPhraseDrawing,
-    professionalWordDrawing,
+    // professionalWordDrawing,
 } from '@/common/constants/animated-drawings'
 
 import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
@@ -31,18 +31,8 @@ const PagePreviews: HomePagePreview[] = [
         key: 'introduction',
         titleStart: "Hello, I'm",
         titleEnd: 'Austin',
-        titleEndDrawing: firstNameWordDrawing,
-        content: (
-            <img
-                src={headshotImage}
-                alt="Austin Aitken's profile picture"
-                width={1080}
-                height={1080}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-            />
-        ),
+        titleEndDrawing: problemSolverPhraseDrawing,
+        content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
         description: 'An experienced software developer with an entrepreneurial spirit.',
         buttonLabel: 'Contact Me',
         buttonAction: () => {
@@ -53,7 +43,7 @@ const PagePreviews: HomePagePreview[] = [
         key: 'experience',
         titleStart: 'An Experienced',
         titleEnd: 'Professional',
-        titleEndDrawing: professionalWordDrawing,
+        titleEndDrawing: problemSolverPhraseDrawing,
         content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
         description: 'Catching financial fraud for the largest institutions in North America.',
         buttonLabel: 'View Experience',
@@ -65,7 +55,7 @@ const PagePreviews: HomePagePreview[] = [
         key: 'entrepreneurship',
         titleStart: 'An Entrepreneurial',
         titleEnd: 'Flame',
-        titleEndDrawing: flameWordDrawing,
+        titleEndDrawing: problemSolverPhraseDrawing,
         content: (
             <img
                 className={styles.entrepreneurshipImage}
@@ -95,7 +85,7 @@ const PagePreviews: HomePagePreview[] = [
         key: 'personality',
         titleStart: 'A Light in the',
         titleEnd: 'Dark',
-        titleEndDrawing: darkWordDrawing,
+        titleEndDrawing: problemSolverPhraseDrawing,
         // content: (
         //     <img
         //         className={styles.entrepreneurshipImage}

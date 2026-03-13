@@ -1,5 +1,6 @@
 import PagePreview from '@/common/components/PagePreview/PagePreview'
-import styles from './HomePage.module.css'
+import type { PagePreviewProps } from '@/common/components/PagePreview/PagePreview'
+import GraduationCard from '@/routes/Home2/components/Qualifications/components/GraduationCard/GraduationCard'
 import {
     darkWordDrawing,
     firstNameWordDrawing,
@@ -8,21 +9,52 @@ import {
     professionalWordDrawing,
 } from '@/common/constants/animated-drawings'
 
-const PagePreviews = [
+import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
+import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
+import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+
+import styles from './HomePage.module.css'
+
+type HomePreviewKey =
+    | 'introduction'
+    | 'experience'
+    | 'entrepreneurship'
+    | 'qualifications'
+    | 'personality'
+
+type HomePagePreview = PagePreviewProps & {
+    key: HomePreviewKey
+}
+
+const PagePreviews: HomePagePreview[] = [
     {
         key: 'introduction',
         titleStart: "Hello, I'm",
+        titleEnd: 'Austin',
         titleEndDrawing: firstNameWordDrawing,
+        content: (
+            <img
+                src={headshotImage}
+                alt="Austin Aitken's profile picture"
+                width={1080}
+                height={1080}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+            />
+        ),
         description: 'An experienced software developer with an entrepreneurial spirit.',
-        buttonLabel: 'View Experience',
+        buttonLabel: 'Contact Me',
         buttonAction: () => {
-            // Navigate to Experience page
+            // Navigate to Contact page
         },
     },
     {
         key: 'experience',
         titleStart: 'An Experienced',
+        titleEnd: 'Professional',
         titleEndDrawing: professionalWordDrawing,
+        content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
         description: 'Catching financial fraud for the largest institutions in North America.',
         buttonLabel: 'View Experience',
         buttonAction: () => {
@@ -32,7 +64,15 @@ const PagePreviews = [
     {
         key: 'entrepreneurship',
         titleStart: 'An Entrepreneurial',
+        titleEnd: 'Flame',
         titleEndDrawing: flameWordDrawing,
+        content: (
+            <img
+                className={styles.entrepreneurshipImage}
+                src={mdiumNewspaperHeadshotImage}
+                alt="Entrepreneurship"
+            />
+        ),
         description: 'Turning ideas into live consumer products to solve real problems.',
         buttonLabel: 'View Businesses',
         buttonAction: () => {
@@ -42,7 +82,9 @@ const PagePreviews = [
     {
         key: 'qualifications',
         titleStart: 'A Qualified',
+        titleEnd: 'Problem Solver',
         titleEndDrawing: problemSolverPhraseDrawing,
+        content: <GraduationCard />,
         description: 'A Bachelor of Engineering graduate with academic distinction.',
         buttonLabel: 'View Qualifications',
         buttonAction: () => {
@@ -52,7 +94,15 @@ const PagePreviews = [
     {
         key: 'personality',
         titleStart: 'A Light in the',
+        titleEnd: 'Dark',
         titleEndDrawing: darkWordDrawing,
+        // content: (
+        //     <img
+        //         className={styles.entrepreneurshipImage}
+        //         src={mdiumNewspaperHeadshotImage}
+        //         alt="Entrepreneurship"
+        //     />
+        // ),
         description: 'Crafting joy in the world through humour and software.',
         buttonLabel: 'View Personality',
         buttonAction: () => {
@@ -68,7 +118,9 @@ const HomePage = () => {
                 <PagePreview
                     key={preview.key}
                     titleStart={preview.titleStart}
+                    titleEnd={preview.titleEnd}
                     titleEndDrawing={preview.titleEndDrawing}
+                    content={preview.content}
                     description={preview.description}
                     buttonLabel={preview.buttonLabel}
                     buttonAction={preview.buttonAction}

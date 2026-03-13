@@ -1,6 +1,6 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
-import { availableWordDrawing } from '@/common/constants/animated-drawings'
+import { resourcesWordDrawing } from '@/common/constants/animated-drawings'
 
 import styles from './Resources.module.css'
 
@@ -30,7 +30,7 @@ const Resources = () => {
         <section className={styles.container} ref={resourcesRef}>
             <h1 className={styles.title}>Available</h1>
             <div className={styles.animatedWordContainer}>
-                <AnimatedDrawing drawing={availableWordDrawing} />
+                <AnimatedDrawing drawing={resourcesWordDrawing} />
             </div>
             {/* <p className="largeDescription" style={{ marginBottom: '40px' }}>
                 Graduated with a Bachelor of Engineering (Computer) with distinction.

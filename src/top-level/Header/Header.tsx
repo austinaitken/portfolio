@@ -44,7 +44,7 @@ const Header = () => {
                         aria-controls="mobile-nav-menu"
                     >
                         <span className={isNavOpen ? styles.close : styles.bars}>
-                            {isNavOpen ? '>' : '|||'}
+                            {isNavOpen ? '✕' : '☰'}
                         </span>
                     </button>
                 </div>

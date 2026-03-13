@@ -9,7 +9,8 @@ input,
 label,
 ul,
 li,
-footer {
+footer,
+a {
     color: var(--color-text-primary);
     font-family: var(--font-family-base);
 }

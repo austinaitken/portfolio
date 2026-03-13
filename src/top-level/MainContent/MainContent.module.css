@@ -1,0 +1,9 @@
+.mainContentContainer {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 320px;
+    /* border: 1px solid magenta; */
+}

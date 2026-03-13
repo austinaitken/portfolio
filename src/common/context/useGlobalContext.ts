@@ -14,6 +14,8 @@ export interface GlobalContextProps {
     isNavOpen: boolean
     toggleNav: () => void
     setNavOpen: (openNav: boolean) => void
+    openNav: () => void
+    closeNav: () => void
     scrollToIntro: () => void
     scrollToExperience: () => void
     scrollToEntrepreneurship: () => void

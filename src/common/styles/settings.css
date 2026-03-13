@@ -1,0 +1,14 @@
+:root {
+    --header-scroll-offset: clamp(80px, 10vh, 100px);
+    --font-family-base: 'Roboto', sans-serif;
+
+    --color-text-primary: #dfdfdf;
+    --color-text-secondary: #c1c1c1;
+    --color-text-tertiary: #afafaf;
+    --color-text-muted: #b1b1b1;
+
+    --color-link: #c1c1c1;
+    --color-button-bg: #00b686;
+    --color-button-text: #000000;
+    --color-footer: rgba(255, 255, 255, 0.75);
+}

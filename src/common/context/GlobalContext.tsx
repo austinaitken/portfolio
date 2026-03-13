@@ -14,6 +14,14 @@ export const GlobalProvider: FC<{ children: ReactNode }> = ({ children }) => {
         setIsNavOpen(openNav)
     }, [])
 
+    const openNav = useCallback(() => {
+        setIsNavOpen(true)
+    }, [])
+
+    const closeNav = useCallback(() => {
+        setIsNavOpen(false)
+    }, [])
+
     const introRef = useRef<HTMLDivElement>(null)
     const experienceRef = useRef<HTMLDivElement>(null)
     const entrepreneurshipRef = useRef<HTMLDivElement>(null)
@@ -90,6 +98,8 @@ export const GlobalProvider: FC<{ children: ReactNode }> = ({ children }) => {
             isNavOpen,
             toggleNav,
             setNavOpen,
+            openNav,
+            closeNav,
             scrollToIntro,
             scrollToExperience,
             scrollToEntrepreneurship,
@@ -102,6 +112,8 @@ export const GlobalProvider: FC<{ children: ReactNode }> = ({ children }) => {
             isNavOpen,
             toggleNav,
             setNavOpen,
+            openNav,
+            closeNav,
             scrollToIntro,
             scrollToExperience,
             scrollToEntrepreneurship,

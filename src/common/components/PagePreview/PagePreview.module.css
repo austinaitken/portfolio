@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 400px;
+    height: calc(100vh - var(--header-scroll-offset));
+    height: calc(100svh - var(--header-scroll-offset));
+    height: calc(100dvh - var(--header-scroll-offset));
+    max-height: 650px;
+}
+
+.containerTop {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.containerTopLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animatedWordContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.containerTopRight {
+    width: 90%;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 20px 0;
+}
+
+.title {
+    margin: 0;
+}
+
+.containerBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    color: #cfcfcf;
+}
+
+.button {
+    margin-top: 40px;
+    background-color: #00b686;
+}
+
+@media only screen and (max-height: 520px) and (orientation: landscape) {
+    .container {
+        min-height: calc(100svh - var(--header-scroll-offset));
+        min-height: calc(100dvh - var(--header-scroll-offset));
+        max-height: none;
+        justify-content: space-between;
+    }
+
+    .containerTop {
+        justify-content: center;
+    }
+
+    .containerTopRight {
+        width: 120px;
+        height: 120px;
+        margin: 8px 0;
+    }
+
+    .title {
+        font-size: 1.45rem;
+    }
+}

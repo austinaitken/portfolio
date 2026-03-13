@@ -1,9 +1,9 @@
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import Header from '@/top-level/Header/Header'
-import NavMenu from '@/top-level/NavMenu/NavMenu'
-import Body from '@/top-level/Body/Body'
 import Footer from '@/top-level/Footer/Footer'
+import NavMenu from '@/top-level/NavMenu/NavMenu'
+import MainContent from '@/top-level/MainContent/MainContent'
 
 import styles from './App.module.css'
 
@@ -11,16 +11,9 @@ const App = () => {
     const { isNavOpen } = useGlobalContext()
 
     return (
-        <div className={styles.app}>
+        <div className={styles.appContainer}>
             <Header />
-            <div className={styles.contentArea}>
-                <Body />
-                {isNavOpen && (
-                    <div className={styles.navOverlay}>
-                        <NavMenu />
-                    </div>
-                )}
-            </div>
+            {isNavOpen ? <NavMenu /> : <MainContent />}
             <Footer />
         </div>
     )

@@ -1,0 +1,9 @@
+html {
+    scroll-padding-top: var(--header-scroll-offset);
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}

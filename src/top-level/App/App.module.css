@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: stretch;
     width: 100vw;
-    height: calc(100vh - var(--header-scroll-offset, 0px));
+    height: calc(100svh - var(--header-scroll-offset, 0px));
     overflow-y: auto;
     overscroll-behavior: contain;
     background-color: black;

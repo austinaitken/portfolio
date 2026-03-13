@@ -86,13 +86,7 @@ const PagePreviews: HomePagePreview[] = [
         titleStart: 'A Light in the',
         titleEnd: 'Dark',
         titleEndDrawing: problemSolverPhraseDrawing,
-        // content: (
-        //     <img
-        //         className={styles.entrepreneurshipImage}
-        //         src={mdiumNewspaperHeadshotImage}
-        //         alt="Entrepreneurship"
-        //     />
-        // ),
+        content: <GraduationCard />,
         description: 'Crafting joy in the world through humour and software.',
         buttonLabel: 'View Personality',
         buttonAction: () => {

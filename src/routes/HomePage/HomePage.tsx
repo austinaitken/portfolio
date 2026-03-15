@@ -12,8 +12,10 @@ import {
 import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
 import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+import austinBeard from '@/assets/images/AustinBeard.png'
 
 import styles from './HomePage.module.css'
+import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 
 type HomePreviewKey =
     | 'introduction'
@@ -21,6 +23,7 @@ type HomePreviewKey =
     | 'entrepreneurship'
     | 'qualifications'
     | 'personality'
+    | 'resources'
 
 type HomePagePreview = PagePreviewProps & {
     key: HomePreviewKey
@@ -86,11 +89,23 @@ const PagePreviews: HomePagePreview[] = [
         titleStart: 'A Light in the',
         titleEnd: 'Dark',
         titleEndDrawing: problemSolverPhraseDrawing,
-        content: <GraduationCard />,
+        content: <img src={austinBeard} alt="Austin Aitken's profile picture" />,
         description: 'Crafting joy in the world through humour and software.',
         buttonLabel: 'View Personality',
         buttonAction: () => {
             // Navigate to Personality page
+        },
+    },
+    {
+        key: 'resources',
+        titleStart: 'Explore',
+        titleEnd: 'Resources',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        content: <ResourcePreviewGraphic />,
+        description: 'View or download resources related to my work and education.',
+        buttonLabel: 'View Resources',
+        buttonAction: () => {
+            // Navigate to Resources page
         },
     },
 ]

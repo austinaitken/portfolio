@@ -5,6 +5,7 @@ import ExperiencePage from '@/routes/ExperiencePage/ExperiencePage'
 import EntrepreneurshipPage from '@/routes/EntrepreneurshipPage/EntrepreneurshipPage'
 import QualificationsPage from '@/routes/QualificationsPage/QualificationsPage'
 import PersonalityPage from '@/routes/PersonalityPage/PersonalityPage'
+import ResourcesPage from './ResourcesPage/ResourcesPage'
 
 export type AppRoute = {
     path: string
@@ -29,6 +30,7 @@ export const APP_ROUTES: readonly AppRoute[] = [
         showInNav: true,
     },
     { path: '/personality', label: 'Personality', component: PersonalityPage, showInNav: true },
+    { path: '/resources', label: 'Resources', component: ResourcesPage, showInNav: true },
 ]
 
 export const NAV_ROUTES = APP_ROUTES.filter((route) => route.showInNav)

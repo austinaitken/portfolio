@@ -45,7 +45,7 @@ const PagePreviews: HomePagePreview[] = [
         titleEnd: 'Professional',
         titleEndDrawing: problemSolverPhraseDrawing,
         content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
-        description: 'Catching financial fraud for the largest institutions in North America.',
+        description: 'Catching fraud for the largest institutions in North America.',
         buttonLabel: 'View Experience',
         buttonAction: () => {
             // Navigate to Experience page

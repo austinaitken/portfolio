@@ -13,7 +13,9 @@
     /* padding-top: 10px;
     padding-bottom: 20px; */
     /* border: 1px solid red; */
-    height: 50px;
+    min-height: 50px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
 }
 
 .year {

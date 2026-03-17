@@ -15,7 +15,10 @@
 }
 
 .appContainerNavOpen {
-    height: 100svh;
+    height: 100dvh;
+    min-height: 100svh;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
     overflow: hidden;
 }
 
@@ -54,6 +57,11 @@
     pointer-events: none;
     visibility: hidden;
     transition: opacity 160ms ease;
+}
+
+.appContainerNavOpen .navOverlay {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
 }
 
 .navOverlayOpen {

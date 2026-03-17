@@ -5,8 +5,8 @@
     align-items: center;
     height: calc(100svh - var(--header-scroll-offset));
     gap: 1.5rem;
-    max-height: 650px;
-    min-height: 600px;
+    max-height: 625px;
+    min-height: 550px;
 }
 
 .titleContainer {

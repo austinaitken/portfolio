@@ -40,8 +40,20 @@ const PdfDocument = ({ file }: PdfDocumentProps) => {
         }
     }, [])
 
-    function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }): void => {
         setNumPages(numPages)
+    }
+
+    const previousPage = (): void => {
+        if (pageNumber > 1) {
+            setPageNumber(pageNumber - 1)
+        }
+    }
+
+    const nextPage = (): void => {
+        if (pageNumber < (numPages || 0)) {
+            setPageNumber(pageNumber + 1)
+        }
     }
 
     return (
@@ -51,7 +63,17 @@ const PdfDocument = ({ file }: PdfDocumentProps) => {
             </Document>
             <p>
                 Page {pageNumber} of {numPages}
-            </p>
+            </p>{' '}
+            {numPages && numPages > 1 && (
+                <div>
+                    <button onClick={previousPage} disabled={pageNumber <= 1}>
+                        Previous Page
+                    </button>
+                    <button onClick={nextPage} disabled={pageNumber >= (numPages || 0)}>
+                        Next Page
+                    </button>
+                </div>
+            )}
         </div>
     )
 }

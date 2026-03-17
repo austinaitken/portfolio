@@ -223,14 +223,14 @@
 }
 
 .bars {
-    font-size: 1.3rem;
+    font-size: 2rem;
     padding: 0.2rem;
     animation: fadeInAnimation ease 3s;
     color: #00b686;
 }
 
 .close {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding: 0.2rem;
     animation: fadeInAnimation ease 3s;
     color: #00b686;

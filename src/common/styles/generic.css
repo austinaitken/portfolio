@@ -7,3 +7,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+@supports selector(html:has(*)) {
+    html:has(.nav-open),
+    body:has(.nav-open) {
+        overflow: hidden;
+    }
+}

@@ -16,12 +16,12 @@
 
 .hr {
     width: 100%;
-    border: 1px solid #303030;
+    border: 1px solid #252525;
     margin: 0px;
     padding: 0px;
 }
 
-.navButton {
+/* .navButton {
     background-color: transparent;
     color: rgb(171, 171, 171);
     font-size: 1.3rem;
@@ -30,4 +30,4 @@
 
 .navButton:hover {
     color: #999999;
-}
+} */

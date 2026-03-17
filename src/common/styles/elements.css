@@ -44,7 +44,7 @@ h3 {
 }
 
 button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
     font-family: var(--font-family-base);
     background-color: var(--color-button-bg);
@@ -58,7 +58,12 @@ button {
 
 a {
     text-decoration: none;
+    font-size: 1.2rem;
     color: var(--color-link);
+}
+
+a:hover {
+    color: var(--color-link-hover);
 }
 
 footer {

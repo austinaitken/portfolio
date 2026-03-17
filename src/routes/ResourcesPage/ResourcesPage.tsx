@@ -4,6 +4,9 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import ResourcePreviewGraphic from './components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 
 const ResourcesPage = () => {
+    const resumePdfSrc = '/pdfs/Austin_Aitken_Resume.pdf#page=1&zoom=page-fit'
+    const transcriptPdfSrc = '/pdfs/Austin_Aitken_Transcript.pdf#page=1&zoom=page-fit'
+
     return (
         <section className={styles.container}>
             <PagePreview
@@ -20,18 +23,14 @@ const ResourcesPage = () => {
             <section className={styles.sectionContainer}>
                 <h2>Resume</h2>
                 <p>Last Updated: January 2024</p>
-                <iframe
-                    className={styles.verticalPdfViewer}
-                    src="/pdfs/Austin_Aitken_Resume.pdf"
-                    title="Resume"
-                />
+                <iframe className={styles.verticalPdfViewer} src={resumePdfSrc} title="Resume" />
             </section>
             <section className={styles.sectionContainer}>
                 <h2>Transcript</h2>
                 <p>Last Updated: January 2024</p>
                 <iframe
                     className={styles.horizontalPdfViewer}
-                    src="/pdfs/Austin_Aitken_Transcript.pdf"
+                    src={transcriptPdfSrc}
                     title="Transcript"
                 />
             </section>

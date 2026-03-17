@@ -13,6 +13,11 @@
     /* border: 1px solid magenta; */
 }
 
+.appContainerNavOpen {
+    height: 100svh;
+    overflow: hidden;
+}
+
 .contentArea {
     position: relative;
     z-index: 0;
@@ -20,22 +25,28 @@
     justify-content: center;
     width: 100%;
     flex-grow: 1;
+    align-items: stretch;
+}
+
+.appContainerNavOpen .contentArea {
+    min-height: 0;
+    overflow: hidden;
 }
 
 .navOverlay {
-    position: fixed;
-    top: var(--header-scroll-offset, 0px);
+    position: absolute;
+    inset: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    width: 100vw;
-    height: calc(100svh - var(--header-scroll-offset, 0px));
-    overflow-y: auto;
-    overscroll-behavior: contain;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
     background-color: black;
     opacity: 0;
     pointer-events: none;

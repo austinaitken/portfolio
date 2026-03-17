@@ -5,13 +5,20 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    align-self: stretch;
     width: 95%;
+    flex: 1 1 auto;
+    min-height: 100%;
+    padding: 0.75rem 0 1.5rem;
+    box-sizing: border-box;
+    /* border: 1px solid magenta; */
 }
 
 .hr {
     width: 100%;
     border: 1px solid #303030;
+    margin: 0px;
+    padding: 0px;
 }
 
 .navButton {

@@ -8,14 +8,14 @@ const GraduationCard = () => {
                 <div className={styles.card}>
                     <div className={`${styles.face} ${styles.front}`}>
                         <img
-                            className={styles.image}
+                            className={`${styles.image} ${styles.sceneImage}`}
                             src={graduationCard}
                             alt="Austin Aitken's Graduation Trading Card"
                         />
                     </div>
                     <div className={`${styles.face} ${styles.back}`}>
                         <img
-                            className={styles.image}
+                            className={`${styles.image} ${styles.sceneImage}`}
                             src={graduationCard}
                             alt="Austin Aitken's Graduation Trading Card"
                         />

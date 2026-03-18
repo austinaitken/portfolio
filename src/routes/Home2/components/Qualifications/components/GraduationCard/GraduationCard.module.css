@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid magenta; */
 }
 
 .scene {
@@ -33,7 +32,7 @@
 .face {
     position: absolute;
     inset: 0;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     overflow: hidden;
     backface-visibility: hidden;
     box-shadow:
@@ -52,8 +51,17 @@
 .image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    /* object-fit: contain;
+    display: block; */
+}
+
+.face .sceneImage {
     display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
 }
 
 .back .image {

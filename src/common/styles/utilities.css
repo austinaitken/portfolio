@@ -5,7 +5,7 @@
 .largeDescription {
     margin: 0;
     font-size: 1.3rem;
-    line-height: 1.8rem;
+    line-height: 1.9rem;
     font-weight: 300;
     color: var(--color-text-secondary);
 }
@@ -13,6 +13,14 @@
 .mediumDescription {
     margin: 0;
     font-size: 1.1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+}
+
+.smallDescription {
+    margin: 0;
+    font-size: 1rem;
     line-height: 1.8rem;
     font-weight: 300;
     color: var(--color-text-muted);

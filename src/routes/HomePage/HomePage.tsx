@@ -1,6 +1,8 @@
-import PagePreview from '@/common/components/PagePreview/PagePreview'
-import type { PagePreviewProps } from '@/common/components/PagePreview/PagePreview'
+import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+import type { PagePreviewProps } from '@/common/components/pages/PagePreview/PagePreview'
+import { useNavigate } from 'react-router-dom'
 import GraduationCard from '@/routes/Home2/components/Qualifications/components/GraduationCard/GraduationCard'
+import { NAV_ITEMS } from '@/common/constants/navigation'
 import {
     // darkWordDrawing,
     // firstNameWordDrawing,
@@ -29,91 +31,85 @@ type HomePagePreview = PagePreviewProps & {
     key: HomePreviewKey
 }
 
-const PagePreviews: HomePagePreview[] = [
-    {
-        key: 'introduction',
-        titleStart: "Hello, I'm",
-        titleEnd: 'Austin',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
-        description: 'An experienced software developer with an entrepreneurial spirit.',
-        buttonLabel: 'Contact Me',
-        buttonAction: () => {
-            // Navigate to Contact page
-        },
-    },
-    {
-        key: 'experience',
-        titleStart: 'An Experienced',
-        titleEnd: 'Professional',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
-        description: 'Catching financial fraud for the largest institutions in North America.',
-        buttonLabel: 'View Experience',
-        buttonAction: () => {
-            // Navigate to Experience page
-        },
-    },
-    {
-        key: 'entrepreneurship',
-        titleStart: 'An Entrepreneurial',
-        titleEnd: 'Flame',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: (
-            <img
-                className={styles.entrepreneurshipImage}
-                src={mdiumNewspaperHeadshotImage}
-                alt="Entrepreneurship"
-            />
-        ),
-        description: 'Turning ideas into live consumer products to solve real problems.',
-        buttonLabel: 'View Businesses',
-        buttonAction: () => {
-            // Navigate to Entrepreneurship page
-        },
-    },
-    {
-        key: 'qualifications',
-        titleStart: 'A Qualified',
-        titleEnd: 'Problem Solver',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: <GraduationCard />,
-        description: 'A Bachelor of Engineering graduate with academic distinction.',
-        buttonLabel: 'View Qualifications',
-        buttonAction: () => {
-            // Navigate to Qualifications page
-        },
-    },
-    {
-        key: 'personality',
-        titleStart: 'A Light in the',
-        titleEnd: 'Dark',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: <img src={austinBeard} alt="Austin Aitken's profile picture" />,
-        description: 'Crafting joy in the world through humour and software.',
-        buttonLabel: 'View Personality',
-        buttonAction: () => {
-            // Navigate to Personality page
-        },
-    },
-    {
-        key: 'resources',
-        titleStart: 'Explore',
-        titleEnd: 'Resources',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        content: <ResourcePreviewGraphic />,
-        description: 'View or download resources related to my work and education.',
-        buttonLabel: 'View Resources',
-        buttonAction: () => {
-            // Navigate to Resources page
-        },
-    },
-]
+const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const HomePage = () => {
+    const navigate = useNavigate()
+
+    const pagePreviews: HomePagePreview[] = [
+        {
+            key: 'introduction',
+            titleStart: "Hello, I'm",
+            titleEnd: 'Austin',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
+            description: 'An experienced software developer with an entrepreneurial spirit.',
+            buttonLabel: 'Contact Me',
+            buttonAction: scrollToContact,
+        },
+        {
+            key: 'experience',
+            titleStart: 'An Experienced',
+            titleEnd: 'Professional',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
+            description: 'Catching financial fraud for the largest institutions in North America.',
+            buttonLabel: 'View Experience',
+            buttonAction: () => navigate(NAV_ITEMS.experience.to),
+        },
+        {
+            key: 'entrepreneurship',
+            titleStart: 'An Entrepreneurial',
+            titleEnd: 'Flame',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: (
+                <img
+                    className={styles.entrepreneurshipImage}
+                    src={mdiumNewspaperHeadshotImage}
+                    alt="Entrepreneurship"
+                />
+            ),
+            description: 'Turning ideas into live consumer products to solve real problems.',
+            buttonLabel: 'View Businesses',
+            buttonAction: () => navigate(NAV_ITEMS.entrepreneurship.to),
+        },
+        {
+            key: 'qualifications',
+            titleStart: 'A Qualified',
+            titleEnd: 'Problem Solver',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <GraduationCard />,
+            description: 'A Bachelor of Engineering graduate with academic distinction.',
+            buttonLabel: 'View Qualifications',
+            buttonAction: () => navigate(NAV_ITEMS.qualifications.to),
+        },
+        {
+            key: 'personality',
+            titleStart: 'A Light in the',
+            titleEnd: 'Dark',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <img src={austinBeard} alt="Austin Aitken's profile picture" />,
+            description: 'Crafting joy in the world through humour and software.',
+            buttonLabel: 'View Personality',
+            buttonAction: () => navigate(NAV_ITEMS.personality.to),
+        },
+        {
+            key: 'resources',
+            titleStart: 'Explore',
+            titleEnd: 'Resources',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <ResourcePreviewGraphic />,
+            description: 'View or download resources related to my work and education.',
+            buttonLabel: 'View Resources',
+            buttonAction: () => navigate(NAV_ITEMS.resources.to),
+        },
+    ]
+
     return (
         <div className={styles.container}>
-            {PagePreviews.map((preview) => (
+            {pagePreviews.map((preview) => (
                 <PagePreview
                     key={preview.key}
                     titleStart={preview.titleStart}

@@ -1,7 +1,7 @@
-import styles from './Template.module.css'
+import styles from './PageIntroduction.module.css'
 
-const Template = () => {
+const PageIntroduction = () => {
     return <div className={styles.container}></div>
 }
 
-export default Template
+export default PageIntroduction

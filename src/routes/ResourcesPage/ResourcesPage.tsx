@@ -1,4 +1,4 @@
-import PagePreview from '@/common/components/PagePreview/PagePreview'
+import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import styles from './ResourcesPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ResourcePreviewGraphic from './components/ResourcePreviewGraphic/ResourcePreviewGraphic'
@@ -7,6 +7,9 @@ import PdfDocument from './components/PdfDocument/PdfDocument'
 const ResourcesPage = () => {
     const resumePdfSrc = '/pdfs/Austin_Aitken_Resume.pdf'
     const transcriptPdfSrc = '/pdfs/Austin_Aitken_Transcript.pdf'
+    const scrollToContact = () => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
 
     return (
         <section className={styles.container}>
@@ -17,9 +20,7 @@ const ResourcesPage = () => {
                 content={<ResourcePreviewGraphic />}
                 description="View or download resources related to my work and education."
                 buttonLabel="Contact Me"
-                buttonAction={() => {
-                    // Navigate to Resources page
-                }}
+                buttonAction={scrollToContact}
             />
             <section className={styles.sectionContainer}>
                 <h2>Resume</h2>

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import AnimatedDrawing, { type AnimatedDrawingData } from '../AnimatedDrawing/AnimatedDrawing'
+import AnimatedDrawing, { type AnimatedDrawingData } from '../../AnimatedDrawing/AnimatedDrawing'
 import styles from './PagePreview.module.css'
 
 export interface PagePreviewProps {

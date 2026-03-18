@@ -33,7 +33,7 @@ const ContactMe = ({ titleStart, titleEnd, titleEndDrawing }: ContactMeProps) =>
     }
 
     return (
-        <section className={styles.container}>
+        <section id="contact" className={styles.container}>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title} aria-label={fullTitle}>
                     {titleStart}

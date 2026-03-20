@@ -12,7 +12,7 @@
 
 .mediumDescription {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.6rem;
     font-weight: 300;
     color: var(--color-text-muted);
@@ -20,7 +20,7 @@
 
 .smallDescription {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.8rem;
     font-weight: 300;
     color: var(--color-text-muted);

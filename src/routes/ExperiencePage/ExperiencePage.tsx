@@ -1,6 +1,7 @@
 import styles from './ExperiencePage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 
@@ -40,101 +41,126 @@ const ExperiencePage = () => {
                 </button>
             </div>
             <section className={styles.bodyContainer}>
-                <h1 style={{ margin: '0px', padding: '0px' }}>Nasdaq Verafin</h1>
-                <section className={styles.sectionContainer}>
-                    <div className={styles.sectionTitleContainer}>
-                        <h2>Protection in Real-Time</h2>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '1rem',
+                    }}
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            // gap: '1rem',
+                        }}
+                    >
+                        <img
+                            className={styles.nasdaqLogo}
+                            src={nasdaqLogo}
+                            alt="Nasdaq Verafin Logo"
+                        />
+                        <h1>Nasdaq Verafin</h1>
+                    </div>
+                    <section className={styles.sectionContainer}>
+                        <div className={styles.sectionTitleContainer}>
+                            <h2>Protection in Real-Time</h2>
+                            <p className="mediumDescription">
+                                I pioneered the company's real-time fraud detection of payment
+                                services like E-Transfer and Zelle.
+                            </p>
+                        </div>
+                        <img
+                            className={styles.goldMedal}
+                            src={goldMedal}
+                            alt="Verafin Hackathon Winner"
+                        />
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Sub-Second Analysis</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Rest API</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Machine Learning</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                    </section>
+                    <section className={styles.sectionContainer}>
+                        <div className={styles.sectionTitleContainer}>
+                            <h2>Big Data for Big Results</h2>
+                            <p className="mediumDescription">
+                                I designed and maintained a big data pipeline to analyze thousands
+                                of financial institutions' data for fraud.
+                            </p>
+                        </div>
+                        <img
+                            className={styles.goldMedal}
+                            src={goldMedal}
+                            alt="Verafin Hackathon Winner"
+                        />
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Reduced Time & Cost</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Latest Technologies</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                        <div className={styles.subSectionTitleContainer}>
+                            <h3>Scalable Solutions</h3>
+                            <p className="smallDescription">
+                                By optimizing our data pipeline, I reduced processing time by 30%
+                                and costs by 20%.
+                            </p>
+                        </div>
+                    </section>
+                    <section className={styles.sectionContainer}>
+                        <h2>Training Crime Fighters</h2>
                         <p className="mediumDescription">
-                            I pioneered the company's real-time fraud detection of payment services
-                            like E-Transfer and Zelle.
+                            I mentored and supervised new software developers to achieve full-time
+                            employment and become top performers.
                         </p>
-                    </div>
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Sub-Second Analysis</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Rest API</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Machine Learning</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                </section>
-                <section className={styles.sectionContainer}>
-                    <div className={styles.sectionTitleContainer}>
-                        <h2>Big Data for Big Results</h2>
+                        <img
+                            className={styles.goldMedal}
+                            src={goldMedal}
+                            alt="Verafin Hackathon Winner"
+                        />
+                    </section>
+                    <section className={styles.sectionContainer}>
+                        <h2>Heroism Recognized</h2>
                         <p className="mediumDescription">
-                            I designed and maintained a big data pipeline to analyze thousands of
-                            financial institutions' data for fraud.
+                            I won the company's annual hackathon by detecting potential animal
+                            trafficking through banking and online data.
                         </p>
-                    </div>
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Reduced Time & Cost</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Latest Technologies</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                    <div className={styles.subSectionTitleContainer}>
-                        <h3>Scalable Solutions</h3>
-                        <p className="smallDescription">
-                            By optimizing our data pipeline, I reduced processing time by 30% and
-                            costs by 20%.
-                        </p>
-                    </div>
-                </section>
-                <section className={styles.sectionContainer}>
-                    <h2>Training Crime Fighters</h2>
-                    <p className="mediumDescription">
-                        I mentored and supervised new software developers to achieve full-time
-                        employment and become top performers.
-                    </p>
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                </section>
-                <section className={styles.sectionContainer}>
-                    <h2>Heroism Recognized</h2>
-                    <p className="mediumDescription">
-                        I won the company's annual hackathon by detecting potential animal
-                        trafficking through banking and online data.
-                    </p>
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                </section>
+                        <img
+                            className={styles.goldMedal}
+                            src={goldMedal}
+                            alt="Verafin Hackathon Winner"
+                        />
+                    </section>
+                </div>
             </section>
         </section>
     )

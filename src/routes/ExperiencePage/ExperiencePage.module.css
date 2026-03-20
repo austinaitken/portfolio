@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     align-items: center;
     /* height: calc(100svh - var(--header-scroll-offset)); */
-    gap: 3rem;
+    gap: 1rem;
     /* max-height: 650px;
     min-height: 600px; */
 }
@@ -14,10 +14,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
-.sectionContainer {
+.sectionsContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     /* border: 1px solid magenta; */
 }
 

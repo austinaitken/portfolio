@@ -2,17 +2,19 @@ import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 
 import styles from './EntrepreneurshipPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
-import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+// import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+// import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 
-import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
+// import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
 
-import mdiumNewspaper from '@/assets/images/mdium/Mdium_Newspaper 3.jpg'
+// import mdiumNewspaper from '@/assets/images/mdium/Mdium_Newspaper 3.jpg'
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
-import { useEffect, useRef, useState } from 'react'
+// import { useEffect, useRef, useState } from 'react'
+// import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 
 const screenshotItems = [
     { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
@@ -20,60 +22,53 @@ const screenshotItems = [
     { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
 ]
 
-const STAR_PATH =
-    'M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z'
+// const STAR_PATH =
+//     'M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z'
 
 const EntrepreneurshipPage = () => {
     const scrollToContact = () => {
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
     }
-    const starsContainerRef = useRef<HTMLDivElement | null>(null)
-    const [areStarsVisible, setAreStarsVisible] = useState(false)
+    // const starsContainerRef = useRef<HTMLDivElement | null>(null)
+    // const [areStarsVisible, setAreStarsVisible] = useState(false)
 
-    useEffect(() => {
-        const target = starsContainerRef.current
-        if (!target) {
-            return
-        }
+    // useEffect(() => {
+    //     const target = starsContainerRef.current
+    //     if (!target) {
+    //         return
+    //     }
 
-        if (typeof IntersectionObserver === 'undefined') {
-            setAreStarsVisible(true)
-            return
-        }
+    //     if (typeof IntersectionObserver === 'undefined') {
+    //         setAreStarsVisible(true)
+    //         return
+    //     }
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const entry = entries[0]
-                if (entry?.isIntersecting) {
-                    setAreStarsVisible(true)
-                    observer.unobserve(target)
-                }
-            },
-            { threshold: 0.35 }
-        )
+    //     const observer = new IntersectionObserver(
+    //         (entries) => {
+    //             const entry = entries[0]
+    //             if (entry?.isIntersecting) {
+    //                 setAreStarsVisible(true)
+    //                 observer.unobserve(target)
+    //             }
+    //         },
+    //         { threshold: 0.35 }
+    //     )
 
-        observer.observe(target)
+    //     observer.observe(target)
 
-        return () => {
-            observer.disconnect()
-        }
-    }, [])
+    //     return () => {
+    //         observer.disconnect()
+    //     }
+    // }, [])
 
     return (
         <section className={styles.container}>
-            <PagePreview
+            <PageIntroduction
                 titleStart="An Entrepreneurial"
                 titleEnd="Flame"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                content={
-                    <img
-                        className={styles.entrepreneurshipImage}
-                        src={mdiumNewspaperHeadshotImage}
-                        alt="Entrepreneurship"
-                    />
-                }
                 description="Turning ideas into live consumer products to solve real problems."
-                buttonLabel={'Contact Me'}
+                buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
             <PagePreview
@@ -81,11 +76,11 @@ const EntrepreneurshipPage = () => {
                 titleEnd="Care"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<TrioAppScreenshots screenshots={screenshotItems} />}
-                description="A veterinary telemedicine platform with advanced remote tools."
-                buttonLabel={'Visit Phauna'}
+                description="A veterinary telemedicine platform with the tools for remote care."
+                buttonLabel={'View Phauna'}
                 buttonAction={scrollToContact}
             />
-            <section className={styles.bodyContainer}>
+            {/* <section className={styles.bodyContainer}>
                 <section className={styles.sectionContainer}>
                     <div className={styles.sectionTitleContainer}>
                         <h2>Driven by Clinical Data</h2>
@@ -211,17 +206,17 @@ const EntrepreneurshipPage = () => {
                         alt="Verafin Hackathon Winner"
                     />
                 </section>
-            </section>
+            </section> */}
             <PagePreview
                 titleStart="Send Files"
                 titleEnd="Anywhere"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<TrioAppScreenshots screenshots={screenshotItems} />}
                 description="Transfer large files through emails, links, and short-lived codes."
-                buttonLabel={'Visit Mdium'}
+                buttonLabel={'View Mdium'}
                 buttonAction={scrollToContact}
             />
-            <section className={styles.bodyContainer}>
+            {/* <section className={styles.bodyContainer}>
                 <section className={styles.sectionContainer}>
                     <div className={styles.sectionTitleContainer}>
                         <h2>Making Headlines</h2>
@@ -329,7 +324,7 @@ const EntrepreneurshipPage = () => {
                         alt="Verafin Hackathon Winner"
                     />
                 </section>
-            </section>
+            </section> */}
         </section>
     )
 }

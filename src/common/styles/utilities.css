@@ -2,6 +2,16 @@
     cursor: pointer;
 }
 
+.primaryButton {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+}
+
+.secondaryButton {
+    background-color: var(--color-button-secondary-bg);
+    color: var(--color-button-secondary-text);
+}
+
 .largeDescription {
     margin: 0;
     font-size: 1.3rem;
@@ -12,7 +22,7 @@
 
 .mediumDescription {
     margin: 0;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
     font-weight: 300;
     color: var(--color-text-muted);
@@ -20,7 +30,7 @@
 
 .smallDescription {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.8rem;
     font-weight: 300;
     color: var(--color-text-muted);

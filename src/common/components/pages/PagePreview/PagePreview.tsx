@@ -26,21 +26,22 @@ const PagePreview = ({
     return (
         <section className={styles.container}>
             <div className={styles.titleContainer}>
-                <h1 className={styles.title} aria-label={fullTitle}>
+                <h2 className={styles.title} aria-label={fullTitle}>
                     {titleStart}
                     <span className={styles.visuallyHidden}> {titleEnd}</span>
-                </h1>
+                </h2>
                 <div className={styles.titleDrawing}>
                     <AnimatedDrawing
                         drawing={titleEndDrawing}
                         aria-hidden="true"
                         focusable="false"
+                        strokeColor={'var(--color-text-primary)'}
                     />
                 </div>
             </div>
             <div className={styles.contentContainer}>{content}</div>
-            <p className={`largeDescription ${styles.description}`}>{description}</p>
-            <button className={styles.button} onClick={buttonAction}>
+            <p className={`mediumDescription ${styles.description}`}>{description}</p>
+            <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
                 {buttonLabel}
             </button>
         </section>

@@ -6,6 +6,8 @@ import EntrepreneurshipPage from '@/routes/EntrepreneurshipPage/Entrepreneurship
 import QualificationsPage from '@/routes/QualificationsPage/QualificationsPage'
 import PersonalityPage from '@/routes/PersonalityPage/PersonalityPage'
 import ResourcesPage from './ResourcesPage/ResourcesPage'
+import MdiumPage from './EntrepreneurshipPage/sub-pages/MdiumPage/MdiumPage'
+import PhaunaPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/PhaunaPage'
 
 export type AppRoute = {
     path: string
@@ -22,6 +24,18 @@ export const APP_ROUTES: readonly AppRoute[] = [
         label: 'Entrepreneurship',
         component: EntrepreneurshipPage,
         showInNav: true,
+    },
+    {
+        path: '/entrepreneurship/phauna',
+        label: 'Phauna',
+        component: PhaunaPage,
+        showInNav: false,
+    },
+    {
+        path: '/entrepreneurship/mdium',
+        label: 'Mdium',
+        component: MdiumPage,
+        showInNav: false,
     },
     {
         path: '/qualifications',

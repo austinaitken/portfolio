@@ -18,6 +18,7 @@ import austinBeard from '@/assets/images/AustinBeard.png'
 
 import styles from './HomePage.module.css'
 import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
+import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 
 type HomePreviewKey =
     | 'introduction'
@@ -39,23 +40,24 @@ const HomePage = () => {
     const navigate = useNavigate()
 
     const pagePreviews: HomePagePreview[] = [
-        {
-            key: 'introduction',
-            titleStart: "Hello, I'm",
-            titleEnd: 'Austin',
-            titleEndDrawing: problemSolverPhraseDrawing,
-            content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
-            description: 'An experienced software developer with an entrepreneurial spirit.',
-            buttonLabel: 'Contact Me',
-            buttonAction: scrollToContact,
-        },
+        // {
+        //     key: 'introduction',
+        //     titleStart: "Hello, I'm",
+        //     titleEnd: 'Austin',
+        //     titleEndDrawing: problemSolverPhraseDrawing,
+        //     isTopTitle: true,
+        //     content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
+        //     description: 'An experienced software developer with an entrepreneurial spirit.',
+        //     buttonLabel: 'Contact Me',
+        //     buttonAction: scrollToContact,
+        // },
         {
             key: 'experience',
             titleStart: 'An Experienced',
             titleEnd: 'Professional',
             titleEndDrawing: problemSolverPhraseDrawing,
             content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
-            description: 'Catching financial fraud for the largest institutions in North America.',
+            description: 'Catching fraud for the largest institutions in North America.',
             buttonLabel: 'View Experience',
             buttonAction: () => navigate(NAV_ITEMS.experience.to),
         },
@@ -109,18 +111,45 @@ const HomePage = () => {
 
     return (
         <div className={styles.container}>
-            {pagePreviews.map((preview) => (
-                <PagePreview
-                    key={preview.key}
-                    titleStart={preview.titleStart}
-                    titleEnd={preview.titleEnd}
-                    titleEndDrawing={preview.titleEndDrawing}
-                    content={preview.content}
-                    description={preview.description}
-                    buttonLabel={preview.buttonLabel}
-                    buttonAction={preview.buttonAction}
-                />
-            ))}
+            <section className={styles.introContainer}>
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title} aria-label="Hello, I'm Austin Aitken">
+                        Hello, I'm
+                        <span className={styles.visuallyHidden}> Austin Aitken</span>
+                    </h1>
+
+                    <div className={styles.titleDrawing}>
+                        <AnimatedDrawing
+                            drawing={problemSolverPhraseDrawing}
+                            aria-hidden="true"
+                            focusable="false"
+                        />
+                    </div>
+                </div>
+                <div className={styles.contentContainer}>
+                    <img src={headshotImage} alt="Austin Aitken's profile picture" />
+                </div>
+                <p className={`largeDescription ${styles.description}`}>
+                    An experienced software developer with an entrepreneurial spirit.
+                </p>
+                <button className={styles.button} onClick={scrollToContact}>
+                    Contact Me
+                </button>
+            </section>
+            <div className={styles.pagePreviewsContainer}>
+                {pagePreviews.map((preview) => (
+                    <PagePreview
+                        key={preview.key}
+                        titleStart={preview.titleStart}
+                        titleEnd={preview.titleEnd}
+                        titleEndDrawing={preview.titleEndDrawing}
+                        content={preview.content}
+                        description={preview.description}
+                        buttonLabel={preview.buttonLabel}
+                        buttonAction={preview.buttonAction}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

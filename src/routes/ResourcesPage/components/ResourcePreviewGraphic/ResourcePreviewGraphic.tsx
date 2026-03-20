@@ -7,11 +7,23 @@ const ResourcePreviewGraphic = () => {
     return (
         <div className={styles.container}>
             <div className={styles.row}>
-                <img className={styles.icon} src={githubLogo} alt="GitHub Logo" />
-                <img className={styles.icon} src={documentIcon} alt="Document Icon" />
+                <img
+                    className={`${styles.icon} ${styles.monochromeIcon}`}
+                    src={githubLogo}
+                    alt="GitHub Logo"
+                />
+                <img
+                    className={`${styles.icon} ${styles.monochromeIcon}`}
+                    src={documentIcon}
+                    alt="Document Icon"
+                />
             </div>
             <div className={styles.row}>
-                <img className={styles.icon} src={documentIcon} alt="Document Icon" />
+                <img
+                    className={`${styles.icon} ${styles.monochromeIcon}`}
+                    src={documentIcon}
+                    alt="Document Icon"
+                />
                 <img className={styles.icon} src={linkedinLogo} alt="LinkedIn Logo" />
             </div>
         </div>

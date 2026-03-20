@@ -14,7 +14,15 @@ const MainContent = () => {
     }, [pathname])
 
     return (
-        <main style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <main
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1.5rem',
+                width: '90%',
+                margin: '0 auto',
+            }}
+        >
             <Routes>
                 {APP_ROUTES.map(({ path, component: PageComponent }) => (
                     <Route key={path} path={path} element={<PageComponent />} />

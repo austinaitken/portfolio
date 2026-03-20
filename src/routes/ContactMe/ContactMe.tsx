@@ -35,15 +35,16 @@ const ContactMe = ({ titleStart, titleEnd, titleEndDrawing }: ContactMeProps) =>
     return (
         <section id="contact" className={styles.container}>
             <div className={styles.titleContainer}>
-                <h1 className={styles.title} aria-label={fullTitle}>
+                <h2 className={styles.title} aria-label={fullTitle}>
                     {titleStart}
                     <span className={styles.visuallyHidden}> {titleEnd}</span>
-                </h1>
+                </h2>
                 <div className={styles.titleDrawing}>
                     <AnimatedDrawing
                         drawing={titleEndDrawing}
                         aria-hidden="true"
                         focusable="false"
+                        strokeColor="var(--color-text-primary)"
                     />
                 </div>
             </div>
@@ -51,25 +52,29 @@ const ContactMe = ({ titleStart, titleEnd, titleEndDrawing }: ContactMeProps) =>
                 <div className={styles.addressButtonContainer}>
                     <button
                         style={{ width: '100%' }}
-                        className={styles.button}
+                        className="secondaryButton"
                         onClick={handleEmailCopy}
                     >
                         austinlaitken@gmail.com
                     </button>
-                    <button className={styles.button} onClick={handleEmail}>
+                    <button className="secondaryButton" onClick={handleEmail}>
                         📧
                     </button>
                 </div>
                 <div className={styles.addressButtonContainer}>
                     <button
                         style={{ width: '100%' }}
-                        className={styles.button}
+                        className="secondaryButton"
                         onClick={handlePhoneCopy}
                     >
                         + 1 (709) 770-3770
                     </button>
-                    <button onClick={handlePhoneCall}>📞</button>
-                    <button onClick={handlePhoneMessage}>💬</button>
+                    <button className="secondaryButton" onClick={handlePhoneCall}>
+                        📞
+                    </button>
+                    <button className="secondaryButton" onClick={handlePhoneMessage}>
+                        💬
+                    </button>
                 </div>
             </div>
         </section>

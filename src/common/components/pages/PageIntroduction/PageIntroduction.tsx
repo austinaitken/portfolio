@@ -1,7 +1,46 @@
-import styles from './Template.module.css'
+import AnimatedDrawing, { type AnimatedDrawingData } from '../../AnimatedDrawing/AnimatedDrawing'
+import styles from './PageIntroduction.module.css'
 
-const Template = () => {
-    return <div className={styles.container}></div>
+export interface PageIntroductionProps {
+    titleStart: string
+    titleEnd: string
+    titleEndDrawing: AnimatedDrawingData
+    description: string
+    buttonLabel: string
+    buttonAction: () => void
 }
 
-export default Template
+const PageIntroduction = ({
+    titleStart,
+    titleEnd,
+    titleEndDrawing,
+    description,
+    buttonLabel,
+    buttonAction,
+}: PageIntroductionProps) => {
+    const fullTitle = `${titleStart} ${titleEnd}`.trim()
+
+    return (
+        <section className={styles.container}>
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title} aria-label={fullTitle}>
+                    {titleStart}
+                    <span className={styles.visuallyHidden}> {titleEnd}</span>
+                </h1>
+                <div className={styles.titleDrawing}>
+                    <AnimatedDrawing
+                        drawing={titleEndDrawing}
+                        aria-hidden="true"
+                        focusable="false"
+                    />
+                </div>
+            </div>
+            <p className={`largeDescription ${styles.description}`}>{description}</p>
+            <button className={styles.button} onClick={buttonAction}>
+                {buttonLabel}
+            </button>
+        </section>
+    )
+}
+
+export default PageIntroduction

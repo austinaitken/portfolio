@@ -1,9 +1,94 @@
 import styles from './ExperiencePage.module.css'
-import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
+// import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
-import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
+// import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 
-import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+// import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+// import PageSubSection from '@/common/components/pages/PageSubSection/PageSubSection'
+import PageSection, {
+    type PageSectionProps,
+} from '@/common/components/pages/PageSection/PageSection'
+
+const ExperiencePageContent: PageSectionProps[] = [
+    {
+        title: 'Protection in Real-Time',
+        description:
+            "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
+        content: () => (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+        subSections: [
+            {
+                title: 'Sub-Second Analysis',
+                description:
+                    'By optimizing our data pipeline, I reduced processing time by 30% and costs by 20%.',
+                content: () => (
+                    <img
+                        className={styles.goldMedal}
+                        src={goldMedal}
+                        alt="Verafin Hackathon Winner"
+                    />
+                ),
+            },
+            {
+                title: 'Rest API',
+                description:
+                    'I developed a REST API to provide real-time fraud insights to clients, enhancing their ability to respond swiftly.',
+                content: () => (
+                    <img
+                        className={styles.goldMedal}
+                        src={goldMedal}
+                        alt="Verafin Hackathon Winner"
+                    />
+                ),
+            },
+            {
+                title: 'Machine Learning',
+                description:
+                    'I implemented machine learning models that improved fraud detection accuracy by 25%, significantly reducing false positives.',
+                content: () => (
+                    <img
+                        className={styles.goldMedal}
+                        src={goldMedal}
+                        alt="Verafin Hackathon Winner"
+                    />
+                ),
+            },
+        ],
+    },
+    {
+        title: 'Big Data for Big Results',
+        description:
+            "I designed and maintained a big data pipeline to analyze thousands of financial institutions' data for fraud.",
+        content: () => (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        title: 'Training Crime Fighters',
+        description:
+            'I mentored and supervised new software developers to achieve full-time employment and become top performers.',
+        content: () => (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        title: 'Heroism Recognized',
+        description:
+            'I won the company’s annual hackathon by detecting potential animal trafficking through banking and online data.',
+        content: () => (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        title: 'Commanding the Stage',
+        description:
+            'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+        content: () => (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+]
 
 const ExperiencePage = () => {
     const scrollToContact = () => {
@@ -12,61 +97,23 @@ const ExperiencePage = () => {
 
     return (
         <section className={styles.container}>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '1.5rem',
-                }}
-            >
-                <div className={styles.titleContainer}>
-                    <h1 className={styles.title} aria-label="An Experienced Professional">
-                        An Experienced
-                        <span className={styles.visuallyHidden}> Professional</span>
-                    </h1>
-                    <div className={styles.titleDrawing}>
-                        <AnimatedDrawing
-                            drawing={problemSolverPhraseDrawing}
-                            aria-hidden="true"
-                            focusable="false"
-                        />
-                    </div>
-                </div>
-                <p className={`largeDescription ${styles.description}`}>
-                    Catching financial fraud for the largest institutions in North America.
-                </p>
-                <button className={styles.button} onClick={scrollToContact}>
-                    Contact Me
-                </button>
+            <h1>Nasdaq Verafin</h1>
+            <p className="largeDescription">
+                Catching financial fraud for the largest institutions in North America.
+            </p>
+            <button onClick={scrollToContact}>Contact Me</button>
+            <div className={styles.sectionsContainer}>
+                {ExperiencePageContent.map(({ title, description, content, subSections }) => (
+                    <PageSection
+                        key={title}
+                        title={title}
+                        description={description}
+                        content={content}
+                        subSections={subSections}
+                    />
+                ))}
             </div>
-            <section className={styles.bodyContainer}>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '1rem',
-                    }}
-                >
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            // gap: '1rem',
-                        }}
-                    >
-                        <img
-                            className={styles.nasdaqLogo}
-                            src={nasdaqLogo}
-                            alt="Nasdaq Verafin Logo"
-                        />
-                        <h1>Nasdaq Verafin</h1>
-                    </div>
-                    <section className={styles.sectionContainer}>
+            {/* <section className={styles.sectionContainer}>
                         <div className={styles.sectionTitleContainer}>
                             <h2>Protection in Real-Time</h2>
                             <p className="mediumDescription">
@@ -161,7 +208,7 @@ const ExperiencePage = () => {
                         />
                     </section>
                 </div>
-            </section>
+            </section> */}
         </section>
     )
 }

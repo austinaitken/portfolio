@@ -18,7 +18,7 @@ const MainContent = () => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1.5rem',
+                gap: '2rem',
                 width: '90%',
                 margin: '0 auto',
             }}

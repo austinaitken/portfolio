@@ -39,7 +39,7 @@ const PagePreview = ({
                     />
                 </div>
             </div>
-            {/* <div className={styles.contentContainer}>{content}</div> */}
+            <div className={styles.contentContainer}>{content}</div>
             <p className={`mediumDescription ${styles.description}`}>{description}</p>
             <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
                 {buttonLabel}

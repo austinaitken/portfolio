@@ -5,7 +5,8 @@
     align-items: center;
     height: 100%;
     gap: 0rem;
-    height: calc((100svh - var(--header-scroll-offset)) * (7 / 10));
+    height: calc((100svh - var(--header-scroll-offset)) * (8 / 10));
+    width: 90%;
     /* max-height: 625px;
     min-height: 550px; */
     /* border: 1px solid purple; */
@@ -36,8 +37,8 @@
     width: 90%;
     flex: 1;
     min-height: 0;
-    max-height: 150px;
-    margin-top: 5px;
+    /* max-height: 150px; */
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 

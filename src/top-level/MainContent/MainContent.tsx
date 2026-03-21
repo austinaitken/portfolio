@@ -18,9 +18,12 @@ const MainContent = () => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 gap: '2rem',
                 width: '90%',
                 margin: '0 auto',
+                marginBottom: '10px',
             }}
         >
             <Routes>

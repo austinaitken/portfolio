@@ -1,10 +1,11 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    gap: 2rem;
+    gap: 0rem;
+    height: calc((100svh - var(--header-scroll-offset)) / 2);
     /* max-height: 625px;
     min-height: 550px; */
     /* border: 1px solid purple; */
@@ -75,7 +76,7 @@
 
 .button {
     width: 100%;
-    max-width: 16rem;
+    max-width: 13rem;
     margin-bottom: 1rem;
 }
 

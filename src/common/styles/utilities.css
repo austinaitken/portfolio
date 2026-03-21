@@ -10,6 +10,7 @@
 .secondaryButton {
     background-color: var(--color-button-secondary-bg);
     color: var(--color-button-secondary-text);
+    font-size: 1.2rem;
 }
 
 .largeDescription {

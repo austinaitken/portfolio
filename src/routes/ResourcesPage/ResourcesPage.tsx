@@ -1,4 +1,4 @@
-import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+// import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import styles from './ResourcesPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ResourcePreviewGraphic from './components/ResourcePreviewGraphic/ResourcePreviewGraphic'

@@ -19,7 +19,7 @@ const PageIntroduction = ({
     description,
     buttonLabel,
     buttonAction,
-    content,
+    // content,
 }: PageIntroductionProps) => {
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
 

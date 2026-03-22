@@ -10,7 +10,22 @@
 .secondaryButton {
     background-color: var(--color-button-secondary-bg);
     color: var(--color-button-secondary-text);
+    font-size: 1.2rem;
+}
+
+.tertiaryButton {
+    background-color: var(--color-button-tertiary-bg);
+    color: var(--color-button-tertiary-text);
     font-size: 1.1rem;
+    padding: 0;
+}
+
+.iconButton {
+    background-color: transparent;
+    color: var(--color-button-text);
+    font-size: 2rem;
+    padding: 0;
+    border-radius: 50%;
 }
 
 .largeDescription {

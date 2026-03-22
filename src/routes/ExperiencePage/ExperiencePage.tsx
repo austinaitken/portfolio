@@ -2,7 +2,7 @@ import styles from './ExperiencePage.module.css'
 // import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
-import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+// import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 // import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 
 // import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
@@ -110,6 +110,9 @@ const ExperiencePage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
+            <div>
+                <h2>Nasdaq Verafin</h2>
+            </div>
             <div className={styles.sectionsContainer}>
                 {ExperiencePageContent.map(({ title, description, content, subSections }) => (
                     <PageSection

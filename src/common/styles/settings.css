@@ -9,9 +9,11 @@
 
     --color-link: #c1c1c1;
     --color-link-hover: #6b6b6b;
-    --color-button-bg: #00b686;
+    --color-button-bg: #33b391;
     --color-button-text: #000000;
     --color-button-secondary-bg: #c1c1c1;
     --color-button-secondary-text: #000000;
+    --color-button-tertiary-bg: transparent;
+    --color-button-tertiary-text: #b1b1b1;
     --color-footer: rgba(255, 255, 255, 0.75);
 }

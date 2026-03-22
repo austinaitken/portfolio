@@ -1,15 +1,27 @@
 .animatedPath {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
+    animation-name: writePath;
+    animation-duration: var(--stroke-duration);
+    animation-delay: var(--stroke-delay);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
-:global(@keyframes writePath) {
+.animatedPathWithFill {
+    animation-name: writePath, fadeFill;
+    animation-duration: var(--stroke-duration), var(--fill-duration);
+    animation-delay: var(--stroke-delay), var(--fill-delay);
+}
+
+@keyframes writePath {
     to {
         stroke-dashoffset: 0;
     }
 }
 
-:global(@keyframes fadeFill) {
+@keyframes fadeFill {
     from {
         fill-opacity: 0;
     }

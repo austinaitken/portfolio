@@ -3,7 +3,7 @@ import AnimatedDrawing, {
 } from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import styles from './NasdaqVerafinGraphic.module.css'
 
-import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
+// import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 
 const nasdaqDrawing: AnimatedDrawingData = {
     viewBox: '0 0 1550 1325',

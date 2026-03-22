@@ -3,6 +3,7 @@ import styles from './ResourcesPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ResourcePreviewGraphic from './components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 import PdfDocument from './components/PdfDocument/PdfDocument'
+import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 
 const ResourcesPage = () => {
     const resumePdfSrc = '/pdfs/Austin_Aitken_Resume.pdf'
@@ -13,7 +14,7 @@ const ResourcesPage = () => {
 
     return (
         <section className={styles.container}>
-            <PagePreview
+            <PageIntroduction
                 titleStart="Explore"
                 titleEnd="Resources"
                 titleEndDrawing={problemSolverPhraseDrawing}

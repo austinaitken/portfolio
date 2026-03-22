@@ -26,6 +26,13 @@ interface AnimatedDrawingProps extends Omit<
     fillDelayAfterPathComplete?: number
 }
 
+type AnimatedPathStyle = CSSProperties & {
+    '--stroke-duration': string
+    '--stroke-delay': string
+    '--fill-duration'?: string
+    '--fill-delay'?: string
+}
+
 const AnimatedDrawing = ({
     drawing,
     delayBetweenPaths = 0.1,
@@ -39,10 +46,9 @@ const AnimatedDrawing = ({
 }: AnimatedDrawingProps) => {
     const { paths, viewBox } = drawing
     const hasAnimatedFill = Boolean(fillColor) && fillAnimationDuration > 0
-    const totalStrokeAnimationDuration = paths.reduce(
-        (total, path) => total + path.duration,
-        0,
-    ) + Math.max(paths.length - 1, 0) * delayBetweenPaths
+    const totalStrokeAnimationDuration =
+        paths.reduce((total, path) => total + path.duration, 0) +
+        Math.max(paths.length - 1, 0) * delayBetweenPaths
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox={viewBox} {...svgProps}>
@@ -55,17 +61,13 @@ const AnimatedDrawing = ({
                 const strokeDelay = previousDuration + gapDelay
                 const fillDelay = totalStrokeAnimationDuration + fillDelayAfterPathComplete
 
-                const style: CSSProperties = {
-                    animationName: hasAnimatedFill ? 'writePath, fadeFill' : 'writePath',
-                    animationDuration: hasAnimatedFill
-                        ? `${path.duration}s, ${fillAnimationDuration}s`
-                        : `${path.duration}s`,
-                    animationDelay: hasAnimatedFill
-                        ? `${strokeDelay}s, ${fillDelay}s`
-                        : `${strokeDelay}s`,
-                    animationTimingFunction: 'linear',
-                    animationFillMode: 'forwards',
-                    animationIterationCount: '1',
+                const style: AnimatedPathStyle = {
+                    '--stroke-duration': `${path.duration}s`,
+                    '--stroke-delay': `${strokeDelay}s`,
+                    ...(hasAnimatedFill && {
+                        '--fill-duration': `${fillAnimationDuration}s`,
+                        '--fill-delay': `${fillDelay}s`,
+                    }),
                     fill: fillColor ?? 'none',
                     ...(hasAnimatedFill && { fillOpacity: 0 }),
                     fillRule,
@@ -78,7 +80,7 @@ const AnimatedDrawing = ({
                 return (
                     <path
                         key={index}
-                        className={styles.animatedPath}
+                        className={`${styles.animatedPath} ${hasAnimatedFill ? styles.animatedPathWithFill : ''}`}
                         d={path.d}
                         pathLength={1}
                         style={style}

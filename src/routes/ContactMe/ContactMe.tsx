@@ -50,29 +50,21 @@ const ContactMe = ({ titleStart, titleEnd, titleEndDrawing }: ContactMeProps) =>
             </div>
             <div className={styles.buttonContainer}>
                 <div className={styles.addressButtonContainer}>
-                    <button
-                        style={{ width: '100%' }}
-                        className="secondaryButton"
-                        onClick={handleEmailCopy}
-                    >
+                    <button className="tertiaryButton" onClick={handleEmailCopy}>
                         austinlaitken@gmail.com
                     </button>
-                    <button className="secondaryButton" onClick={handleEmail}>
+                    <button className="iconButton" onClick={handleEmail}>
                         📧
                     </button>
                 </div>
                 <div className={styles.addressButtonContainer}>
-                    <button
-                        style={{ width: '100%' }}
-                        className="secondaryButton"
-                        onClick={handlePhoneCopy}
-                    >
+                    <button className="tertiaryButton" onClick={handlePhoneCopy}>
                         + 1 (709) 770-3770
                     </button>
-                    <button className="secondaryButton" onClick={handlePhoneCall}>
+                    <button className="iconButton" onClick={handlePhoneCall}>
                         📞
                     </button>
-                    <button className="secondaryButton" onClick={handlePhoneMessage}>
+                    <button className="iconButton" onClick={handlePhoneMessage}>
                         💬
                     </button>
                 </div>

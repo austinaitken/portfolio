@@ -12,7 +12,7 @@ import {
 } from '@/common/constants/animated-drawings'
 
 import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
-import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
+// import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 import austinBeard from '@/assets/images/AustinBeard.png'
 

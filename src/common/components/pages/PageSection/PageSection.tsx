@@ -5,7 +5,7 @@ import styles from './PageSection.module.css'
 export interface PageSectionProps {
     title: string
     description: string
-    content: ComponentType
+    content?: ComponentType
     subSections?: PageSubSectionProps[]
 }
 
@@ -14,9 +14,11 @@ const PageSection = ({ title, description, content: Content, subSections }: Page
         <section className={styles.container}>
             <h2 className={styles.title}>{title}</h2>
             <p className={`mediumDescription ${styles.description}`}>{description}</p>
-            <div className={styles.contentContainer}>
-                <Content />
-            </div>
+            {Content && (
+                <div className={styles.contentContainer}>
+                    <Content />
+                </div>
+            )}
             <div className={styles.subSectionsContainer}>
                 {subSections?.map((subSection) => (
                     <PageSubSection

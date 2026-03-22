@@ -19,6 +19,7 @@ import austinBeard from '@/assets/images/AustinBeard.png'
 import styles from './HomePage.module.css'
 import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import NasdaqVerafinGraphic from './NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 
 type HomePreviewKey =
     | 'introduction'
@@ -56,8 +57,8 @@ const HomePage = () => {
             titleStart: 'An Experienced',
             titleEnd: 'Professional',
             titleEndDrawing: problemSolverPhraseDrawing,
-            content: <img src={nasdaqLogo} alt="Nasdaq Logo" />,
-            description: 'Catching financial fraud for the largest institutions in North America.',
+            content: <NasdaqVerafinGraphic />,
+            description: 'Catching fraud for the largest institutions in North America.',
             buttonLabel: 'View Experience',
             buttonAction: () => navigate(NAV_ITEMS.experience.to),
         },

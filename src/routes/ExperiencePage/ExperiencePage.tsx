@@ -1,6 +1,8 @@
 import styles from './ExperiencePage.module.css'
 // import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
+import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 // import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 
 // import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
@@ -8,6 +10,8 @@ import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 import PageSection, {
     type PageSectionProps,
 } from '@/common/components/pages/PageSection/PageSection'
+import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
+import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 
 const ExperiencePageContent: PageSectionProps[] = [
     {
@@ -22,37 +26,37 @@ const ExperiencePageContent: PageSectionProps[] = [
                 title: 'Sub-Second Analysis',
                 description:
                     'By optimizing our data pipeline, I reduced processing time by 30% and costs by 20%.',
-                content: () => (
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                ),
+                // content: () => (
+                //     <img
+                //         className={styles.goldMedal}
+                //         src={goldMedal}
+                //         alt="Verafin Hackathon Winner"
+                //     />
+                // ),
             },
             {
                 title: 'Rest API',
                 description:
                     'I developed a REST API to provide real-time fraud insights to clients, enhancing their ability to respond swiftly.',
-                content: () => (
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                ),
+                // content: () => (
+                //     <img
+                //         className={styles.goldMedal}
+                //         src={goldMedal}
+                //         alt="Verafin Hackathon Winner"
+                //     />
+                // ),
             },
             {
                 title: 'Machine Learning',
                 description:
                     'I implemented machine learning models that improved fraud detection accuracy by 25%, significantly reducing false positives.',
-                content: () => (
-                    <img
-                        className={styles.goldMedal}
-                        src={goldMedal}
-                        alt="Verafin Hackathon Winner"
-                    />
-                ),
+                // content: () => (
+                //     <img
+                //         className={styles.goldMedal}
+                //         src={goldMedal}
+                //         alt="Verafin Hackathon Winner"
+                //     />
+                // ),
             },
         ],
     },
@@ -97,11 +101,15 @@ const ExperiencePage = () => {
 
     return (
         <section className={styles.container}>
-            <h1>Nasdaq Verafin</h1>
-            <p className="largeDescription">
-                Catching financial fraud for the largest institutions in North America.
-            </p>
-            <button onClick={scrollToContact}>Contact Me</button>
+            <PageIntroduction
+                titleStart="An Experienced"
+                titleEnd="Professional"
+                titleEndDrawing={problemSolverPhraseDrawing}
+                content={<NasdaqVerafinGraphic />}
+                description="Catching fraud for the largest institutions in North America."
+                buttonLabel="Contact Me"
+                buttonAction={scrollToContact}
+            />
             <div className={styles.sectionsContainer}>
                 {ExperiencePageContent.map(({ title, description, content, subSections }) => (
                     <PageSection

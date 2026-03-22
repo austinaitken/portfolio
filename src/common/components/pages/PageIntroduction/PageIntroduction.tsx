@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import AnimatedDrawing, { type AnimatedDrawingData } from '../../AnimatedDrawing/AnimatedDrawing'
 import styles from './PageIntroduction.module.css'
 
@@ -8,6 +9,7 @@ export interface PageIntroductionProps {
     description: string
     buttonLabel: string
     buttonAction: () => void
+    content?: ReactNode
 }
 
 const PageIntroduction = ({
@@ -17,6 +19,7 @@ const PageIntroduction = ({
     description,
     buttonLabel,
     buttonAction,
+    content,
 }: PageIntroductionProps) => {
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
 
@@ -35,6 +38,7 @@ const PageIntroduction = ({
                     />
                 </div>
             </div>
+            <div className={styles.contentContainer}>{content}</div>
             <p className={`largeDescription ${styles.description}`}>{description}</p>
             <button className={styles.button} onClick={buttonAction}>
                 {buttonLabel}

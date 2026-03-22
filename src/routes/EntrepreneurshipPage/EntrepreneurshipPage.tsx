@@ -1,31 +1,26 @@
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+import { useNavigate } from 'react-router-dom'
 
 import styles from './EntrepreneurshipPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 // import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
-// import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
+import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
+import mdiumLogo from '@/assets/images/mdium/Mdium_Logo.png'
 
 // import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
-import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
 
 // import mdiumNewspaper from '@/assets/images/mdium/Mdium_Newspaper 3.jpg'
-import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
 // import { useEffect, useRef, useState } from 'react'
 // import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
-
-const screenshotItems = [
-    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
-    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2' },
-    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
-]
 
 // const STAR_PATH =
 //     'M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z'
 
 const EntrepreneurshipPage = () => {
+    const navigate = useNavigate()
+
     const scrollToContact = () => {
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
     }
@@ -67,6 +62,7 @@ const EntrepreneurshipPage = () => {
                 titleStart="An Entrepreneurial"
                 titleEnd="Flame"
                 titleEndDrawing={problemSolverPhraseDrawing}
+                content={<img src={mdiumNewspaperHeadshotImage} alt="Entrepreneurship" />}
                 description="Turning ideas into live consumer products to solve real problems."
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
@@ -75,10 +71,21 @@ const EntrepreneurshipPage = () => {
                 titleStart="Virtual Veterinary"
                 titleEnd="Care"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                // content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                content={<img src={phaunaLogo} alt="Phauna Logo" />}
                 description="A veterinary telemedicine platform with the tools for remote care."
                 buttonLabel={'View Phauna'}
-                buttonAction={scrollToContact}
+                buttonAction={() => navigate('/entrepreneurship/phauna')}
+            />
+            <PagePreview
+                titleStart="Send Files"
+                titleEnd="Anywhere"
+                titleEndDrawing={problemSolverPhraseDrawing}
+                content={<img src={mdiumLogo} alt="Mdium Logo" />}
+                // content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                description="Transfer large files through emails, links, and short-lived codes."
+                buttonLabel={'View Mdium'}
+                buttonAction={() => navigate('/entrepreneurship/mdium')}
             />
             {/* <section className={styles.bodyContainer}>
                 <section className={styles.sectionContainer}>
@@ -207,15 +214,6 @@ const EntrepreneurshipPage = () => {
                     />
                 </section>
             </section> */}
-            <PagePreview
-                titleStart="Send Files"
-                titleEnd="Anywhere"
-                titleEndDrawing={problemSolverPhraseDrawing}
-                content={<TrioAppScreenshots screenshots={screenshotItems} />}
-                description="Transfer large files through emails, links, and short-lived codes."
-                buttonLabel={'View Mdium'}
-                buttonAction={scrollToContact}
-            />
             {/* <section className={styles.bodyContainer}>
                 <section className={styles.sectionContainer}>
                     <div className={styles.sectionTitleContainer}>

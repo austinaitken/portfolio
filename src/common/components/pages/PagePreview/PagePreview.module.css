@@ -7,8 +7,8 @@
     gap: 0rem;
     height: calc((100svh - var(--header-scroll-offset)) * (8 / 10));
     width: 90%;
-    /* max-height: 625px;
-    min-height: 550px; */
+    max-height: 500px;
+    min-height: 400px;
     /* border: 1px solid purple; */
 }
 
@@ -40,6 +40,7 @@
     /* max-height: 150px; */
     margin-top: 10px;
     margin-bottom: 20px;
+    /* border: 1px solid cyan; */
 }
 
 .contentContainer > * {

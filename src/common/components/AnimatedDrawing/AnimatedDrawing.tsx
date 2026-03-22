@@ -20,6 +20,10 @@ interface AnimatedDrawingProps extends Omit<
     delayBetweenPaths?: number
     strokeColor?: string
     strokeWidth?: number
+    fillColor?: string
+    fillRule?: SVGProps<SVGPathElement>['fillRule']
+    fillAnimationDuration?: number
+    fillDelayAfterPathComplete?: number
 }
 
 const AnimatedDrawing = ({
@@ -27,9 +31,18 @@ const AnimatedDrawing = ({
     delayBetweenPaths = 0.1,
     strokeColor = '#00b686',
     strokeWidth = 15,
+    fillColor,
+    fillRule,
+    fillAnimationDuration = 0.3,
+    fillDelayAfterPathComplete = 0,
     ...svgProps
 }: AnimatedDrawingProps) => {
     const { paths, viewBox } = drawing
+    const hasAnimatedFill = Boolean(fillColor) && fillAnimationDuration > 0
+    const totalStrokeAnimationDuration = paths.reduce(
+        (total, path) => total + path.duration,
+        0,
+    ) + Math.max(paths.length - 1, 0) * delayBetweenPaths
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox={viewBox} {...svgProps}>
@@ -39,10 +52,23 @@ const AnimatedDrawing = ({
                     .reduce((total, previousPath) => total + previousPath.duration, 0)
                 const gapDelay = index === 0 ? 0 : index * delayBetweenPaths
 
+                const strokeDelay = previousDuration + gapDelay
+                const fillDelay = totalStrokeAnimationDuration + fillDelayAfterPathComplete
+
                 const style: CSSProperties = {
-                    animationDuration: `${path.duration}s`,
-                    animationDelay: `${previousDuration + gapDelay}s`,
-                    fill: 'none',
+                    animationName: hasAnimatedFill ? 'writePath, fadeFill' : 'writePath',
+                    animationDuration: hasAnimatedFill
+                        ? `${path.duration}s, ${fillAnimationDuration}s`
+                        : `${path.duration}s`,
+                    animationDelay: hasAnimatedFill
+                        ? `${strokeDelay}s, ${fillDelay}s`
+                        : `${strokeDelay}s`,
+                    animationTimingFunction: 'linear',
+                    animationFillMode: 'forwards',
+                    animationIterationCount: '1',
+                    fill: fillColor ?? 'none',
+                    ...(hasAnimatedFill && { fillOpacity: 0 }),
+                    fillRule,
                     stroke: strokeColor,
                     strokeWidth,
                     strokeMiterlimit: 10,

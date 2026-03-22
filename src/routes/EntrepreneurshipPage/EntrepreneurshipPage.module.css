@@ -4,9 +4,10 @@
     justify-content: space-evenly;
     align-items: center;
     /* height: calc(100svh - var(--header-scroll-offset)); */
-    gap: 2rem;
+    gap: 3rem;
     /* max-height: 650px;
     min-height: 600px; */
+    /* border: 1px solid red; */
 }
 
 .newsMediaContainer {

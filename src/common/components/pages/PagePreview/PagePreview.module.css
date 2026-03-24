@@ -9,6 +9,7 @@
     width: 90%;
     max-height: 500px;
     min-height: 400px;
+    max-width: 350px;
     /* border: 1px solid purple; */
 }
 
@@ -37,6 +38,7 @@
     width: 90%;
     flex: 1;
     min-height: 0;
+    max-width: 250px;
     /* max-height: 150px; */
     margin-top: 10px;
     margin-bottom: 20px;

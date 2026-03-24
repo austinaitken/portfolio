@@ -19,7 +19,7 @@ const PageIntroduction = ({
     description,
     buttonLabel,
     buttonAction,
-    // content,
+    content,
 }: PageIntroductionProps) => {
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
 
@@ -38,7 +38,7 @@ const PageIntroduction = ({
                     />
                 </div>
             </div>
-            {/* <div className={styles.contentContainer}>{content}</div> */}
+            <div className={styles.contentContainer}>{content}</div>
             <p className={`largeDescription ${styles.description}`}>{description}</p>
             <button className={styles.button} onClick={buttonAction}>
                 {buttonLabel}

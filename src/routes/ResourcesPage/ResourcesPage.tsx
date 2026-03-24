@@ -23,16 +23,18 @@ const ResourcesPage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
-            <section className={styles.sectionContainer}>
-                <h2>Resume</h2>
-                <p>Last Updated: January 2024</p>
-                <PdfDocument file={resumePdfSrc} />
-            </section>
-            <section className={styles.sectionContainer}>
-                <h2>Transcript</h2>
-                <p>Last Updated: January 2024</p>
-                <PdfDocument file={transcriptPdfSrc} />
-            </section>
+            <div className={styles.documentsRow}>
+                <section className={styles.sectionContainer}>
+                    <h2>Resume</h2>
+                    <p>Last Updated: January 2024</p>
+                    <PdfDocument file={resumePdfSrc} />
+                </section>
+                <section className={styles.sectionContainer}>
+                    <h2>Transcript</h2>
+                    <p>Last Updated: January 2024</p>
+                    <PdfDocument file={transcriptPdfSrc} />
+                </section>
+            </div>
         </section>
     )
 }

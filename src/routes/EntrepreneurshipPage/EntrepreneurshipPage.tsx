@@ -67,26 +67,28 @@ const EntrepreneurshipPage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
-            <PagePreview
-                titleStart="Virtual Veterinary"
-                titleEnd="Care"
-                titleEndDrawing={problemSolverPhraseDrawing}
-                // content={<TrioAppScreenshots screenshots={screenshotItems} />}
-                content={<img src={phaunaLogo} alt="Phauna Logo" />}
-                description="A veterinary telemedicine platform with the tools for remote care."
-                buttonLabel={'View Phauna'}
-                buttonAction={() => navigate('/entrepreneurship/phauna')}
-            />
-            <PagePreview
-                titleStart="Send Files"
-                titleEnd="Anywhere"
-                titleEndDrawing={problemSolverPhraseDrawing}
-                content={<img src={mdiumLogo} alt="Mdium Logo" />}
-                // content={<TrioAppScreenshots screenshots={screenshotItems} />}
-                description="Transfer large files through emails, links, and short-lived codes."
-                buttonLabel={'View Mdium'}
-                buttonAction={() => navigate('/entrepreneurship/mdium')}
-            />
+            <div className={styles.previewRow}>
+                <PagePreview
+                    titleStart="Virtual Veterinary"
+                    titleEnd="Care"
+                    titleEndDrawing={problemSolverPhraseDrawing}
+                    // content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                    content={<img src={phaunaLogo} alt="Phauna Logo" />}
+                    description="A veterinary telemedicine platform with the tools for remote care."
+                    buttonLabel={'View Phauna'}
+                    buttonAction={() => navigate('/entrepreneurship/phauna')}
+                />
+                <PagePreview
+                    titleStart="Send Files"
+                    titleEnd="Anywhere"
+                    titleEndDrawing={problemSolverPhraseDrawing}
+                    content={<img src={mdiumLogo} alt="Mdium Logo" />}
+                    // content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                    description="Transfer large files through emails, links, and short-lived codes."
+                    buttonLabel={'View Mdium'}
+                    buttonAction={() => navigate('/entrepreneurship/mdium')}
+                />
+            </div>
             {/* <section className={styles.bodyContainer}>
                 <section className={styles.sectionContainer}>
                     <div className={styles.sectionTitleContainer}>

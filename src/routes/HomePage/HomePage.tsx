@@ -18,7 +18,7 @@ import austinBeard from '@/assets/images/AustinBeard.png'
 
 import styles from './HomePage.module.css'
 import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
-import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import NasdaqVerafinGraphic from './NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 
 type HomePreviewKey =
@@ -112,31 +112,15 @@ const HomePage = () => {
 
     return (
         <div className={styles.container}>
-            <section className={styles.introContainer}>
-                <div className={styles.titleContainer}>
-                    <h1 className={styles.title} aria-label="Hello, I'm Austin Aitken">
-                        Hello, I'm
-                        <span className={styles.visuallyHidden}> Austin Aitken</span>
-                    </h1>
-
-                    <div className={styles.titleDrawing}>
-                        <AnimatedDrawing
-                            drawing={problemSolverPhraseDrawing}
-                            aria-hidden="true"
-                            focusable="false"
-                        />
-                    </div>
-                </div>
-                <div className={styles.contentContainer}>
-                    <img src={headshotImage} alt="Austin Aitken's profile picture" />
-                </div>
-                <p className={`largeDescription ${styles.description}`}>
-                    An experienced software developer with an entrepreneurial spirit.
-                </p>
-                <button className={styles.button} onClick={scrollToContact}>
-                    Contact Me
-                </button>
-            </section>
+            <PageIntroduction
+                titleStart="Hello, I'm"
+                titleEnd="Austin Aitken"
+                titleEndDrawing={problemSolverPhraseDrawing}
+                content={<img src={headshotImage} alt="Austin Aitken's profile picture" />}
+                description="An experienced software developer with an entrepreneurial spirit."
+                buttonLabel="Contact Me"
+                buttonAction={scrollToContact}
+            />
             <div className={styles.pagePreviewsContainer}>
                 {pagePreviews.map((preview) => (
                     <PagePreview

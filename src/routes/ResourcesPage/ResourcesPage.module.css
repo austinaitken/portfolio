@@ -7,6 +7,12 @@
     padding: 0 1rem; */
 }
 
+.documentsRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .sectionContainer {
     margin: 2rem 0;
     display: flex;
@@ -14,6 +20,18 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+@media only screen and (min-width: 900px) {
+    .documentsRow {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .sectionContainer {
+        flex: 1;
+    }
 }
 
 .verticalPdfViewer {

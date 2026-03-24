@@ -2,7 +2,7 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './QualificationsPage.module.css'
 import GraduationCard from '../Home2/components/Qualifications/components/GraduationCard/GraduationCard'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
-import PageSection from '@/common/components/pages/PageSection/PageSection'
+// import PageSection from '@/common/components/pages/PageSection/PageSection'
 import trophyImage from '@/assets/images/university/Work_Term_Award.png'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 

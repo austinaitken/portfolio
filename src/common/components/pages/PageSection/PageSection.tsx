@@ -1,4 +1,4 @@
-import type { ComponentType, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import PageSubSection, { type PageSubSectionProps } from '../PageSubSection/PageSubSection'
 import styles from './PageSection.module.css'
 

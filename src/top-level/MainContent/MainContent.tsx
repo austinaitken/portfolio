@@ -3,8 +3,8 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 
 import HomePage from '@/routes/HomePage/HomePage'
 import { APP_ROUTES } from '@/routes/routes'
-import ContactMe from '@/routes/ContactMe/ContactMe'
-import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
+// import ContactMe from '@/routes/ContactMe/ContactMe'
+// import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import styles from './MainContent.module.css'
 
 const MainContent = () => {

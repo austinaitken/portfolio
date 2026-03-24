@@ -67,7 +67,7 @@ const EntrepreneurshipPage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
-            <div className={styles.previewRow}>
+            <div className={styles.pagePreviewsContainer}>
                 <PagePreview
                     titleStart="Virtual Veterinary"
                     titleEnd="Care"

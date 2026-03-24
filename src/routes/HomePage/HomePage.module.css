@@ -98,7 +98,7 @@
     margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
     .pagePreviewsContainer {
         display: flex;
         flex-direction: row;
@@ -111,14 +111,19 @@
     }
 
     .pagePreviewsContainer > * {
-        flex: 0 0 calc((100% - 3rem) / 3);
-        max-width: calc((100% - 3rem) / 3);
+        flex: 0 0 calc((100% - 3rem) / 2);
+        width: calc((100% - 3rem) / 2);
     }
 }
 
 @media only screen and (min-width: 1050px) {
     .pagePreviewsContainer {
         width: min(100%, 1500px);
+    }
+
+    .pagePreviewsContainer > * {
+        flex: 0 0 calc((100% - 3rem) / 3);
+        width: calc((100% - 3rem) / 3);
     }
 
     .introContainer {

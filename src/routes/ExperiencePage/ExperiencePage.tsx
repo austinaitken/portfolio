@@ -18,7 +18,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         title: 'Protection in Real-Time',
         description:
             "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
-        content: () => (
+        content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
         subSections: [
@@ -64,7 +64,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         title: 'Big Data for Big Results',
         description:
             "I designed and maintained a big data pipeline to analyze thousands of financial institutions' data for fraud.",
-        content: () => (
+        content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
@@ -72,7 +72,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         title: 'Training Crime Fighters',
         description:
             'I mentored and supervised new software developers to achieve full-time employment and become top performers.',
-        content: () => (
+        content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
@@ -80,7 +80,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         title: 'Heroism Recognized',
         description:
             'I won the company’s annual hackathon by detecting potential animal trafficking through banking and online data.',
-        content: () => (
+        content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
@@ -88,7 +88,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         title: 'Commanding the Stage',
         description:
             'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
-        content: () => (
+        content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },

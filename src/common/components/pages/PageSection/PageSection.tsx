@@ -1,24 +1,20 @@
-import type { ComponentType } from 'react'
+import type { ComponentType, ReactNode } from 'react'
 import PageSubSection, { type PageSubSectionProps } from '../PageSubSection/PageSubSection'
 import styles from './PageSection.module.css'
 
 export interface PageSectionProps {
     title: string
     description: string
-    content?: ComponentType
+    content?: ReactNode
     subSections?: PageSubSectionProps[]
 }
 
-const PageSection = ({ title, description, content: Content, subSections }: PageSectionProps) => {
+const PageSection = ({ title, description, content, subSections }: PageSectionProps) => {
     return (
         <section className={styles.container}>
             <h2 className={styles.title}>{title}</h2>
+            {content && <div className={styles.contentContainer}>{content}</div>}
             <p className={`mediumDescription ${styles.description}`}>{description}</p>
-            {Content && (
-                <div className={styles.contentContainer}>
-                    <Content />
-                </div>
-            )}
             <div className={styles.subSectionsContainer}>
                 {subSections?.map((subSection) => (
                     <PageSubSection

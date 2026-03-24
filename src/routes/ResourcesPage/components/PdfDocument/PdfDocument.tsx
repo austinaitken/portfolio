@@ -61,13 +61,15 @@ const PdfDocument = ({ file }: PdfDocumentProps) => {
             <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
                 {containerWidth ? <Page pageNumber={pageNumber} width={containerWidth} /> : null}
             </Document>
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>{' '}
+            {numPages && numPages > 1 && (
+                <p>
+                    Page {pageNumber} of {numPages}
+                </p>
+            )}
             {numPages && numPages > 1 && (
                 <div>
                     <button onClick={previousPage} disabled={pageNumber <= 1}>
-                        Previous Page
+                        Last Page
                     </button>
                     <button onClick={nextPage} disabled={pageNumber >= (numPages || 0)}>
                         Next Page

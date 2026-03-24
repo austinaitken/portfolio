@@ -1,8 +1,11 @@
-.mainContentContainer {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-grow: 1;
+    align-items: center;
+    gap: 2rem;
     width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
     max-width: 1200px;
-    min-width: 320px;
 }

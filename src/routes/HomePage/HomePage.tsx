@@ -28,6 +28,7 @@ type HomePreviewKey =
     | 'qualifications'
     | 'personality'
     | 'resources'
+    | 'contact'
 
 type HomePagePreview = PagePreviewProps & {
     key: HomePreviewKey
@@ -70,6 +71,7 @@ const HomePage = () => {
             content: (
                 <img
                     className={styles.entrepreneurshipImage}
+                    style={{ borderRadius: '25px' }}
                     src={mdiumNewspaperHeadshotImage}
                     alt="Entrepreneurship"
                 />
@@ -93,7 +95,13 @@ const HomePage = () => {
             titleStart: 'A Light in the',
             titleEnd: 'Dark',
             titleEndDrawing: problemSolverPhraseDrawing,
-            content: <img src={austinBeard} alt="Austin Aitken's profile picture" />,
+            content: (
+                <img
+                    style={{ borderRadius: '25px' }}
+                    src={austinBeard}
+                    alt="Austin Aitken's profile picture"
+                />
+            ),
             description: 'Crafting joy in the world through humour and software.',
             buttonLabel: 'View Personality',
             buttonAction: () => navigate(NAV_ITEMS.personality.to),
@@ -108,6 +116,16 @@ const HomePage = () => {
             buttonLabel: 'View Resources',
             buttonAction: () => navigate(NAV_ITEMS.resources.to),
         },
+        {
+            key: 'contact',
+            titleStart: 'Contact Me',
+            titleEnd: 'Today',
+            titleEndDrawing: problemSolverPhraseDrawing,
+            content: <ResourcePreviewGraphic />,
+            description: 'Get in touch with me to discuss opportunities or collaborations.',
+            buttonLabel: 'Contact Me',
+            buttonAction: () => navigate(NAV_ITEMS.contact.to),
+        },
     ]
 
     return (
@@ -116,7 +134,13 @@ const HomePage = () => {
                 titleStart="Hello, I'm"
                 titleEnd="Austin Aitken"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                content={<img src={headshotImage} alt="Austin Aitken's profile picture" />}
+                content={
+                    <img
+                        style={{ borderRadius: '25px' }}
+                        src={headshotImage}
+                        alt="Austin Aitken's profile picture"
+                    />
+                }
                 description="An experienced software developer with an entrepreneurial spirit."
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}

@@ -8,7 +8,7 @@
     max-height: 625px;
     min-height: 550px;
     min-width: 350px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .titleContainer {

@@ -109,6 +109,7 @@
         width: min(100%, 900px);
         height: auto;
         min-height: 0;
+        max-height: 450px;
         margin-inline: auto;
         padding-inline: clamp(1rem, 2.5vw, 2rem);
         padding-block: clamp(2rem, 3vw, 3rem);

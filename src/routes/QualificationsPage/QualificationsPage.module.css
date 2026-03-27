@@ -52,3 +52,55 @@
         width: min(100%, 1500px);
     }
 }
+
+@property --grade-progress {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes draw-border-91 {
+    from {
+        --grade-progress: 0deg;
+    }
+    to {
+        --grade-progress: 327.6deg;
+    }
+}
+
+@keyframes draw-border-90 {
+    from {
+        --grade-progress: 0deg;
+    }
+    to {
+        --grade-progress: 324deg;
+    }
+}
+
+.gradeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 25px;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(#000000, #000000) padding-box,
+        conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                transparent calc(360deg - var(--grade-progress)),
+                white calc(360deg - var(--grade-progress)),
+                var(--color-link-hover) 360deg
+            )
+            border-box;
+}
+
+.gradeBox91 {
+    animation: draw-border-91 2s ease-out 0.5s both;
+}
+
+.gradeBox90 {
+    animation: draw-border-90 2s ease-out 0.5s both;
+}

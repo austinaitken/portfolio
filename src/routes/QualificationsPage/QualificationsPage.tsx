@@ -20,6 +20,21 @@ const QualificationsPage = () => {
             />
             <div className={styles.pagePreviewsContainer}>
                 <PagePreview
+                    titleStart="Engineering"
+                    titleEnd="Graduate"
+                    titleEndDrawing={problemSolverPhraseDrawing}
+                    content={
+                        <img
+                            className={styles.trophyImage}
+                            src={trophyImage}
+                            alt="The trophy for the Director's Award for Exemplary Work Terms"
+                        />
+                    }
+                    description="Earned a Bachelor of Engineering - Computer Major - as a top performer."
+                    buttonLabel="View Program"
+                    buttonAction={() => {}}
+                />
+                <PagePreview
                     titleStart="Excellence"
                     titleEnd="Awarded"
                     titleEndDrawing={problemSolverPhraseDrawing}
@@ -39,62 +54,38 @@ const QualificationsPage = () => {
                     titleEnd="Proven"
                     titleEndDrawing={problemSolverPhraseDrawing}
                     content={
-                        <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-                                <div
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.75rem',
+                                height: '100%',
+                                // border: '1px solid #00b686',
+                            }}
+                        >
+                            <div className={`${styles.gradeBox} ${styles.gradeBox91}`}>
+                                <p
                                     style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        flex: 1,
-                                        aspectRatio: '1',
-                                        // border: '1px solid #00b686',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        borderRadius: '30px',
+                                        fontSize: '2rem',
+                                        margin: '0px',
+                                        padding: '0px',
                                     }}
                                 >
-                                    <p
-                                        style={{
-                                            fontSize: '1.8rem',
-                                            margin: '0px',
-                                            padding: '0px',
-                                        }}
-                                    >
-                                        91%
-                                    </p>
-                                    <p style={{ fontSize: '1rem', margin: '0px', padding: '0px' }}>
-                                        Real-Time Operating
-                                        <br />
-                                        Systems
-                                    </p>
-                                </div>
-                                <div
+                                    91%
+                                </p>
+                                <p className="smallDescription">Real-Time Operating Systems</p>
+                            </div>
+                            <div className={`${styles.gradeBox} ${styles.gradeBox90}`}>
+                                <p
                                     style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        flex: 1,
-                                        aspectRatio: '1',
-                                        // border: '1px solid #00b686',
-                                        borderRadius: '30px',
+                                        fontSize: '2rem',
+                                        margin: '0px',
+                                        padding: '0px',
                                     }}
                                 >
-                                    <p
-                                        style={{
-                                            fontSize: '1.8rem',
-                                            margin: '0px',
-                                            padding: '0px',
-                                        }}
-                                    >
-                                        90%
-                                    </p>
-                                    <p style={{ fontSize: '1rem', margin: '0px', padding: '0px' }}>
-                                        Computer
-                                        <br />
-                                        Security
-                                    </p>
-                                </div>
+                                    90%
+                                </p>
+                                <p className="smallDescription">Computer Security</p>
                             </div>
                         </div>
                     }

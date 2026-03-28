@@ -8,6 +8,8 @@ import PersonalityPage from '@/routes/PersonalityPage/PersonalityPage'
 import ResourcesPage from './ResourcesPage/ResourcesPage'
 import MdiumPage from './EntrepreneurshipPage/sub-pages/MdiumPage/MdiumPage'
 import PhaunaPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/PhaunaPage'
+import AmelloPage from './PersonalityPage/sub-pages/AmelloPage/AmelloPage'
+import DmvSimulatorPage from './PersonalityPage/sub-pages/DmvSimulatorPage/DmvSimulatorPage'
 
 export type AppRoute = {
     path: string
@@ -44,6 +46,18 @@ export const APP_ROUTES: readonly AppRoute[] = [
         showInNav: true,
     },
     { path: '/personality', label: 'Personality', component: PersonalityPage, showInNav: true },
+    {
+        path: '/personality/amello',
+        label: 'Amello',
+        component: AmelloPage,
+        showInNav: false,
+    },
+    {
+        path: '/personality/dmv-simulator',
+        label: 'DMV Simulator',
+        component: DmvSimulatorPage,
+        showInNav: false,
+    },
     { path: '/resources', label: 'Resources', component: ResourcesPage, showInNav: true },
 ]
 

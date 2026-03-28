@@ -120,6 +120,16 @@ const PhaunaPage = () => {
                 buttonLabel={'Contact Me'}
                 buttonAction={() => {}}
             />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>
+                        Phauna Technologies&nbsp;&nbsp;&middot;&nbsp;&nbsp;Founder
+                    </p>
+                    <p className={styles.experienceDate}>Nov 2023 &mdash; Mar 2026</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
             <div className={styles.sectionsContainer}>
                 {PhaunaPageContent.map(
                     ({

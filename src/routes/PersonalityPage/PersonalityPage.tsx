@@ -8,6 +8,7 @@ import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppSc
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 const screenshotItems = [
     { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
@@ -16,6 +17,7 @@ const screenshotItems = [
 ]
 
 const PersonalityPage = () => {
+    const navigate = useNavigate()
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -34,8 +36,8 @@ const PersonalityPage = () => {
                     titleEndDrawing={problemSolverPhraseDrawing}
                     content={<TrioAppScreenshots screenshots={screenshotItems} />}
                     description="Play interest-based games with new friends on a video call."
-                    buttonLabel="View Personality"
-                    buttonAction={() => {}}
+                    buttonLabel="View Amello"
+                    buttonAction={() => navigate('/personality/amello')}
                 />
                 <PagePreview
                     titleStart="Experience Life on"
@@ -43,8 +45,8 @@ const PersonalityPage = () => {
                     titleEndDrawing={problemSolverPhraseDrawing}
                     content={<TrioAppScreenshots screenshots={screenshotItems} />}
                     description="Enjoy renewing your license in this humour-based story game."
-                    buttonLabel="View Personality"
-                    buttonAction={() => {}}
+                    buttonLabel="View Simulator"
+                    buttonAction={() => navigate('/personality/dmv-simulator')}
                 />
             </div>
         </div>

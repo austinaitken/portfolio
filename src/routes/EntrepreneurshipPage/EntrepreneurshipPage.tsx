@@ -87,6 +87,7 @@ const EntrepreneurshipPage = () => {
                     description="Transfer large files through emails, links, and short-lived codes."
                     buttonLabel={'View Mdium'}
                     buttonAction={() => navigate('/entrepreneurship/mdium')}
+                    contentSide="right"
                 />
             </div>
             {/* <section className={styles.bodyContainer}>

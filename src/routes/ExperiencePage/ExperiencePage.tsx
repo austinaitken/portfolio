@@ -149,31 +149,16 @@ const ExperiencePage = () => {
                     <span>May 2022&nbsp;&nbsp;&mdash;&nbsp;&nbsp;Nov 2023</span>
                 </p>
             </section> */}
-            <section
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '3rem',
-                    marginTop: '2.5rem',
-                    // border: '1px solid red',
-                }}
-            >
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <p className="contextText">Nasdaq Verafin</p>
-                    <p>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</p>
-                    <p className="contextText">Software Developer</p>
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>
+                        Nasdaq Verafin&nbsp;&nbsp;&middot;&nbsp;&nbsp;Software Developer
+                    </p>
+                    <p className={styles.experienceDate}>May 2022 &mdash; Nov 2023</p>
                 </div>
-                <p className="contextText">May 2022&nbsp;&nbsp;&mdash;&nbsp;&nbsp;Nov 2023</p>
-            </section>
+                <span className={styles.dividerLine} />
+            </div>
             <div className={styles.sectionsContainer}>
                 {ExperiencePageContent.map(
                     ({

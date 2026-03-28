@@ -10,6 +10,7 @@ export interface PagePreviewProps {
     buttonLabel: string
     buttonAction: () => void
     content?: ReactNode
+    contentSide?: 'left' | 'right'
 }
 
 const PagePreview = ({
@@ -20,11 +21,15 @@ const PagePreview = ({
     buttonLabel,
     buttonAction,
     content,
+    contentSide = 'left',
 }: PagePreviewProps) => {
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
 
     return (
-        <section className={styles.container}>
+        <div className={styles.wrapper}>
+        <section
+            className={`${styles.container} ${contentSide === 'right' ? styles.contentRight : ''}`}
+        >
             <div className={styles.titleContainer}>
                 <h2 className={styles.title} aria-label={fullTitle}>
                     {titleStart}
@@ -45,6 +50,7 @@ const PagePreview = ({
                 {buttonLabel}
             </button>
         </section>
+        </div>
     )
 }
 

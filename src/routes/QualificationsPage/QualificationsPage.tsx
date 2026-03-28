@@ -18,8 +18,19 @@ const QualificationsPage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>
+                        Memorial University of Newfoundland&nbsp;&nbsp;&middot;&nbsp;&nbsp;Bachelor
+                        of Engineering (Computer)
+                    </p>
+                    <p className={styles.experienceDate}>Sep 2017 &mdash; May 2022</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
             <div className={styles.pagePreviewsContainer}>
-                <PagePreview
+                {/* <PagePreview
                     titleStart="Engineering"
                     titleEnd="Graduate"
                     titleEndDrawing={problemSolverPhraseDrawing}
@@ -33,7 +44,7 @@ const QualificationsPage = () => {
                     description="Earned a Bachelor of Engineering - Computer Major - as a top performer."
                     buttonLabel="View Program"
                     buttonAction={() => {}}
-                />
+                /> */}
                 <PagePreview
                     titleStart="Excellence"
                     titleEnd="Awarded"
@@ -53,6 +64,7 @@ const QualificationsPage = () => {
                     titleStart="Academically"
                     titleEnd="Proven"
                     titleEndDrawing={problemSolverPhraseDrawing}
+                    contentSide="right"
                     content={
                         <div
                             style={{

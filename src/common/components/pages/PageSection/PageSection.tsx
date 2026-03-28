@@ -10,6 +10,8 @@ export interface PageSectionProps {
     titleStart: string
     titleEnd: string
     titleEndDrawing: AnimatedDrawingData
+    buttonLabel?: string
+    buttonAction?: () => void
 }
 
 const PageSection = ({
@@ -19,6 +21,8 @@ const PageSection = ({
     description,
     content,
     subSections,
+    buttonLabel,
+    buttonAction,
 }: PageSectionProps) => {
     const fullTitle = `${titleStart} ${titleEnd}`.trim()
     return (
@@ -49,6 +53,11 @@ const PageSection = ({
                     />
                 ))}
             </div>
+            {buttonLabel && buttonAction && (
+                <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
+                    {buttonLabel}
+                </button>
+            )}
         </section>
     )
 }

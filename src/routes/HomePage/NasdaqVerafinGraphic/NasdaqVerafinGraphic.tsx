@@ -27,6 +27,7 @@ const NasdaqVerafinGraphic = () => {
                 fillRule="evenodd"
                 drawing={nasdaqDrawing}
             />
+
             {/* <p className={styles.label}>Nasdaq Verafin</p> */}
             {/* <img src={nasdaqTextLogo} alt="Nasdaq Text Logo" /> */}
         </div>

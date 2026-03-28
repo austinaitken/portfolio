@@ -7,7 +7,7 @@ import styles from './RealtimePaymentsFraud.module.css'
 const RealtimePaymentsFraud = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.personContainer} style={{ marginRight: '15px' }}>
+            <div className={styles.personContainer}>
                 <svg
                     className={styles.stickMan}
                     viewBox="0 0 120 200"
@@ -33,7 +33,7 @@ const RealtimePaymentsFraud = () => {
             <Arrow />
             <img className={styles.ndaqLogo} src={ndaqLogo} alt="NDAQ logo" />
             <Arrow delaySeconds={2.2} />
-            <div className={styles.personContainer} style={{ marginLeft: '15px' }}>
+            <div className={styles.personContainer}>
                 <svg
                     className={styles.stickMan}
                     viewBox="0 0 120 200"

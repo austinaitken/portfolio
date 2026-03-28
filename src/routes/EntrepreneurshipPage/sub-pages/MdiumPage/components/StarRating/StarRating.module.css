@@ -1,0 +1,144 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsMediaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 95%;
+}
+
+.newspaper {
+    cursor: pointer;
+}
+
+.starPath {
+    fill: none;
+    stroke: #00b686;
+    stroke-width: 50;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+}
+
+.starFillPath {
+    fill: transparent;
+    stroke: none;
+    clip-path: inset(0 100% 0 0);
+}
+
+.starPathAnimate {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starFillAnimate {
+    animation-name: fillStar;
+    animation-duration: 0.22s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starFillAnimatePartial {
+    animation-name: fillStarPartial;
+    animation-duration: 0.22s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.starsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    max-width: 600px;
+}
+
+/* .starSvg {
+    width: 32px;
+    height: 32px;
+} */
+
+.starDelay1 {
+    animation-delay: 0s;
+}
+
+.starDelay2 {
+    animation-delay: 0.12s;
+}
+
+.starDelay3 {
+    animation-delay: 0.24s;
+}
+
+.starDelay4 {
+    animation-delay: 0.36s;
+}
+
+.starDelay5 {
+    animation-delay: 0.48s;
+}
+
+.starFillDelay1 {
+    animation-delay: 0.98s;
+}
+
+.starFillDelay2 {
+    animation-delay: 1.12s;
+}
+
+.starFillDelay3 {
+    animation-delay: 1.26s;
+}
+
+.starFillDelay4 {
+    animation-delay: 1.4s;
+}
+
+.starFillDelay5 {
+    animation-delay: 1.54s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fillStar {
+    to {
+        fill: #00b686;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes fillStarPartial {
+    to {
+        fill: #00b686;
+        clip-path: inset(0 40% 0 0);
+    }
+}
+
+/* Desktop Size */
+@media only screen and (min-width: 1200px) {
+    .newsMediaContainer {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .newsMediaContainer > * {
+        flex: 1;
+        min-width: 0;
+    }
+}

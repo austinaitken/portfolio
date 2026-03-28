@@ -12,14 +12,13 @@ import PageSection, {
 } from '@/common/components/pages/PageSection/PageSection'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
+import RealtimePaymentsFraud from '../Home2/components/Experience/components/RealtimePaymentsFraud/RealtimePaymentsFraud'
 
 const ExperiencePageContent: PageSectionProps[] = [
     {
         description:
             "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
+        content: <RealtimePaymentsFraud />,
         titleStart: 'Protection in',
         titleEnd: 'Real-Time',
         titleEndDrawing: problemSolverPhraseDrawing,
@@ -67,7 +66,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         titleEnd: 'for Big Results',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            "I designed and maintained a big data pipeline to analyze thousands of financial institutions' data for fraud.",
+            "I designed and maintained a big data pipeline to analyze ~10k financial institutions' data for fraud.",
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -97,7 +96,7 @@ const ExperiencePageContent: PageSectionProps[] = [
         titleEnd: 'the Stage',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+            'I demoed a new product feature I implemented to over 700 enterprise clients and stakeholders.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -126,7 +125,7 @@ const ExperiencePage = () => {
                 titleEnd="Professional"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<NasdaqVerafinGraphic />}
-                description="Catching fraud for the largest institutions in North America."
+                description="Catching financial fraud for the largest institutions in North America."
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />

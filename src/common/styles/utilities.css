@@ -31,7 +31,7 @@
 .largeDescription {
     margin: 0;
     font-size: 1.3rem;
-    line-height: 1.9rem;
+    line-height: 2rem;
     font-weight: 300;
     color: var(--color-text-secondary);
 }
@@ -39,7 +39,7 @@
 .mediumDescription {
     margin: 0;
     font-size: 1.2rem;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     font-weight: 300;
     color: var(--color-text-muted);
 }
@@ -47,7 +47,17 @@
 .smallDescription {
     margin: 0;
     font-size: 1rem;
-    line-height: 1.8rem;
+    line-height: 1.2rem;
     font-weight: 300;
     color: var(--color-text-muted);
+}
+
+.contextText {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    /* opacity: 0.8; */
 }

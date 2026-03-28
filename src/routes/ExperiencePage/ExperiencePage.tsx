@@ -12,13 +12,15 @@ import PageSection, {
 } from '@/common/components/pages/PageSection/PageSection'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
-import RealtimePaymentsFraud from '../Home2/components/Experience/components/RealtimePaymentsFraud/RealtimePaymentsFraud'
+// import RealtimePaymentsFraud from '../Home2/components/Experience/components/RealtimePaymentsFraud/RealtimePaymentsFraud'
 
 const ExperiencePageContent: PageSectionProps[] = [
     {
         description:
             "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
-        content: <RealtimePaymentsFraud />,
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
         titleStart: 'Protection in',
         titleEnd: 'Real-Time',
         titleEndDrawing: problemSolverPhraseDrawing,
@@ -129,9 +131,49 @@ const ExperiencePage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
-            {/* <div>
-                <h2>Nasdaq Verafin</h2>
-            </div> */}
+            {/* <section
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '3.5rem',
+                    marginTop: '2.5rem',
+                }}
+            >
+                <p className="contextText" style={{ textAlign: 'center', marginRight: '0px' }}>
+                    <span>Nasdaq Verafin</span>
+                    <span>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Software Developer</span>
+                    <span>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+                    <span>May 2022&nbsp;&nbsp;&mdash;&nbsp;&nbsp;Nov 2023</span>
+                </p>
+            </section> */}
+            <section
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '3rem',
+                    marginTop: '2.5rem',
+                    // border: '1px solid red',
+                }}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <p className="contextText">Nasdaq Verafin</p>
+                    <p>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</p>
+                    <p className="contextText">Software Developer</p>
+                </div>
+                <p className="contextText">May 2022&nbsp;&nbsp;&mdash;&nbsp;&nbsp;Nov 2023</p>
+            </section>
             <div className={styles.sectionsContainer}>
                 {ExperiencePageContent.map(
                     ({

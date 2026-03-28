@@ -5,10 +5,10 @@
     align-items: center;
     height: 100%;
     gap: 0rem;
-    height: calc((100svh - var(--header-scroll-offset)) * (8 / 10));
+    height: calc((100svh - var(--header-scroll-offset)) * (3 / 10));
     width: 100%;
     max-height: 500px;
-    min-height: 400px;
+    min-height: 425px;
     max-width: 330px;
     /* border: 1px solid purple; */
 }

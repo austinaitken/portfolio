@@ -5,7 +5,7 @@
     align-items: center;
     height: calc(100svh - var(--header-scroll-offset));
     gap: 1.5rem;
-    max-height: 625px;
+    max-height: 600px;
     min-height: 550px;
     min-width: 350px;
 }

@@ -122,10 +122,10 @@
         width: min(100%, 1500px);
     }
 
-    .pagePreviewsContainer > * {
+    /* .pagePreviewsContainer > * {
         flex: 0 0 calc((100% - 3rem) / 3);
         width: calc((100% - 3rem) / 3);
-    }
+    } */
 
     .introContainer {
         display: grid;

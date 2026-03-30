@@ -145,13 +145,13 @@ const HomePage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
-            {/* <div className={styles.experienceDivider}>
+            <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
                     <p className={styles.experienceMain}>Portfolio Overview</p>
                 </div>
                 <span className={styles.dividerLine} />
-            </div> */}
+            </div>
             <div className={styles.pagePreviewsContainer}>
                 {pagePreviews.map((preview, index) => (
                     <PagePreview

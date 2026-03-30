@@ -22,9 +22,10 @@ const QualificationsPage = () => {
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
                     <p className={styles.experienceMain}>
-                        Memorial University of Newfoundland&nbsp;&nbsp;&middot;&nbsp;&nbsp;Bachelor
-                        of Engineering (Computer)
+                        Memorial University of N.L.&nbsp;&nbsp;&middot;&nbsp;&nbsp;Bachelor of
+                        Engineering (Computer)
                     </p>
+                    {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>Sep 2017 &mdash; May 2022</p>
                 </div>
                 <span className={styles.dividerLine} />
@@ -80,24 +81,34 @@ const QualificationsPage = () => {
                                     style={{
                                         fontSize: '2rem',
                                         margin: '0px',
+                                        marginBottom: '5px',
                                         padding: '0px',
                                     }}
                                 >
                                     91%
                                 </p>
-                                <p className="smallDescription">Real-Time Operating Systems</p>
+                                <p className="smallDescription">
+                                    Real-Time
+                                    <br />
+                                    Operating Systems
+                                </p>
                             </div>
                             <div className={`${styles.gradeBox} ${styles.gradeBox90}`}>
                                 <p
                                     style={{
                                         fontSize: '2rem',
                                         margin: '0px',
+                                        marginBottom: '5px',
                                         padding: '0px',
                                     }}
                                 >
                                     90%
                                 </p>
-                                <p className="smallDescription">Computer Security</p>
+                                <p className="smallDescription">
+                                    Computer
+                                    <br />
+                                    Security
+                                </p>
                             </div>
                         </div>
                     }

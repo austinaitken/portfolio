@@ -47,6 +47,7 @@ const PersonalityPage = () => {
                     description="Enjoy renewing your license in this humour-based story game."
                     buttonLabel="View Simulator"
                     buttonAction={() => navigate('/personality/dmv-simulator')}
+                    contentSide="right"
                 />
             </div>
         </div>

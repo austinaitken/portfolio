@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
+    width: 100%;
     /* border: 1px solid cyan; */
 }
 
@@ -24,14 +25,14 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: stretch;
-        gap: 2.5rem 1.5rem;
+        gap: 2.5rem 0rem;
         width: min(100%, 1100px);
         margin-inline: auto;
     }
 
     .pagePreviewsContainer > * {
-        flex: 0 0 calc((100% - 3rem) / 2);
-        width: calc((100% - 3rem) / 2);
+        flex: 0 0 calc((100% - 0rem) / 2);
+        width: calc((100% - 0rem) / 2);
     }
 }
 

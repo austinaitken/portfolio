@@ -67,6 +67,15 @@ const EntrepreneurshipPage = () => {
                 buttonLabel="Contact Me"
                 buttonAction={scrollToContact}
             />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Software Business Overview</p>
+                    {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
+                    {/* <p className={styles.experienceDate}>Sep 2017 &mdash; May 2022</p> */}
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
             <div className={styles.pagePreviewsContainer}>
                 <PagePreview
                     titleStart="Virtual Veterinary"

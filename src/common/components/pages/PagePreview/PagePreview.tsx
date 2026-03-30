@@ -27,29 +27,29 @@ const PagePreview = ({
 
     return (
         <div className={styles.wrapper}>
-        <section
-            className={`${styles.container} ${contentSide === 'right' ? styles.contentRight : ''}`}
-        >
-            <div className={styles.titleContainer}>
-                <h2 className={styles.title} aria-label={fullTitle}>
-                    {titleStart}
-                    <span className={styles.visuallyHidden}> {titleEnd}</span>
-                </h2>
-                <div className={styles.titleDrawing}>
-                    <AnimatedDrawing
-                        drawing={titleEndDrawing}
-                        aria-hidden="true"
-                        focusable="false"
-                        strokeColor={'var(--color-text-primary)'}
-                    />
+            <section
+                className={`${styles.container} ${contentSide === 'right' ? styles.contentRight : ''}`}
+            >
+                <div className={styles.titleContainer}>
+                    <h2 className={styles.title} aria-label={fullTitle}>
+                        {titleStart}
+                        <span className={styles.visuallyHidden}> {titleEnd}</span>
+                    </h2>
+                    <div className={styles.titleDrawing}>
+                        <AnimatedDrawing
+                            drawing={titleEndDrawing}
+                            aria-hidden="true"
+                            focusable="false"
+                            strokeColor={'var(--color-text-primary)'}
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className={styles.contentContainer}>{content}</div>
-            <p className={`mediumDescription ${styles.description}`}>{description}</p>
-            <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
-                {buttonLabel}
-            </button>
-        </section>
+                <div className={styles.contentContainer}>{content}</div>
+                <p className={`mediumDescription ${styles.description}`}>{description}</p>
+                <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
+                    {buttonLabel}
+                </button>
+            </section>
         </div>
     )
 }

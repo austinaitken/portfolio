@@ -17,7 +17,9 @@ const Amello = () => {
     return (
         <div className={styles.container}>
             <h2>Say Hello to Amello!</h2>
-            <p className="mediumDescription">Play interest-based games with new friends.</p>
+            <p className="mediumDescription">
+                Play interest-based games with new friends on a video call.
+            </p>
             <p>Interest-based Matching</p>
             <p>Peer-to-Peer WebRTC Video Calls</p>
             <p>Custom Interest-Based Games.</p>

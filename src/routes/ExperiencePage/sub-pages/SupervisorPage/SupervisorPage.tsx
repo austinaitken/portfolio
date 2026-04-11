@@ -1,0 +1,107 @@
+import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
+import styles from './SupervisorPage.module.css'
+import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
+import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
+import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+
+const supervisorPageContent: PageSectionProps[] = [
+    {
+        titleStart: 'Full-Time',
+        titleEnd: 'Supervision',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description:
+            "Daily check-ins and mentorship sessions to maximize the new developers' success.",
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        titleStart: 'Regular Code',
+        titleEnd: 'Reviews',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description:
+            'All code was always first reviewed by me to ensure quality and correctness before production.',
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        titleStart: 'Goal-Setting',
+        titleEnd: 'Time & Cost',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description:
+            'Developed short & long term project goals for new developers to ensure company and employee success.',
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        titleStart: 'Performance Reviews',
+        titleEnd: 'Monitoring',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description:
+            'Performed performance reviews to ensure the new developer has actionable feedback to excel.',
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+]
+
+const SupervisorPage = () => {
+    return (
+        <div className={styles.container}>
+            <PageIntroduction
+                titleStart="Training New"
+                titleEnd="Crime Fighters"
+                titleEndDrawing={problemSolverPhraseDrawing}
+                content={<NasdaqVerafinGraphic />}
+                description="Supervised new software developers to become top performers."
+                buttonLabel="Contact Me"
+                buttonAction={() => {}}
+            />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Technical Overview</p>
+                    {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
+                    <p className={styles.experienceDate}>
+                        * Technical details omitted for NDA-related purposes *
+                    </p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
+            <div className={styles.pagePreviewsContainer}>
+                {supervisorPageContent.map((item, index) => {
+                    const {
+                        titleStart,
+                        titleEnd,
+                        titleEndDrawing,
+                        description,
+                        content,
+                        // subSections,
+                        buttonAction,
+                        buttonLabel,
+                    } = item
+                    return (
+                        <PagePreview
+                            key={`${titleStart}-${titleEnd}`}
+                            titleStart={titleStart}
+                            titleEnd={titleEnd}
+                            titleEndDrawing={titleEndDrawing}
+                            description={description}
+                            content={content}
+                            // subSections={subSections}
+                            contentSide={index % 2 === 0 ? 'left' : 'right'}
+                            buttonAction={buttonAction ?? (() => {})}
+                            buttonLabel={buttonLabel ?? ''}
+                        />
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
+
+export default SupervisorPage

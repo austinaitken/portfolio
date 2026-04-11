@@ -177,6 +177,27 @@
     /* border: 1px solid gold; */
 }
 
+.routeGroup {
+    display: none;
+}
+
+.subRouteList {
+    display: none;
+}
+
+.routeSeparator {
+    color: var(--color-text-muted);
+}
+
+.subRouteLink {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+.subRouteLink:hover {
+    color: #999999;
+}
+
 .innerHeaderContainer {
     display: flex;
     flex-direction: row;
@@ -264,7 +285,7 @@
     margin-right: 10px;
     background-color: #202020;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .contactButton:hover {
@@ -327,13 +348,32 @@
 
 /* Desktop Size */
 @media only screen and (min-width: 1100px) {
+    .routeGroup {
+        display: inline-flex;
+        align-items: center;
+        flex: 1 1 auto;
+        justify-content: space-evenly;
+        min-width: 0;
+    }
+
     .sectionButton {
         display: inline;
         text-decoration: none;
+        white-space: nowrap;
+        flex: 0 0 auto;
+        text-align: center;
     }
 
     .sectionButton:hover {
         color: #999999;
+    }
+
+    .subRouteList {
+        display: contents;
+    }
+
+    .subRouteLink {
+        white-space: nowrap;
     }
 
     .navButton {

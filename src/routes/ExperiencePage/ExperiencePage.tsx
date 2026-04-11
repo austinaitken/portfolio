@@ -7,23 +7,33 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 
 // import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 // import PageSubSection from '@/common/components/pages/PageSubSection/PageSubSection'
-import PageSection, {
-    type PageSectionProps,
-} from '@/common/components/pages/PageSection/PageSection'
+import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
+import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+// import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
+// import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
+// import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
+import { useNavigate } from 'react-router-dom'
+// import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+// import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
 // import RealtimePaymentsFraud from '../Home2/components/Experience/components/RealtimePaymentsFraud/RealtimePaymentsFraud'
 
-const ExperiencePageContent: PageSectionProps[] = [
+type ExperiencePreviewProps = PageSectionProps & {
+    routePath: string
+}
+
+const experiencePageContent: ExperiencePreviewProps[] = [
     {
-        description:
-            "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
         titleStart: 'Protection in',
         titleEnd: 'Real-Time',
         titleEndDrawing: problemSolverPhraseDrawing,
+        description: 'Pioneered real-time fraud detection of payment services like FedNow.',
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+        routePath: '/experience/real-time-fraud-analysis',
+        buttonLabel: 'Learn More',
         // subSections: [
         //     {
         //         title: 'Sub-Second Analysis',
@@ -67,55 +77,90 @@ const ExperiencePageContent: PageSectionProps[] = [
         titleStart: 'Big Data',
         titleEnd: 'for Big Results',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            "I designed and maintained a big data pipeline to analyze ~10k financial institutions' data for fraud.",
+        description: 'Developed a big data pipeline to analyze fraud for 10k+ institutions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        routePath: '/experience/big-data-pipeline',
+        buttonLabel: 'Learn More',
     },
     {
         titleStart: 'Training',
         titleEnd: 'Crime Fighters',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I supervised new software developers to achieve full-time employment and become top performers.',
+        description: 'Supervised new software developers to become top performers.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        routePath: '/experience/supervisor',
+        buttonLabel: 'Learn More',
     },
     {
         titleStart: 'Heroism',
         titleEnd: 'Recognized',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I won the company’s annual hackathon by detecting potential animal trafficking through banking and online data.',
+        description: 'Won the financial hackathon by detecting potential animal trafficking.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        routePath: '/experience/hackathon-winner',
+        buttonLabel: 'Learn More',
     },
-    {
-        titleStart: 'Commanding',
-        titleEnd: 'the Stage',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I demoed a new product feature I implemented to over 700 enterprise clients and stakeholders.',
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
-    },
-    {
-        titleStart: 'Something',
-        titleEnd: 'Else',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
-    },
+    // {
+    //     titleStart: 'Commanding',
+    //     titleEnd: 'the Stage',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description:
+    //         'Demoed a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    //     buttonAction: () => {},
+    //     buttonLabel: 'Learn More',
+    // },
+    // {
+    //     titleStart: 'Commanding',
+    //     titleEnd: 'the Stage2',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description:
+    //         'Demoed a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    //     buttonAction: () => {},
+    //     buttonLabel: 'Learn More',
+    // },
+    // {
+    //     titleStart: 'Something',
+    //     titleEnd: 'Else',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description:
+    //         'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    //     buttonAction: () => {},
+    //     buttonLabel: 'Learn More',
+    // },
 ]
 
+// const screenshotItems = [
+//     { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
+//     { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2' },
+//     { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
+// ]
+
+// const featuredContent = {
+//     titleStart: 'Fighting',
+//     titleEnd: 'Fraudsters',
+//     description:
+//         'Developed cloud-based fraud detection agents to identify high-risk activity across financial institutions.',
+//     buttonLabel: 'Visit Verafin',
+// }
+
 const ExperiencePage = () => {
+    const navigate = useNavigate()
+
     const scrollToContact = () => {
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
     }
@@ -159,8 +204,63 @@ const ExperiencePage = () => {
                 </div>
                 <span className={styles.dividerLine} />
             </div>
-            <div className={styles.sectionsContainer}>
-                {ExperiencePageContent.map(
+            {/* <div className={styles.mainContentContainer}>
+                <section className={styles.mainContentLayout}>
+                    <div className={styles.titleContainer}>
+                        <h2
+                            className={styles.title}
+                            aria-label={`${featuredContent.titleStart} ${featuredContent.titleEnd}`}
+                        >
+                            {featuredContent.titleStart}
+                            <span className={styles.visuallyHidden}>
+                                {' '}
+                                {featuredContent.titleEnd}
+                            </span>
+                        </h2>
+                        <div className={styles.titleDrawing}>
+                            <AnimatedDrawing
+                                drawing={problemSolverPhraseDrawing}
+                                aria-hidden="true"
+                                focusable="false"
+                                strokeColor={'var(--color-text-primary)'}
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.contentContainer}>
+                        <TrioAppScreenshots screenshots={screenshotItems} />
+                    </div>
+                    <p className={`mediumDescription ${styles.description}`}>
+                        {featuredContent.description}
+                    </p>
+                    <button className={`secondaryButton ${styles.button}`} onClick={() => {}}>
+                        {featuredContent.buttonLabel}
+                    </button>
+                </section>
+            </div>
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Achievement Overview</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div> */}
+            <div className={styles.pagePreviewsContainer}>
+                {experiencePageContent.map((preview, index) => (
+                    <PagePreview
+                        key={`${preview.titleStart}-${preview.titleEnd}`}
+                        titleStart={preview.titleStart}
+                        titleEnd={preview.titleEnd}
+                        titleEndDrawing={preview.titleEndDrawing}
+                        content={preview.content}
+                        description={preview.description}
+                        buttonLabel={preview.buttonLabel ?? 'Learn More'}
+                        buttonAction={() => navigate(preview.routePath)}
+                        contentSide={index % 2 === 0 ? 'left' : 'right'}
+                    />
+                ))}
+            </div>
+            {/* <div className={styles.sectionsContainer}>
+                {experiencePageContent.map(
                     ({
                         titleStart,
                         titleEnd,
@@ -168,6 +268,8 @@ const ExperiencePage = () => {
                         description,
                         content,
                         subSections,
+                        buttonAction,
+                        buttonLabel,
                     }) => (
                         <PageSection
                             key={`${titleStart}-${titleEnd}`}
@@ -177,10 +279,12 @@ const ExperiencePage = () => {
                             description={description}
                             content={content}
                             subSections={subSections}
+                            buttonAction={buttonAction}
+                            buttonLabel={buttonLabel}
                         />
                     )
                 )}
-            </div>
+            </div> */}
             {/* <section className={styles.sectionContainer}>
                         <div className={styles.sectionTitleContainer}>
                             <h2>Protection in Real-Time</h2>

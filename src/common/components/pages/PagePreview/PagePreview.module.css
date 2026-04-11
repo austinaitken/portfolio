@@ -83,7 +83,7 @@
 .description {
     margin: 0;
     text-align: center;
-    max-width: 400px;
+    max-width: 325px;
     /* border: 1px solid yellow; */
 }
 
@@ -189,7 +189,7 @@
         grid-area: description;
         text-align: center;
         margin: 0;
-        max-width: 38ch;
+        /* max-width: 38ch; */
         min-height: calc(1.45em * 2);
         line-height: 1.4;
         justify-self: center;

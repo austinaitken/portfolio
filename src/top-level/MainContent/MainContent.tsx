@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
-import HomePage from '@/routes/HomePage/HomePage'
 import { APP_ROUTES } from '@/routes/routes'
-// import ContactMe from '@/routes/ContactMe/ContactMe'
-// import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
+import HomePage from '@/routes/HomePage/HomePage'
+
 import styles from './MainContent.module.css'
 
 const MainContent = () => {
@@ -22,11 +21,6 @@ const MainContent = () => {
                 ))}
                 <Route path="*" element={<HomePage />} />
             </Routes>
-            {/* <ContactMe
-                titleStart="Contact Me"
-                titleEnd="Today"
-                titleEndDrawing={problemSolverPhraseDrawing}
-            /> */}
         </main>
     )
 }

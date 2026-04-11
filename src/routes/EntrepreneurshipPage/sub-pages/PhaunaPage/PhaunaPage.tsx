@@ -4,18 +4,37 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
-import PageSection from '@/common/components/pages/PageSection/PageSection'
+import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
+import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
+import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
+import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
+// import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 
-const PhaunaPageContent: PageSectionProps[] = [
+const screenshotItems = [
+    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
+    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2' },
+    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
+]
+
+// const featuredContent = {
+//     titleStart: 'Driven By',
+//     titleEnd: 'Clinical Data',
+//     description: 'Complete and auditable clinical data built to support remote veterinary care.',
+//     buttonLabel: 'Learn More',
+// }
+
+const phaunaPageContent: PageSectionProps[] = [
     {
-        description:
-            "I pioneered the company's real-time fraud detection of payment services like E-Transfer and Zelle.",
+        titleStart: 'Advanced',
+        titleEnd: 'Virtual Exams',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description: 'Physical exams are essential for vet care but difficult to perform remotely.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
-        titleStart: 'Protection in',
-        titleEnd: 'Real-Time',
-        titleEndDrawing: problemSolverPhraseDrawing,
+        buttonLabel: 'Learn More',
+        buttonAction: () => {},
         // subSections: [
         //     {
         //         title: 'Sub-Second Analysis',
@@ -56,55 +75,68 @@ const PhaunaPageContent: PageSectionProps[] = [
         // ],
     },
     {
-        titleStart: 'Big Data',
-        titleEnd: 'for Big Results',
+        titleStart: 'Driven By',
+        titleEnd: 'Clinical Data',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            "I designed and maintained a big data pipeline to analyze thousands of financial institutions' data for fraud.",
+        description: 'Complete & auditable clinical data that can be used across clinical domains.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        buttonAction: () => {},
+        buttonLabel: 'Learn More',
     },
     {
-        titleStart: 'Training',
-        titleEnd: 'Crime Fighters',
+        titleStart: 'Clinical Decision',
+        titleEnd: 'Support',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I supervised new software developers to achieve full-time employment and become top performers.',
+        description: 'Use clinical data to advise diagnostic and therapeutic decisions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        buttonAction: () => {},
+        buttonLabel: 'Learn More',
     },
+    // {
+    //     titleStart: 'Clinical Decision',
+    //     titleEnd: 'Support',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description: 'Use clinical data to advise diagnostic and therapeutic decisions.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    //     buttonAction: () => {},
+    //     buttonLabel: 'Learn More',
+    // },
     {
-        titleStart: 'Heroism',
-        titleEnd: 'Recognized',
+        titleStart: 'Modular',
+        titleEnd: 'Infrastructure',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I won the company’s annual hackathon by detecting potential animal trafficking through banking and online data.',
+        description: 'Domain-driven design for scalable and maintainable infrastructure.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
+        buttonAction: () => {},
+        buttonLabel: 'Learn More',
     },
-    {
-        titleStart: 'Commanding',
-        titleEnd: 'the Stage',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
-    },
-    {
-        titleStart: 'Something',
-        titleEnd: 'Else',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
-    },
+    // {
+    //     titleStart: 'Custom',
+    //     titleEnd: 'Mobile',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description: 'Integrated C and Swift code for cross-platform development.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    // },
+    // {
+    //     titleStart: 'Something',
+    //     titleEnd: 'Else',
+    //     titleEndDrawing: problemSolverPhraseDrawing,
+    //     description:
+    //         'I demoed live a new product feature I implemented to over 700 enterprise clients and stakeholders.',
+    //     content: (
+    //         <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+    //     ),
+    // },
 ]
 
 const PhaunaPage = () => {
@@ -116,7 +148,7 @@ const PhaunaPage = () => {
                 titleEndDrawing={problemSolverPhraseDrawing}
                 // content={<TrioAppScreenshots screenshots={screenshotItems} />}
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
-                description="A veterinary telemedicine platform with the tools for remote care."
+                description="A veterinary telemedicine platform with the tools vital for remote care."
                 buttonLabel={'Contact Me'}
                 buttonAction={() => {}}
             />
@@ -124,13 +156,79 @@ const PhaunaPage = () => {
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
                     <p className={styles.experienceMain}>
-                        Phauna Technologies&nbsp;&nbsp;&middot;&nbsp;&nbsp;Founder
+                        Phauna Technologies Inc.&nbsp;&nbsp;&middot;&nbsp;&nbsp;Founder
                     </p>
                     <p className={styles.experienceDate}>Nov 2023 &mdash; Mar 2026</p>
                 </div>
                 <span className={styles.dividerLine} />
             </div>
-            <div className={styles.sectionsContainer}>
+            {/* <div className={styles.mainContentContainer}>
+                <section className={styles.mainContentLayout}>
+                    <div className={styles.titleContainer}>
+                        <h2
+                            className={styles.title}
+                            aria-label={`${featuredContent.titleStart} ${featuredContent.titleEnd}`}
+                        >
+                            {featuredContent.titleStart}
+                            <span className={styles.visuallyHidden}>
+                                {' '}
+                                {featuredContent.titleEnd}
+                            </span>
+                        </h2>
+                        <div className={styles.titleDrawing}>
+                            <AnimatedDrawing
+                                drawing={problemSolverPhraseDrawing}
+                                aria-hidden="true"
+                                focusable="false"
+                                strokeColor={'var(--color-text-primary)'}
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.contentContainer}>
+                        <TrioAppScreenshots screenshots={screenshotItems} />
+                    </div>
+                    <p className={`mediumDescription ${styles.description}`}>
+                        {featuredContent.description}
+                    </p>
+                    <button className={`secondaryButton ${styles.button}`} onClick={() => {}}>
+                        {featuredContent.buttonLabel}
+                    </button>
+                </section>
+            </div> */}
+            <PagePreview
+                key="the-veterinarian"
+                titleStart="The Veterinarian"
+                titleEnd=""
+                titleEndDrawing={problemSolverPhraseDrawing}
+                content={<TrioAppScreenshots screenshots={screenshotItems} />}
+                description="Sign up as a virtual veterinarian to care for patients remotely."
+                buttonLabel="Learn More"
+                buttonAction={() => {}}
+                contentSide="left"
+            />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Technical Overview</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
+            <div className={styles.pagePreviewsContainer}>
+                {phaunaPageContent.map((preview, index) => (
+                    <PagePreview
+                        key={`${preview.titleStart}-${preview.titleEnd}`}
+                        titleStart={preview.titleStart}
+                        titleEnd={preview.titleEnd}
+                        titleEndDrawing={preview.titleEndDrawing}
+                        content={preview.content}
+                        description={preview.description}
+                        buttonLabel={preview.buttonLabel ?? 'Learn More'}
+                        buttonAction={() => {}}
+                        contentSide={index % 2 === 0 ? 'left' : 'right'}
+                    />
+                ))}
+            </div>
+            {/* <div className={styles.sectionsContainer}>
                 {PhaunaPageContent.map(
                     ({
                         titleStart,
@@ -139,6 +237,8 @@ const PhaunaPage = () => {
                         description,
                         content,
                         subSections,
+                        buttonLabel,
+                        buttonAction,
                     }: PageSectionProps) => (
                         <PageSection
                             key={`${titleStart}-${titleEnd}`}
@@ -148,10 +248,12 @@ const PhaunaPage = () => {
                             description={description}
                             content={content}
                             subSections={subSections}
+                            buttonLabel={buttonLabel}
+                            buttonAction={buttonAction}
                         />
                     )
                 )}
-            </div>
+            </div> */}
         </section>
     )
 }

@@ -1,10 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     /* height: calc(100svh - var(--header-scroll-offset)); */
-    gap: 2rem;
+    gap: 2.5rem;
     /* max-height: 650px;
     min-height: 600px; */
     width: 100%;
@@ -60,14 +60,14 @@
     /* border: 1px solid magenta; */
 }
 
-.goldMedal {
+/* .goldMedal {
     flex: 1;
     min-height: 0;
     width: 90%;
     max-width: 175px;
     object-fit: contain;
     display: block;
-}
+} */
 
 .titleContainer {
     display: flex;
@@ -121,7 +121,6 @@
         flex-direction: row;
         gap: 2rem;
         padding: 0;
-        margin-bottom: 2rem;
     }
 
     .dividerLine {
@@ -195,6 +194,88 @@
     /* margin-bottom: 1rem; */
 }
 
+.mainContentContainer {
+    container-type: inline-size;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 400px; */
+    min-width: 350px;
+    height: calc(100svh - var(--header-scroll-offset));
+    /* gap: 1.5rem; */
+    /* max-height: 400px; */
+    max-height: 600px;
+    min-height: 550px;
+    /* border: 1px solid red; */
+}
+
+.mainContentLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: min(100%, 1200px);
+    min-height: 0;
+    /* border: 1px solid gold; */
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    /* border: 1px solid gold; */
+}
+
+.title {
+    margin: 0;
+}
+
+.titleDrawing {
+    width: min(100%, 350px);
+    height: min(100%, 65px);
+}
+
+.contentContainer {
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: min(100%, 32rem); */
+    flex: 1;
+    min-height: 0;
+    max-height: 100%;
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
+}
+
+.contentContainer > * {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.description {
+    margin: 0;
+    text-align: center;
+    max-width: 32rem;
+}
+
+.button {
+    width: 100%;
+    max-width: 13rem;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 .visuallyHidden {
     position: absolute;
     width: 1px;
@@ -242,6 +323,122 @@
     .sectionsContainer > * {
         flex: 0 0 calc((100% - 3rem) / 3);
         width: calc((100% - 3rem) / 3);
+    }
+}
+
+.pagePreviewsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    /* border: 1px solid cyan; */
+    width: 100%;
+}
+
+@media only screen and (min-width: 1050px) {
+    .pagePreviewsContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+        gap: 4rem 3rem;
+        width: min(100%, 1100px);
+        margin-inline: auto;
+    }
+
+    .pagePreviewsContainer > * {
+        flex: 0 0 calc((100% - 3rem) / 2);
+        width: calc((100% - 3rem) / 2);
+        /* border: 1px solid red; */
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .pagePreviewsContainer {
+        width: min(100%, 1500px);
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .mainContentLayout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            'content title'
+            'content description'
+            'content button';
+        align-items: start;
+        align-content: stretch;
+        justify-content: center;
+        /* gap: 1rem 1rem; */
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        max-width: min(100%, 1200px);
+
+        margin-inline: auto;
+    }
+
+    .titleContainer {
+        grid-area: title;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 0.35rem;
+        /* border: 1px solid red; */
+    }
+
+    .title {
+        text-align: center;
+        line-height: 1.1;
+        margin: 0;
+        white-space: normal;
+    }
+
+    .titleDrawing {
+        width: min(100%, 300px);
+    }
+
+    .contentContainer {
+        grid-area: content;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        /* border: 1px solid red; */
+    }
+
+    .description {
+        grid-area: description;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        min-height: calc(1.45em * 2);
+        line-height: 1.4;
+        justify-self: center;
+    }
+
+    .button {
+        grid-area: button;
+        justify-self: center;
+        width: auto;
+        margin-top: 0.15rem;
+        margin-bottom: 0;
+    }
+
+    .mainContentContainer {
+        max-height: 350px;
+        min-height: 0;
+        max-width: 1000px;
+        border: 1px solid red;
     }
 }
 

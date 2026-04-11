@@ -60,8 +60,7 @@ const Phauna = () => {
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
             <h2 style={{ marginBottom: '10px' }}>Virtual Exams Advanced</h2>
             <p className="mediumDescription" style={{ marginBottom: '20px' }}>
-                Physical exams are essential for veterinary care and often difficult to perform
-                remotely.
+                Physical exams are essential for veterinary care but difficult to perform remotely.
             </p>
             <img
                 alt="Phauna Virtual Exam Feature"

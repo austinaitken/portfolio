@@ -122,7 +122,7 @@ const HomePage = () => {
             titleEnd: 'Today',
             titleEndDrawing: problemSolverPhraseDrawing,
             content: <ResourcePreviewGraphic />,
-            description: 'Get in touch with me to discuss opportunities or collaborations.',
+            description: "Let's discuss the impact I can bring to your team and organization.",
             buttonLabel: 'Contact Me',
             buttonAction: () => navigate(NAV_ITEMS.contact.to),
         },

@@ -29,6 +29,13 @@ const PersonalityPage = () => {
                 buttonLabel="View Personality"
                 buttonAction={() => {}}
             />
+            <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Funny Projects Overview</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div>
             <div className={styles.pagePreviewsContainer}>
                 <PagePreview
                     titleStart="Say Hello to"

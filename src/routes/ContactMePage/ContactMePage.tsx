@@ -1,7 +1,7 @@
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import styles from './ContactMePage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
-import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
+import ContactMeGraphic from './components/ContactMeGraphic/ContactMeGraphic'
 
 const ContactMePage = () => {
     // const fullTitle = `${titleStart} ${titleEnd}`.trim()
@@ -46,7 +46,7 @@ const ContactMePage = () => {
                 titleStart="Contact Me"
                 titleEnd="Today"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                content={<NasdaqVerafinGraphic />}
+                content={<ContactMeGraphic />}
                 description="Let's discuss the impact I can bring to your team and organization."
                 buttonLabel="Call Me"
                 buttonAction={handlePhoneCall}
@@ -60,35 +60,31 @@ const ContactMePage = () => {
             </div>
             <div
                 style={{
-                    width: '100%',
+                    width: '80%',
                     gap: '1rem',
                     display: 'flex',
                     flexDirection: 'column',
+                    justifyContent: 'center',
                     alignItems: 'center',
                     // border: '1px solid gold',
                 }}
                 className={styles.experienceMain}
             >
-                <p>
-                    +1 (709) 770-3770 &nbsp;&nbsp;&middot;&nbsp;&nbsp; austinlaitken@gmail.com
-                    &nbsp;&nbsp;&middot;&nbsp;&nbsp; linkedin.com/in/austin-aitken
-                </p>
-
                 <div className={styles.buttonContainer}>
-                    <button style={{ flex: 1, fontSize: '3rem' }} onClick={handlePhoneCall}>
+                    <button className={styles.contactButton} onClick={handlePhoneCall}>
                         📞<p>Call</p>
                         {/* <p>+1 (709) 770-3770</p> */}
                     </button>
-                    <button style={{ flex: 1, fontSize: '3rem' }} onClick={handlePhoneMessage}>
+                    <button className={styles.contactButton} onClick={handlePhoneMessage}>
                         💬<p>Message</p>
                         {/* <p>+1 (709) 770-3770</p> */}
                     </button>
-                    <button style={{ flex: 1, fontSize: '3rem' }} onClick={handleEmail}>
+                    <button className={styles.contactButton} onClick={handleEmail}>
                         📧<p>Email</p>
                         {/* <p>austinlaitken@gmail.com</p> */}
                     </button>
-                    <button style={{ flex: 1, fontSize: '3rem' }}>
-                        In<p>LinkedIn Message</p>
+                    <button className={styles.contactButton}>
+                        in<p>LinkedIn</p>
                         {/* <p>linkedin.com/in/austin-aitken</p> */}
                     </button>
                     {/* <div className={styles.addressButtonContainer}>
@@ -113,6 +109,11 @@ const ContactMePage = () => {
                 <div>
                     <button className="tertiaryButton">LinkedIn Message</button>
                 </div> */}
+                </div>
+                <div>
+                    <p>+1 (709) 770-3770</p>
+                    <p>austinlaitken@gmail.com</p>
+                    <p>linkedin.com/in/austin-aitken</p>
                 </div>
             </div>
         </section>

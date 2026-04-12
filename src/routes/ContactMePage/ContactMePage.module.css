@@ -56,13 +56,44 @@
 }
 
 .buttonContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
-    flex-direction: row;
+    width: 100%;
+    container-type: inline-size;
+    /* border: 1px solid magenta; */
+}
+
+@media (min-width: 521px) {
+    .buttonContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.contactButton {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: clamp(1rem, 20cqw, 3rem);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    /* border: 1px solid magenta; */
+    overflow: hidden;
+}
+
+.contactButton p {
+    margin: 0;
+    margin-top: 5px;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Switch to 4-column layout — each button is ~25cqw, so scale font accordingly */
+@container (min-width: 400px) {
+    .contactButton {
+        font-size: clamp(1rem, 10cqw, 3rem);
+    }
 }
 
 .addressButtonContainer {

@@ -103,7 +103,7 @@ const AmelloPage = () => {
                     </button>
                 </section>
             </div>
-            <div className={styles.mainContentContainer}>
+            {/* <div className={styles.mainContentContainer}>
                 <section className={styles.mainContentLayout}>
                     <div className={styles.titleContainer}>
                         <h2
@@ -135,7 +135,7 @@ const AmelloPage = () => {
                         {featuredContent.buttonLabel}
                     </button>
                 </section>
-            </div>
+            </div> */}
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>

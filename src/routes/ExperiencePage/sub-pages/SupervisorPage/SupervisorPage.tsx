@@ -64,11 +64,11 @@ const SupervisorPage = () => {
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
-                    <p className={styles.experienceMain}>Technical Overview</p>
+                    <p className={styles.experienceMain}>Supervisorship Overview</p>
                     {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
-                    <p className={styles.experienceDate}>
+                    {/* <p className={styles.experienceDate}>
                         * Technical details omitted for NDA-related purposes *
-                    </p>
+                    </p> */}
                 </div>
                 <span className={styles.dividerLine} />
             </div>

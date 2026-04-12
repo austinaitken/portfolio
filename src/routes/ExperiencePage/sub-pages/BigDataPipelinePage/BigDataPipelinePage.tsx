@@ -68,7 +68,7 @@ const BigDataPipelinePage = () => {
                     <p className={styles.experienceMain}>Technical Overview</p>
                     {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>
-                        * Technical details omitted for NDA-related purposes *
+                        * Technical details omitted due to NDA constraints *
                     </p>
                 </div>
                 <span className={styles.dividerLine} />

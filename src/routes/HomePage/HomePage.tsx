@@ -20,6 +20,7 @@ import styles from './HomePage.module.css'
 import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import NasdaqVerafinGraphic from './NasdaqVerafinGraphic/NasdaqVerafinGraphic'
+import ContactMeGraphic from '../ContactMePage/components/ContactMeGraphic/ContactMeGraphic'
 
 type HomePreviewKey =
     | 'introduction'
@@ -121,7 +122,7 @@ const HomePage = () => {
             titleStart: 'Contact Me',
             titleEnd: 'Today',
             titleEndDrawing: problemSolverPhraseDrawing,
-            content: <ResourcePreviewGraphic />,
+            content: <ContactMeGraphic />,
             description: "Let's discuss the impact I can bring to your team and organization.",
             buttonLabel: 'Contact Me',
             buttonAction: () => navigate(NAV_ITEMS.contact.to),

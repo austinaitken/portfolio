@@ -57,18 +57,45 @@
 }
 
 .starsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    max-width: 600px;
+    position: relative;
+    width: 280px;
+    height: 265px;
 }
 
-/* .starSvg {
-    width: 32px;
-    height: 32px;
-} */
+.starsContainer .starSvg {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    max-height: 72px;
+    margin: 0;
+}
+
+.starPosition1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.starPosition2 {
+    top: 75px;
+    right: 10px;
+}
+
+.starPosition3 {
+    bottom: 14px;
+    right: 54px;
+}
+
+.starPosition4 {
+    bottom: 14px;
+    left: 54px;
+}
+
+.starPosition5 {
+    top: 75px;
+    left: 10px;
+}
 
 .starDelay1 {
     animation-delay: 0s;

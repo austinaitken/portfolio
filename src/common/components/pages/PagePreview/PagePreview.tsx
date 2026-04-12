@@ -7,8 +7,8 @@ export interface PagePreviewProps {
     titleEnd: string
     titleEndDrawing: AnimatedDrawingData
     description: string
-    buttonLabel: string
-    buttonAction: () => void
+    buttonLabel?: string
+    buttonAction?: () => void
     content?: ReactNode
     contentSide?: 'left' | 'right'
 }
@@ -46,9 +46,11 @@ const PagePreview = ({
                 </div>
                 <div className={styles.contentContainer}>{content}</div>
                 <p className={`mediumDescription ${styles.description}`}>{description}</p>
-                <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
-                    {buttonLabel}
-                </button>
+                {buttonLabel && buttonAction && (
+                    <button className={`secondaryButton ${styles.button}`} onClick={buttonAction}>
+                        {buttonLabel}
+                    </button>
+                )}
             </section>
         </div>
     )

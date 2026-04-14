@@ -8,11 +8,11 @@ import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 
 const supervisorPageContent: PageSectionProps[] = [
     {
-        titleStart: 'Full-Time',
+        titleStart: 'Developer',
         titleEnd: 'Supervision',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            "Daily check-ins and mentorship sessions to maximize the new developers' success.",
+            'Led structured onboarding and mentorship to ramp developers into production-ready contributions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -22,7 +22,7 @@ const supervisorPageContent: PageSectionProps[] = [
         titleEnd: 'Reviews',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'All code was always first reviewed by me to ensure quality and correctness before production.',
+            'Delivered architectural guidance for scalable cloud and fraud analytics systems.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -32,17 +32,17 @@ const supervisorPageContent: PageSectionProps[] = [
         titleEnd: 'Time & Cost',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Developed short & long term project goals for new developers to ensure company and employee success.',
+            'Owned primary code reviews for developers, ensuring correctness, performance, and maintainability.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
     {
-        titleStart: 'Performance Reviews',
-        titleEnd: 'Monitoring',
+        titleStart: 'Developer',
+        titleEnd: 'Growth Engine',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Performed performance reviews to ensure the new developer has actionable feedback to excel.',
+            'Drove developer growth through structured feedback, performance reviews, and development planning.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

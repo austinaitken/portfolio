@@ -13,7 +13,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Analysis',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Be matched in a 4-person video call with an active game based on interests such as improv and debate.',
+            'Implemented a production REST API for real-time fraud decisioning of payment transactions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -23,7 +23,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Restful API',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Built with React, GraphQL, and WebRTC, Amello delivers a seamless and engaging user experience.',
+            'Implemented AWS Lambda-based filtering for sub-second fraud screening of payment transactions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -33,17 +33,17 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Technologies',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Built with React, GraphQL, and WebRTC, Amello delivers a seamless and engaging user experience.',
+            'Implemented a Java-based ECS Fargate service for fraud analysis using consortium intelligence.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
     {
-        titleStart: 'The Latest',
-        titleEnd: 'Technologies2',
+        titleStart: 'Precomputed',
+        titleEnd: 'Evidence',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Built with React, GraphQL, and WebRTC, Amello delivers a seamless and engaging user experience.',
+            'Implemented precomputed fraud evidence to avoid expensive query execution paths in decisioning.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -68,7 +68,7 @@ const RealtimePaymentFraudPage = () => {
                     <p className={styles.experienceMain}>Technical Overview</p>
                     {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>
-                        * Technical details omitted due to NDA constraints *
+                        * Technical details omitted due to NDA *
                     </p>
                 </div>
                 <span className={styles.dividerLine} />

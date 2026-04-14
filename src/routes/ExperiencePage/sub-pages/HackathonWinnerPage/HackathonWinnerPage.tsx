@@ -8,21 +8,31 @@ import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 
 const hackathonPageContent: PageSectionProps[] = [
     {
-        titleStart: 'Evidence Design',
-        titleEnd: 'Technologies',
+        titleStart: 'Real-Time',
+        titleEnd: 'Monitoring',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Developed the core evidence criteria of animal trafficking behaviour through financial and online data.',
+            'Built a fraud detection agent to identify animal trafficking risk using financial and online available data.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
     {
-        titleStart: 'Web Scrapping',
+        titleStart: 'Evidence Design',
+        titleEnd: 'Technologies',
+        titleEndDrawing: problemSolverPhraseDrawing,
+        description:
+            'Designed financial indicators to detect patterns consistent with illicit animal trafficking activity.',
+        content: (
+            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+        ),
+    },
+    {
+        titleStart: 'Web Scraping',
         titleEnd: 'Pipeline',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Searched online marketplaces and news articles to determine potential affiliations to animal trafficking.',
+            'Integrated online marketplace and news data to determine potential affiliates to animal trafficking.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -32,17 +42,7 @@ const hackathonPageContent: PageSectionProps[] = [
         titleEnd: 'One Week',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'The fraud detecting agent was developed in less than one week to earn the first place award.',
-        content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
-        ),
-    },
-    {
-        titleStart: 'Real-Time',
-        titleEnd: 'Monitoring',
-        titleEndDrawing: problemSolverPhraseDrawing,
-        description:
-            'Developed real-time monitoring methods to ensure the pipeline’s health and quality of results.',
+            'Built the fraud detection agent prototype in under one week to secure first place in the hackathon.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -67,7 +67,7 @@ const HackathonWinnerPage = () => {
                     <p className={styles.experienceMain}>Technical Overview</p>
                     {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>
-                        * Technical details omitted for NDA-related purposes *
+                        * Technical details omitted due to NDA *
                     </p>
                 </div>
                 <span className={styles.dividerLine} />

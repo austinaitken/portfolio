@@ -13,7 +13,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Technologies',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Developed Scala queries to run on Spark for cloud-based EMR jobs to replace PostgreSQL queries.',
+            'Designed and implemented distributed Scala workloads on Apache Spark, orchestrated via AWS EMR.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -23,7 +23,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Pipeline',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Developed a step function pipeline to run EMR jobs and transform the results into RDS instances.',
+            'Orchestrated EMR workloads using AWS Step Functions, loading results into production RDS databases.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -33,7 +33,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Time & Cost',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Reduced the time to analyze financial data for potential fraud by over 90% for a fraction of the cost.',
+            'Reduced fraud analysis time by over 90% while significantly lowering infrastructure costs.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -43,7 +43,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Monitoring',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Developed real-time monitoring methods to ensure the pipeline’s health and quality of results.',
+            'Implemented real-time monitoring and alerting with AWS CloudWatch for pipeline reliability and data integrity.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -58,7 +58,7 @@ const BigDataPipelinePage = () => {
                 titleEnd="Big Results"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<NasdaqVerafinGraphic />}
-                description="Developed a big data pipeline to analyze over 10k institutions' activity for fraud."
+                description="Developed a big data pipeline to analyze ~3k institutions' activity for fraud."
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />
@@ -68,7 +68,7 @@ const BigDataPipelinePage = () => {
                     <p className={styles.experienceMain}>Technical Overview</p>
                     {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>
-                        * Technical details omitted due to NDA constraints *
+                        * Technical details omitted due to NDA *
                     </p>
                 </div>
                 <span className={styles.dividerLine} />

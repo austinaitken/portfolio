@@ -12,7 +12,7 @@ const supervisorPageContent: PageSectionProps[] = [
         titleEnd: 'Supervision',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Led structured onboarding and mentorship to ramp developers into production-ready contributions.',
+            'Led onboarding and mentorship to ramp developers into production-ready contributions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -22,7 +22,7 @@ const supervisorPageContent: PageSectionProps[] = [
         titleEnd: 'Reviews',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Delivered architectural guidance for scalable cloud and fraud analytics systems.',
+            'Co-designed and reviewed software architectures with the developers before implementation.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -32,7 +32,7 @@ const supervisorPageContent: PageSectionProps[] = [
         titleEnd: 'Time & Cost',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Owned primary code reviews for developers, ensuring correctness, performance, and maintainability.',
+            'Served as the primary code reviewer for developer production changes, approving all releases.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

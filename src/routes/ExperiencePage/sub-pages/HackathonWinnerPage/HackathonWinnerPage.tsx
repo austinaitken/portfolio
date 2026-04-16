@@ -12,7 +12,7 @@ const hackathonPageContent: PageSectionProps[] = [
         titleEnd: 'Monitoring',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Built a fraud detection agent to identify animal trafficking risk using financial and online available data.',
+            'Engineered a fraud detection agent to identify animal trafficking risk using financial and online data.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -32,7 +32,7 @@ const hackathonPageContent: PageSectionProps[] = [
         titleEnd: 'Pipeline',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Integrated online marketplace and news data to determine potential affiliates to animal trafficking.',
+            'Integrated news and online marketplaces to identify potential animal trafficking affiliates.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -42,7 +42,7 @@ const hackathonPageContent: PageSectionProps[] = [
         titleEnd: 'One Week',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Built the fraud detection agent prototype in under one week to secure first place in the hackathon.',
+            'Built the fraud detection agent prototype in one week to win first place in the hackathon.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -57,7 +57,7 @@ const HackathonWinnerPage = () => {
                 titleEnd="Recognized"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<NasdaqVerafinGraphic />}
-                description="Won the annual hackathon by detecting high-risk animal trafficking behaviour."
+                description="Won a hackathon by detecting high-risk animal trafficking activity."
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />

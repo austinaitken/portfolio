@@ -13,7 +13,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Technologies',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Designed and implemented distributed Scala workloads on Apache Spark, orchestrated via AWS EMR.',
+            'Engineered Scala-based Spark queries over data lakes on AWS EMR to compute fraud evidence.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -23,7 +23,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Pipeline',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Orchestrated EMR workloads using AWS Step Functions, loading results into production RDS databases.',
+            'Orchestrated EMR jobs via AWS Step Functions and persisted fraud evidence in production RDS.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -33,7 +33,7 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         titleEnd: 'Time & Cost',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Reduced fraud analysis time by over 90% while significantly lowering infrastructure costs.',
+            'Reduced fraud evaluation runtime by over 90% compared to PostgreSQL-based workflows.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -58,7 +58,7 @@ const BigDataPipelinePage = () => {
                 titleEnd="Big Results"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<NasdaqVerafinGraphic />}
-                description="Developed a big data pipeline to analyze ~3k institutions' activity for fraud."
+                description="Developed a big data pipeline to analyze fraud activity across ~3K institutions."
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />

@@ -14,7 +14,7 @@ export const NAV_ITEMS: Record<NavItemKey, { label: string; to: string }> = {
     personality: { label: 'Personality', to: '/personality' },
     qualifications: { label: 'Qualifications', to: '/qualifications' },
     resources: { label: 'Resources', to: '/resources' },
-    contact: { label: 'Contact Me', to: '/contact' },
+    contact: { label: 'Contact Me', to: '/contact-me' },
 }
 
 export const NAV_KEYS = [

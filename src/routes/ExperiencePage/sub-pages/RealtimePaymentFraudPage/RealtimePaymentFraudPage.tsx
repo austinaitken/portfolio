@@ -13,7 +13,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Analysis',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Implemented a production REST API for real-time fraud decisioning of payment transactions.',
+            'Engineered a production REST API for real-time fraud decisioning of payment transactions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -23,7 +23,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Restful API',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Implemented AWS Lambda-based filtering for sub-second fraud screening of payment transactions.',
+            'Enhanced sub-second fraud screening of payment transactions through AWS Lambda-based filtering.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -33,7 +33,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Technologies',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Implemented a Java-based ECS Fargate service for fraud analysis using consortium intelligence.',
+            'Developed a Java-based ECS Fargate service for fraud analysis using cross-institutional intelligence.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -43,7 +43,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Evidence',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Implemented precomputed fraud evidence to avoid expensive query execution paths in decisioning.',
+            'Achieved sub-second decision latency by precomputing fraud evidence and avoiding expensive runtime queries.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

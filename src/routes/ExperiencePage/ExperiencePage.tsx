@@ -77,7 +77,7 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleStart: 'Big Data',
         titleEnd: 'for Big Results',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Developed a big data pipeline to analyze fraud for 10k+ institutions.',
+        description: 'Developed a big data pipeline to analyze fraud for ~3k institutions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
@@ -99,7 +99,7 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleStart: 'Heroism',
         titleEnd: 'Recognized',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Won the financial hackathon by detecting potential animal trafficking.',
+        description: 'Won a hackathon by detecting high-risk animal trafficking activity.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

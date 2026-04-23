@@ -1,17 +1,17 @@
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
-import styles from './VirtualExamPage.module.css'
+import styles from './EvidenceCollectionPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
 
-const ClinicalDataPage = () => {
+const EvidenceCollectionPage = () => {
     return (
         <div className={styles.container}>
             <PageIntroduction
-                titleStart="Driven By"
-                titleEnd="Clinical Data"
+                titleStart="Automated"
+                titleEnd="Evidence Collection"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
-                description="Physical exams are essential for vet care but difficult to perform remotely."
+                description="Automating the collection of clinical evidence for virtual veterinary care."
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />
@@ -19,4 +19,4 @@ const ClinicalDataPage = () => {
     )
 }
 
-export default ClinicalDataPage
+export default EvidenceCollectionPage

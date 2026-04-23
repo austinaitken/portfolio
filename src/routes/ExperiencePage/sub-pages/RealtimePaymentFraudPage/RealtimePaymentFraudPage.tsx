@@ -13,7 +13,7 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         titleEnd: 'Analysis',
         titleEndDrawing: problemSolverPhraseDrawing,
         description:
-            'Engineered a production REST API for real-time fraud decisioning of payment transactions.',
+            'Engineered a production REST API for real-time fraud risk analysis of payment transactions.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

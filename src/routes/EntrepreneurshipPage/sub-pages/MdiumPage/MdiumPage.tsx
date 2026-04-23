@@ -16,7 +16,7 @@ const MdiumPageContent: PageSectionProps[] = [
         titleStart: 'Making',
         titleEnd: 'Headlines',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'From NTV News to the Business front page, Mdium was making waves.',
+        description: 'Landing on the Business front page, Mdium was making waves.',
         content: (
             <img
                 className={styles.entrepreneurshipImage}
@@ -55,7 +55,8 @@ const MdiumPageContent: PageSectionProps[] = [
         titleStart: 'Satisfying',
         titleEnd: 'Customers',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Reached 30k+ users with 140k+ transfers achieving an average 4.6/5 rating.',
+        description:
+            'Reached 30k+ users with 140k+ transfers achieving an outstanding 4.6/5 average rating.',
         content: <StarRating />,
     },
 ]
@@ -63,8 +64,8 @@ const MdiumPageContent: PageSectionProps[] = [
 const featuredContent = {
     titleStart: 'Experience our',
     titleEnd: 'Demo',
-    description: 'Watch Mdium featured on NTV News.',
-    buttonLabel: 'Watch Demo',
+    description: 'Watch Mdium featured on NTV News for the Our Time news segment.',
+    buttonLabel: 'View on NTV News',
 }
 
 const MdiumPage = () => {
@@ -90,12 +91,99 @@ const MdiumPage = () => {
                 </div>
                 <span className={styles.dividerLine} />
             </div>
-            <div className={styles.screenshotsContainer}>
-                <div className={styles.screenshotContainer}>
+            <div style={{ display: 'flex', flexDirection: 'row', height: '450px', width: '100%' }}>
+                <div className={styles.screenshotsContainer} style={{ flex: 3 }}>
+                    <div className={styles.screenshotContainer}>
+                        <div className={styles.titleContainer}>
+                            <h3 className={styles.title} aria-label="Step One">
+                                Step 1
+                            </h3>
+                            {/* <div className={styles.titleDrawing}>
+                                <AnimatedDrawing
+                                    drawing={problemSolverPhraseDrawing}
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    strokeColor={'var(--color-text-primary)'}
+                                />
+                            </div> */}
+                        </div>
+                        <img
+                            className={styles.screenshot}
+                            src={phaunaScreenshot1}
+                            alt="Mdium Screenshot 1"
+                        />
+                        {/* <p className="smallDescription">
+                            Add your large files
+                            <br />
+                            on the Mdium web app.
+                        </p> */}
+                    </div>
+                    <p className={styles.stepArrow}>➡</p>
+                    <div className={styles.screenshotContainer}>
+                        <div className={styles.titleContainer}>
+                            <h3 className={styles.title} aria-label="Step Two">
+                                Step 2
+                            </h3>
+                            {/* <div className={styles.titleDrawing}>
+                                <AnimatedDrawing
+                                    drawing={problemSolverPhraseDrawing}
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    strokeColor={'var(--color-text-primary)'}
+                                />
+                            </div> */}
+                        </div>
+                        <img
+                            className={styles.screenshot}
+                            src={phaunaScreenshot1}
+                            alt="Mdium Screenshot 2"
+                        />
+                        {/* <p className="smallDescription">
+                            Share through email,
+                            <br />
+                            links, or a short-lived code.
+                        </p> */}
+                    </div>
+                    <p className={styles.stepArrow}>➡</p>
+                    <div className={styles.screenshotContainer}>
+                        <div className={styles.titleContainer}>
+                            <h3 className={styles.title} aria-label="Step Three">
+                                Step 3
+                            </h3>
+                            {/* <div className={styles.titleDrawing}>
+                                <AnimatedDrawing
+                                    drawing={problemSolverPhraseDrawing}
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    strokeColor={'var(--color-text-primary)'}
+                                />
+                            </div> */}
+                        </div>
+                        <img
+                            className={styles.screenshot}
+                            src={phaunaScreenshot1}
+                            alt="Mdium Screenshot 3"
+                        />
+                        {/* <p className="smallDescription">
+                            Access the shared files
+                            <br />
+                            from any device's browser.
+                        </p> */}
+                    </div>
+                </div>
+                <section
+                    style={{
+                        flex: 2,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                    }}
+                >
                     <div className={styles.titleContainer}>
-                        <h2 className={styles.title} aria-label="Step One">
-                            Step
-                            <span className={styles.visuallyHidden}> One</span>
+                        <h2 className={styles.title} aria-label="Three Easy Steps">
+                            Three Easy
+                            <span className={styles.visuallyHidden}> Steps</span>
                         </h2>
                         <div className={styles.titleDrawing}>
                             <AnimatedDrawing
@@ -106,71 +194,85 @@ const MdiumPage = () => {
                             />
                         </div>
                     </div>
-                    <img
-                        className={styles.screenshot}
-                        src={phaunaScreenshot1}
-                        alt="Mdium Screenshot 1"
-                    />
-                    <p className="mediumDescription">
-                        Add your large files
-                        <br />
-                        on the Mdium web app.
-                    </p>
-                </div>
-                <p className={styles.stepArrow}>➡</p>
-                <div className={styles.screenshotContainer}>
-                    <div className={styles.titleContainer}>
-                        <h2 className={styles.title} aria-label="Step Two">
-                            Step
-                            <span className={styles.visuallyHidden}> Two</span>
-                        </h2>
-                        <div className={styles.titleDrawing}>
-                            <AnimatedDrawing
-                                drawing={problemSolverPhraseDrawing}
-                                aria-hidden="true"
-                                focusable="false"
-                                strokeColor={'var(--color-text-primary)'}
-                            />
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            flex: 1,
+                            justifyContent: 'space-evenly',
+                        }}
+                    >
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'center',
+                                width: '100%',
+                            }}
+                        >
+                            <p
+                                style={{
+                                    fontSize: '1.5rem',
+                                    margin: 0,
+                                    marginRight: '1rem',
+                                }}
+                            >
+                                1.
+                            </p>
+                            <p
+                                style={{ marginRight: '1rem' }}
+                                className={`mediumDescription ${styles.description}`}
+                            >
+                                Add your large files (up to 5TB per file) on the Mdium web app.
+                            </p>
+                        </div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <p style={{ fontSize: '1.5rem', margin: 0, marginRight: '1rem' }}>2.</p>
+                            <p
+                                style={{ marginRight: '1rem' }}
+                                className={`mediumDescription ${styles.description}`}
+                            >
+                                Share through direct links, email, SMS, or a short-lived code.
+                            </p>
+                        </div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <p style={{ fontSize: '1.5rem', margin: 0, marginRight: '1rem' }}>3.</p>
+                            <p
+                                style={{ marginRight: '1rem' }}
+                                className={`mediumDescription ${styles.description}`}
+                            >
+                                Click the direct link, email, SMS, or enter the short-lived code.
+                            </p>
                         </div>
                     </div>
-                    <img
-                        className={styles.screenshot}
-                        src={phaunaScreenshot1}
-                        alt="Mdium Screenshot 2"
-                    />
-                    <p className="mediumDescription">
-                        Choose to share through email,
-                        <br />a link, or a short-lived code.
-                    </p>
-                </div>
-                <p className={styles.stepArrow}>➡</p>
-                <div className={styles.screenshotContainer}>
-                    <div className={styles.titleContainer}>
-                        <h2 className={styles.title} aria-label="Step Three">
-                            Step
-                            <span className={styles.visuallyHidden}> Three</span>
-                        </h2>
-                        <div className={styles.titleDrawing}>
-                            <AnimatedDrawing
-                                drawing={problemSolverPhraseDrawing}
-                                aria-hidden="true"
-                                focusable="false"
-                                strokeColor={'var(--color-text-primary)'}
-                            />
-                        </div>
-                    </div>
-                    <img
-                        className={styles.screenshot}
-                        src={phaunaScreenshot1}
-                        alt="Mdium Screenshot 3"
-                    />
-                    <p className="mediumDescription">
-                        Access the shared files
-                        <br />
-                        from any device's browser.
-                    </p>
-                </div>
+                    {/* <button className={`secondaryButton ${styles.button}`} onClick={() => {}}>
+                        {featuredContent.buttonLabel}
+                    </button> */}
+                </section>
             </div>
+            {/* <div className={styles.experienceDivider}>
+                <span className={styles.dividerLine} />
+                <div className={styles.experienceText}>
+                    <p className={styles.experienceMain}>Core Achievements</p>
+                </div>
+                <span className={styles.dividerLine} />
+            </div> */}
             <div className={styles.mainContentContainer}>
                 <section className={styles.mainContentLayout}>
                     <div className={styles.titleContainer}>
@@ -204,13 +306,14 @@ const MdiumPage = () => {
                     </button>
                 </section>
             </div>
-            <div className={styles.experienceDivider}>
+
+            {/* <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
                     <p className={styles.experienceMain}>Core Achievements</p>
                 </div>
                 <span className={styles.dividerLine} />
-            </div>
+            </div> */}
             <div className={styles.pagePreviewsContainer}>
                 {MdiumPageContent.map(
                     (
@@ -233,7 +336,7 @@ const MdiumPage = () => {
                             titleEndDrawing={titleEndDrawing}
                             description={description}
                             content={content}
-                            buttonLabel={buttonLabel ?? 'Learn More'}
+                            buttonLabel={buttonLabel}
                             buttonAction={buttonAction ?? (() => {})}
                             contentSide={index % 2 === 0 ? 'left' : 'right'}
                         />

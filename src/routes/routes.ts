@@ -16,7 +16,9 @@ import BigDataPipelinePage from './ExperiencePage/sub-pages/BigDataPipelinePage/
 import SupervisorPage from './ExperiencePage/sub-pages/SupervisorPage/SupervisorPage'
 import HackathonWinnerPage from './ExperiencePage/sub-pages/HackathonWinnerPage/HackathonWinnerPage'
 import VirtualExamPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/VirtualExamPage/VirtualExamPage'
-import ClinicalDecisionSupportPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDecisionSupport/ClinicalDecisionSupport'
+import ClinicalDecisionSupportPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDecisionSupportPage/ClinicalDecisionSupportPage'
+import EvidenceCollectionPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/EvidenceCollectionPage/EvidenceCollectionPage'
+import ClinicalDataPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDataPage/ClinicalDataPage'
 
 export type AppRoute = {
     path: string
@@ -65,8 +67,14 @@ export const APP_ROUTES: readonly AppRoute[] = [
         showInNav: false,
     },
     {
-        path: '/entrepreneurship/phauna/automated-cases',
-        label: 'Automated Cases',
+        path: '/entrepreneurship/phauna/evidence-collection',
+        label: 'Evidence Collection',
+        component: EvidenceCollectionPage,
+        showInNav: false,
+    },
+    {
+        path: '/entrepreneurship/phauna/clinical-decision-support',
+        label: 'Clinical Decision Support',
         component: ClinicalDecisionSupportPage,
         showInNav: false,
     },
@@ -79,7 +87,7 @@ export const APP_ROUTES: readonly AppRoute[] = [
     {
         path: '/entrepreneurship/phauna/clinical-data',
         label: 'Clinical Data',
-        component: PhaunaPage,
+        component: ClinicalDataPage,
         showInNav: false,
     },
     // {

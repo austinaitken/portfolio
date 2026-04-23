@@ -38,3 +38,11 @@
     white-space: nowrap;
     border: 0;
 }
+
+.codeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

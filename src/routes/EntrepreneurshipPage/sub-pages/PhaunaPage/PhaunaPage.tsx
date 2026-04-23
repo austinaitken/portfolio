@@ -29,11 +29,11 @@ const phaunaPageContent: PageSectionProps[] = [
         titleStart: 'Advanced',
         titleEnd: 'Virtual Exams',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Physical exams are essential for vet care but difficult to perform remotely.',
+        description: 'Assessing patients through video-based physical examinations.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
-        buttonLabel: 'Learn More',
+        buttonLabel: 'View Exam',
         buttonAction: () => {},
         // subSections: [
         //     {
@@ -78,23 +78,23 @@ const phaunaPageContent: PageSectionProps[] = [
         titleStart: 'Driven By',
         titleEnd: 'Clinical Data',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Complete & auditable clinical data that can be used across clinical domains.',
+        description: 'Building auditable clinical data models for cross-domain interoperability.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
         buttonAction: () => {},
-        buttonLabel: 'Learn More',
+        buttonLabel: 'View Data Design',
     },
     {
         titleStart: 'Clinical Decision',
         titleEnd: 'Support',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Use clinical data to advise diagnostic and therapeutic decisions.',
+        description: 'Turning clinical data into diagnostic and treatment recommendations.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
         buttonAction: () => {},
-        buttonLabel: 'Learn More',
+        buttonLabel: 'View System',
     },
     // {
     //     titleStart: 'Clinical Decision',
@@ -108,15 +108,15 @@ const phaunaPageContent: PageSectionProps[] = [
     //     buttonLabel: 'Learn More',
     // },
     {
-        titleStart: 'Modular',
-        titleEnd: 'Infrastructure',
+        titleStart: 'Automated',
+        titleEnd: 'Evidence Collection',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Domain-driven design for scalable and maintainable infrastructure.',
+        description: 'Automating the collection of clinical evidence for virtual veterinary care.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
         buttonAction: () => {},
-        buttonLabel: 'Learn More',
+        buttonLabel: 'View Automation',
     },
     // {
     //     titleStart: 'Custom',

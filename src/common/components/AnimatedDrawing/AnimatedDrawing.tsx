@@ -79,6 +79,7 @@ const AnimatedDrawing = ({
 
                 return (
                     <path
+                        // eslint-disable-next-line react-x/no-array-index-key -- static, order-dependent SVG path list
                         key={index}
                         className={`${styles.animatedPath} ${hasAnimatedFill ? styles.animatedPathWithFill : ''}`}
                         d={path.d}

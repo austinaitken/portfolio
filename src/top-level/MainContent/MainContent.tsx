@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router'
 
 import { APP_ROUTES } from '@/routes/routes'
 import HomePage from '@/routes/HomePage/HomePage'

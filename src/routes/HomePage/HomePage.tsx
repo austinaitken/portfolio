@@ -1,6 +1,6 @@
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import type { PagePreviewProps } from '@/common/components/pages/PagePreview/PagePreview'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import GraduationCard from '@/routes/Home2/components/Qualifications/components/GraduationCard/GraduationCard'
 import { NAV_ITEMS } from '@/common/constants/navigation'
 import {

@@ -8,7 +8,7 @@ import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppSc
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
 import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 
 const screenshotItems = [
     { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },

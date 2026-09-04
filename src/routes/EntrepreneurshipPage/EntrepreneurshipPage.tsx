@@ -1,5 +1,5 @@
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 
 import styles from './EntrepreneurshipPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'

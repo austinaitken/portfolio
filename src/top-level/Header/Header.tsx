@@ -1,4 +1,4 @@
-import { useEffect, useState, type MouseEvent } from 'react'
+import { useState, type MouseEvent } from 'react'
 import logo from '@/assets/images/Austin_Portfolio_Logo.png'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { NAV_ROUTES, getChildRoutes, getParentRoutePath, getRouteByPath } from '@/routes/routes'
@@ -6,30 +6,38 @@ import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import styles from './Header.module.css'
 
+const FADE_ORDERS: readonly string[] = [
+    styles.fadeOrder0,
+    styles.fadeOrder1,
+    styles.fadeOrder2,
+    styles.fadeOrder3,
+    styles.fadeOrder4,
+    styles.fadeOrder5,
+    styles.fadeOrder6,
+    styles.fadeOrder7,
+]
+
 const Header = () => {
     const navigate = useNavigate()
     const { pathname } = useLocation()
     const { isNavOpen, toggleNav, closeNav } = useGlobalContext()
     const [expandedPath, setExpandedPath] = useState<string | null>(null)
-
-    useEffect(() => {
-        setExpandedPath((previousPath) => {
-            if (
-                previousPath &&
-                pathname !== previousPath &&
-                !pathname.startsWith(`${previousPath}/`)
-            ) {
-                return null
-            }
-
-            return previousPath
-        })
-    }, [pathname])
+    const [prevPathname, setPrevPathname] = useState(pathname)
+    if (prevPathname !== pathname) {
+        setPrevPathname(pathname)
+        if (
+            expandedPath !== null &&
+            pathname !== expandedPath &&
+            !pathname.startsWith(`${expandedPath}/`)
+        ) {
+            setExpandedPath(null)
+        }
+    }
 
     const navigateToContact = () => {
         setExpandedPath(null)
         closeNav()
-        navigate('/contact-me')
+        void navigate('/contact-me')
     }
 
     const onRouteClick = (
@@ -55,12 +63,6 @@ const Header = () => {
     const expandedRoute = expandedPath ? getRouteByPath(expandedPath) : null
     const visibleRoutes = expandedRoute ? [expandedRoute] : NAV_ROUTES
 
-    // const scrollToContact = () => {
-    //     setExpandedPath(null)
-    //     closeNav()
-    //     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-    // }
-
     return (
         <header className={styles.header}>
             <div className={styles.innerHeaderContainer}>
@@ -70,7 +72,7 @@ const Header = () => {
                         setExpandedPath(null)
                         closeNav()
                     }}
-                    className={`${styles.logoButton} ${styles.cascadeItem} ${styles.fadeOrder0}`}
+                    className={`${styles.logoButton} ${styles.cascadeItem} ${FADE_ORDERS[0]}`}
                 >
                     <img className={styles.logo} src={logo} alt="Austin Aitken profile picture" />
                 </Link>
@@ -81,7 +83,7 @@ const Header = () => {
                     return (
                         <div
                             key={route.path}
-                            className={`${styles.routeGroup} ${styles.cascadeItem} ${styles[`fadeOrder${index + 1}`]}`}
+                            className={`${styles.routeGroup} ${styles.cascadeItem} ${FADE_ORDERS[index + 1]}`}
                         >
                             <Link
                                 to={route.path}
@@ -138,7 +140,7 @@ const Header = () => {
                 </button>
                 <button
                     type="button"
-                    className={`${styles.navButton} ${styles.cascadeItem} ${styles.fadeOrder7}`}
+                    className={`${styles.navButton} ${styles.cascadeItem} ${FADE_ORDERS[7]}`}
                     onClick={toggleNav}
                     aria-label={isNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
                     aria-expanded={isNavOpen}

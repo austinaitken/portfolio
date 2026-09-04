@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState, type MouseEvent } from 'react'
+import { Fragment, useState, type MouseEvent } from 'react'
 import { Link } from 'react-router'
 import { NAV_ROUTES, getChildRoutes, getRouteByPath } from '@/routes/routes'
 import { useGlobalContext } from '@/common/context/useGlobalContext'
@@ -23,11 +23,13 @@ const NavMenu = () => {
         setExpandedPath(routePath)
     }
 
-    useEffect(() => {
+    const [prevIsNavOpen, setPrevIsNavOpen] = useState(isNavOpen)
+    if (prevIsNavOpen !== isNavOpen) {
+        setPrevIsNavOpen(isNavOpen)
         if (!isNavOpen) {
             setExpandedPath(null)
         }
-    }, [isNavOpen])
+    }
 
     const expandedRoute = expandedPath ? getRouteByPath(expandedPath) : null
     const visibleRoutes = expandedRoute

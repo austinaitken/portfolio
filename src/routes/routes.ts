@@ -68,20 +68,20 @@ export const APP_ROUTES: readonly AppRoute[] = [
     },
     {
         path: '/entrepreneurship/phauna/evidence-collection',
-        label: 'Evidence Collection',
+        label: 'History Collection',
         component: EvidenceCollectionPage,
-        showInNav: false,
-    },
-    {
-        path: '/entrepreneurship/phauna/clinical-decision-support',
-        label: 'Clinical Decision Support',
-        component: ClinicalDecisionSupportPage,
         showInNav: false,
     },
     {
         path: '/entrepreneurship/phauna/virtual-exams',
         label: 'Virtual Exams',
         component: VirtualExamPage,
+        showInNav: false,
+    },
+    {
+        path: '/entrepreneurship/phauna/clinical-decision-support',
+        label: 'Clinical Decision Support',
+        component: ClinicalDecisionSupportPage,
         showInNav: false,
     },
     {

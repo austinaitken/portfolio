@@ -110,7 +110,10 @@ const ClinicalDataPage = () => {
                         Systematized Nomenclature of Medicine -- Clinical Terms (SNOMED CT) is a
                         comprehensive clinical terminology standard.
                     </p>
-                    <img style={{ width: '50%', height: 'auto' }} src={snomedCtExample} />
+                    <img
+                        style={{ width: '100%', height: 'auto', maxHeight: '400px' }}
+                        src={snomedCtExample}
+                    />
                 </div>
             </div>
             <div>

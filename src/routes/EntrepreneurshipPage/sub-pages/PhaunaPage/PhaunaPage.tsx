@@ -109,9 +109,9 @@ const phaunaPageContent: PageSectionProps[] = [
     // },
     {
         titleStart: 'Automated',
-        titleEnd: 'Evidence Collection',
+        titleEnd: 'History Collection',
         titleEndDrawing: problemSolverPhraseDrawing,
-        description: 'Automating the collection of clinical evidence for virtual veterinary care.',
+        description: 'Automating the collection of patient history for virtual veterinary care.',
         content: (
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),

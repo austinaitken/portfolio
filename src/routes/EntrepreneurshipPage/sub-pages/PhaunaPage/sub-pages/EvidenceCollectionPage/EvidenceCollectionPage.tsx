@@ -8,10 +8,10 @@ const EvidenceCollectionPage = () => {
         <div className={styles.container}>
             <PageIntroduction
                 titleStart="Automated"
-                titleEnd="Evidence Collection"
+                titleEnd="History Collection"
                 titleEndDrawing={problemSolverPhraseDrawing}
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
-                description="Automating the collection of clinical evidence for virtual veterinary care."
+                description="Automating the collection of patient history for virtual veterinary care."
                 buttonLabel="Contact Me"
                 buttonAction={() => {}}
             />

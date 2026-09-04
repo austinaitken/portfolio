@@ -1,6 +1,6 @@
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import styles from './QualificationsPage.module.css'
-import GraduationCard from '../Home2/components/Qualifications/components/GraduationCard/GraduationCard'
+import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 // import PageSection from '@/common/components/pages/PageSection/PageSection'
 import trophyImage from '@/assets/images/university/Work_Term_Award.png'

@@ -29,5 +29,12 @@ export default defineConfig([
             },
         },
     },
+    {
+        files: ['**/__tests__/**/*.{ts,tsx}'],
+        rules: {
+            // test files export helper components/factories alongside tests
+            'react-refresh/only-export-components': 'off',
+        },
+    },
     eslintConfigPrettier,
 ])

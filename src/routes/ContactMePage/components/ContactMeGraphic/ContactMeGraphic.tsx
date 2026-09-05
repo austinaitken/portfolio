@@ -1,6 +1,4 @@
 import styles from './ContactMeGraphic.module.css'
-// import githubLogo from '@/assets/images/github-icon.svg'
-// import documentIcon from '@/assets/images/page-blank-svgrepo-com.svg'
 import linkedinLogo from '@/assets/images/LinkedIn_icon.svg'
 
 const ContactMeGraphic = () => {

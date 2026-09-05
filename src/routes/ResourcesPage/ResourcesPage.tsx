@@ -1,17 +1,15 @@
-// import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import styles from './ResourcesPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ResourcePreviewGraphic from './components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 import PdfDocument from './components/PdfDocument/PdfDocument'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import { useNavigate } from 'react-router'
 
 const ResourcesPage = () => {
+    const navigate = useNavigate()
     const resumePdfSrc = '/pdfs/Austin_Aitken_Resume.pdf'
     const transcriptPdfSrc = '/pdfs/Austin_Aitken_Transcript.pdf'
-    const scrollToContact = () => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-    }
 
     return (
         <section className={styles.container}>
@@ -22,7 +20,7 @@ const ResourcesPage = () => {
                 content={<ResourcePreviewGraphic />}
                 description="View or download resources related to my work and education."
                 buttonLabel="Contact Me"
-                buttonAction={scrollToContact}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
@@ -47,7 +45,6 @@ const ResourcesPage = () => {
                             />
                         </div>
                     </div>
-                    {/* <p>Last Updated: January 2024</p> */}
                     <PdfDocument file={resumePdfSrc} />
                 </section>
                 <section className={styles.sectionContainer}>
@@ -65,7 +62,6 @@ const ResourcesPage = () => {
                             />
                         </div>
                     </div>
-                    {/* <p>Last Updated: January 2024</p> */}
                     <PdfDocument file={transcriptPdfSrc} />
                 </section>
             </div>

@@ -2,46 +2,15 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './ContactMePage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ContactMeGraphic from './components/ContactMeGraphic/ContactMeGraphic'
+import { CONTACT_INFO } from '@/common/constants/contact'
 
 const ContactMePage = () => {
-    // const fullTitle = `${titleStart} ${titleEnd}`.trim()
-
-    // const handlePhoneCopy = () => {
-    //     navigator.clipboard.writeText('+1 (709) 770-3770')
-    // }
-
-    // const handleEmailCopy = () => {
-    //     navigator.clipboard.writeText('austinlaitken@gmail.com')
-    // }
-
     const handlePhoneCall = () => {
-        window.location.href = 'tel:+17097703770'
-    }
-
-    const handleEmail = () => {
-        window.location.href = 'mailto:austinlaitken@gmail.com'
-    }
-
-    const handlePhoneMessage = () => {
-        window.location.href = 'sms:+17097703770'
+        window.location.href = `tel:${CONTACT_INFO.phone}`
     }
 
     return (
         <section id="contact" className={styles.container}>
-            {/* <div className={styles.titleContainer}>
-                <h2 className={styles.title} aria-label={fullTitle}>
-                    {titleStart}
-                    <span className={styles.visuallyHidden}> {titleEnd}</span>
-                </h2>
-                <div className={styles.titleDrawing}>
-                    <AnimatedDrawing
-                        drawing={titleEndDrawing}
-                        aria-hidden="true"
-                        focusable="false"
-                        strokeColor="var(--color-text-primary)"
-                    />
-                </div>
-            </div> */}
             <PageIntroduction
                 titleStart="Contact Me"
                 titleEnd="Today"
@@ -66,54 +35,32 @@ const ContactMePage = () => {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    // border: '1px solid gold',
                 }}
                 className={styles.experienceMain}
             >
                 <div className={styles.buttonContainer}>
-                    <button className={styles.contactButton} onClick={handlePhoneCall}>
-                        📞<p>Call</p>
-                        {/* <p>+1 (709) 770-3770</p> */}
-                    </button>
-                    <button className={styles.contactButton} onClick={handlePhoneMessage}>
-                        💬<p>Message</p>
-                        {/* <p>+1 (709) 770-3770</p> */}
-                    </button>
-                    <button className={styles.contactButton} onClick={handleEmail}>
-                        📧<p>Email</p>
-                        {/* <p>austinlaitken@gmail.com</p> */}
-                    </button>
-                    <button className={styles.contactButton}>
-                        in<p>LinkedIn</p>
-                        {/* <p>linkedin.com/in/austin-aitken</p> */}
-                    </button>
-                    {/* <div className={styles.addressButtonContainer}>
-                    <button className="tertiaryButton" onClick={handleEmailCopy}>
-                        austinlaitken@gmail.com
-                    </button>
-                    <button className="iconButton" onClick={handleEmail}>
-                        📧
-                    </button>
-                </div>
-                <div className={styles.addressButtonContainer}>
-                    <button className="tertiaryButton" onClick={handlePhoneCopy}>
-                        + 1 (709) 770-3770
-                    </button>
-                    <button className="iconButton" onClick={handlePhoneCall}>
-                        📞
-                    </button>
-                    <button className="iconButton" onClick={handlePhoneMessage}>
-                        💬
-                    </button>
+                    <a className={styles.contactButton} href={`tel:${CONTACT_INFO.phone}`}>
+                        📞<span>Call</span>
+                    </a>
+                    <a className={styles.contactButton} href={`sms:${CONTACT_INFO.phone}`}>
+                        💬<span>Message</span>
+                    </a>
+                    <a className={styles.contactButton} href={`mailto:${CONTACT_INFO.email}`}>
+                        📧<span>Email</span>
+                    </a>
+                    <a
+                        className={styles.contactButton}
+                        href={CONTACT_INFO.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        in<span>LinkedIn</span>
+                    </a>
                 </div>
                 <div>
-                    <button className="tertiaryButton">LinkedIn Message</button>
-                </div> */}
-                </div>
-                <div>
-                    <p>+1 (709) 770-3770</p>
-                    <p>austinlaitken@gmail.com</p>
-                    <p>linkedin.com/in/austin-aitken</p>
+                    <p>{CONTACT_INFO.phoneDisplay}</p>
+                    <p>{CONTACT_INFO.email}</p>
+                    <p>{CONTACT_INFO.linkedin.replace('https://www.', '')}</p>
                 </div>
             </div>
         </section>

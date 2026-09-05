@@ -2,8 +2,11 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './ClinicalDecisionSupportPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
+import { useNavigate } from 'react-router'
 
 const ClinicalDecisionSupportPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -13,7 +16,7 @@ const ClinicalDecisionSupportPage = () => {
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
                 description="Turning clinical data into diagnostic and treatment recommendations."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
         </div>
     )

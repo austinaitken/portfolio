@@ -2,25 +2,17 @@ import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import type { PagePreviewProps } from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
-import { NAV_ITEMS } from '@/common/constants/navigation'
-import {
-    // darkWordDrawing,
-    // firstNameWordDrawing,
-    // flameWordDrawing,
-    problemSolverPhraseDrawing,
-    // professionalWordDrawing,
-} from '@/common/constants/animated-drawings'
+import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 
 import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
-// import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 import austinBeard from '@/assets/images/AustinBeard.png'
 
 import styles from './HomePage.module.css'
-import ResourcePreviewGraphic from '../ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
+import ResourcePreviewGraphic from '@/routes/ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import NasdaqVerafinGraphic from './NasdaqVerafinGraphic/NasdaqVerafinGraphic'
-import ContactMeGraphic from '../ContactMePage/components/ContactMeGraphic/ContactMeGraphic'
+import ContactMeGraphic from '@/routes/ContactMePage/components/ContactMeGraphic/ContactMeGraphic'
 
 type HomePreviewKey =
     | 'introduction'
@@ -35,25 +27,10 @@ type HomePagePreview = PagePreviewProps & {
     key: HomePreviewKey
 }
 
-const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-}
-
 const HomePage = () => {
     const navigate = useNavigate()
 
     const pagePreviews: HomePagePreview[] = [
-        // {
-        //     key: 'introduction',
-        //     titleStart: "Hello, I'm",
-        //     titleEnd: 'Austin',
-        //     titleEndDrawing: problemSolverPhraseDrawing,
-        //     isTopTitle: true,
-        //     content: <img src={headshotImage} alt="Austin Aitken's profile picture" />,
-        //     description: 'An experienced software developer with an entrepreneurial spirit.',
-        //     buttonLabel: 'Contact Me',
-        //     buttonAction: scrollToContact,
-        // },
         {
             key: 'experience',
             titleStart: 'An Experienced',
@@ -62,7 +39,7 @@ const HomePage = () => {
             content: <NasdaqVerafinGraphic />,
             description: 'Catching fraud for the largest institutions in North America.',
             buttonLabel: 'View Experience',
-            buttonAction: () => navigate(NAV_ITEMS.experience.to),
+            buttonAction: () => void navigate('/experience'),
         },
         {
             key: 'entrepreneurship',
@@ -79,7 +56,7 @@ const HomePage = () => {
             ),
             description: 'Turning ideas into live consumer products to solve real problems.',
             buttonLabel: 'View Businesses',
-            buttonAction: () => navigate(NAV_ITEMS.entrepreneurship.to),
+            buttonAction: () => void navigate('/entrepreneurship'),
         },
         {
             key: 'qualifications',
@@ -89,7 +66,7 @@ const HomePage = () => {
             content: <GraduationCard />,
             description: 'A Bachelor of Engineering graduate with academic distinction.',
             buttonLabel: 'View Qualifications',
-            buttonAction: () => navigate(NAV_ITEMS.qualifications.to),
+            buttonAction: () => void navigate('/qualifications'),
         },
         {
             key: 'personality',
@@ -105,7 +82,7 @@ const HomePage = () => {
             ),
             description: 'Crafting joy in the world through humour and software.',
             buttonLabel: 'View Personality',
-            buttonAction: () => navigate(NAV_ITEMS.personality.to),
+            buttonAction: () => void navigate('/personality'),
         },
         {
             key: 'resources',
@@ -115,7 +92,7 @@ const HomePage = () => {
             content: <ResourcePreviewGraphic />,
             description: 'View or download resources related to my work and education.',
             buttonLabel: 'View Resources',
-            buttonAction: () => navigate(NAV_ITEMS.resources.to),
+            buttonAction: () => void navigate('/resources'),
         },
         {
             key: 'contact',
@@ -125,7 +102,7 @@ const HomePage = () => {
             content: <ContactMeGraphic />,
             description: "Let's discuss the impact I can bring to your team and organization.",
             buttonLabel: 'Contact Me',
-            buttonAction: () => navigate(NAV_ITEMS.contact.to),
+            buttonAction: () => void navigate('/contact-me'),
         },
     ]
 
@@ -144,7 +121,7 @@ const HomePage = () => {
                 }
                 description="An experienced software developer with an entrepreneurial spirit."
                 buttonLabel="Contact Me"
-                buttonAction={scrollToContact}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />

@@ -44,7 +44,7 @@ const PersonalityPage = () => {
                     content={<TrioAppScreenshots screenshots={screenshotItems} />}
                     description="Play interest-based games with new friends on a video call."
                     buttonLabel="View Amello"
-                    buttonAction={() => navigate('/personality/amello')}
+                    buttonAction={() => void navigate('/personality/amello')}
                 />
                 <PagePreview
                     titleStart="Experience Life on"
@@ -53,7 +53,7 @@ const PersonalityPage = () => {
                     content={<TrioAppScreenshots screenshots={screenshotItems} />}
                     description="Enjoy renewing your license in this humour-based story game."
                     buttonLabel="View Simulator"
-                    buttonAction={() => navigate('/personality/dmv-simulator')}
+                    buttonAction={() => void navigate('/personality/dmv-simulator')}
                     contentSide="right"
                 />
             </div>

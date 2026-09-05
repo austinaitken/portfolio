@@ -6,7 +6,6 @@ import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import {
-    // bitemporalTablePgsqlString,
     bitemporalTemplateTablePgsqlString,
     patientFhirResourceJsonString,
     patientIdentifierTablePgsqlString,
@@ -15,8 +14,11 @@ import {
 } from './database-code'
 import snomedCtExample from '@/assets/images/phauna/snomed-ct-example.png'
 import databaseArch from '@/assets/images/phauna/database-arch-dark.svg'
+import { useNavigate } from 'react-router'
 
 const ClinicalDataPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -26,7 +28,7 @@ const ClinicalDataPage = () => {
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
                 description="Building auditable clinical data models for cross-domain interoperability."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div>
                 <div className={styles.titleContainer}>

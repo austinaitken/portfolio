@@ -79,9 +79,11 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
 }
 
-.contactButton p {
+.contactButton span {
     margin: 0;
     margin-top: 5px;
     color: black;
@@ -94,15 +96,6 @@
     .contactButton {
         font-size: clamp(1rem, 10cqw, 3rem);
     }
-}
-
-.addressButtonContainer {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    /* border: 1px solid magenta; */
 }
 
 .footerContainer {

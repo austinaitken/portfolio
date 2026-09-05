@@ -4,10 +4,10 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
-// import PageSection from '@/common/components/pages/PageSection/PageSection'
 import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import { useNavigate } from 'react-router'
 
 const amelloPageContent: PageSectionProps[] = [
     {
@@ -30,16 +30,6 @@ const amelloPageContent: PageSectionProps[] = [
             <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
         ),
     },
-    // {
-    //     titleStart: 'Experience our',
-    //     titleEnd: 'Demo',
-    //     titleEndDrawing: problemSolverPhraseDrawing,
-    //     description:
-    //         'Watch the demo that won first place in the M.U.N. computer engineering design competition.',
-    //     content: ,
-    //     buttonAction: () => {},
-    //     buttonLabel: 'Watch Demo',
-    // },
 ]
 
 const featuredContent = {
@@ -51,6 +41,8 @@ const featuredContent = {
 }
 
 const AmelloPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -60,7 +52,7 @@ const AmelloPage = () => {
                 content={<GraduationCard />}
                 description="Play interest-based games with new friends on a video call."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
@@ -103,39 +95,6 @@ const AmelloPage = () => {
                     </button>
                 </section>
             </div>
-            {/* <div className={styles.mainContentContainer}>
-                <section className={styles.mainContentLayout}>
-                    <div className={styles.titleContainer}>
-                        <h2
-                            className={styles.title}
-                            aria-label={`${featuredContent.titleStart} ${featuredContent.titleEnd}`}
-                        >
-                            {featuredContent.titleStart}
-                            <span className={styles.visuallyHidden}>
-                                {' '}
-                                {featuredContent.titleEnd}
-                            </span>
-                        </h2>
-                        <div className={styles.titleDrawing}>
-                            <AnimatedDrawing
-                                drawing={problemSolverPhraseDrawing}
-                                aria-hidden="true"
-                                focusable="false"
-                                strokeColor={'var(--color-text-primary)'}
-                            />
-                        </div>
-                    </div>
-                    <div className={styles.contentContainer}>
-                        <YouTubeVideo videoId="fppS6ddagRo" />
-                    </div>
-                    <p className={`mediumDescription ${styles.description}`}>
-                        {featuredContent.description}
-                    </p>
-                    <button className={`secondaryButton ${styles.button}`} onClick={() => {}}>
-                        {featuredContent.buttonLabel}
-                    </button>
-                </section>
-            </div> */}
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>

@@ -2,8 +2,11 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './EvidenceCollectionPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
+import { useNavigate } from 'react-router'
 
 const EvidenceCollectionPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -13,7 +16,7 @@ const EvidenceCollectionPage = () => {
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
                 description="Automating the collection of patient history for virtual veterinary care."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
         </div>
     )

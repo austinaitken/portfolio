@@ -90,12 +90,6 @@ export const APP_ROUTES: readonly AppRoute[] = [
         component: ClinicalDataPage,
         showInNav: false,
     },
-    // {
-    //     path: '/entrepreneurship/phauna/architecture',
-    //     label: 'Architecture',
-    //     component: PhaunaPage,
-    //     showInNav: false,
-    // },
     {
         path: '/entrepreneurship/mdium',
         label: 'Mdium Inc.',

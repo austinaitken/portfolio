@@ -2,7 +2,6 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './MdiumPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import mdiumLogo from '@/assets/images/mdium/Mdium_Logo.png'
-// import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import StarRating from './components/StarRating/StarRating'
@@ -10,6 +9,7 @@ import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
 import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import { useNavigate } from 'react-router'
 
 const MdiumPageContent: PageSectionProps[] = [
     {
@@ -33,24 +33,6 @@ const MdiumPageContent: PageSectionProps[] = [
             )
         },
     },
-    // {
-    //     titleStart: 'Making',
-    //     titleEnd: 'Headlines2',
-    //     titleEndDrawing: problemSolverPhraseDrawing,
-    //     description: 'From NTV News to the Business front page, Mdium was making waves.',
-    //     content: (
-    //         <div className={styles.newsMediaContainer}>
-    //             <YouTubeVideo videoId="HqyS-xeRvQw" />
-    //         </div>
-    //     ),
-    //     buttonLabel: 'Watch Segment',
-    //     buttonAction: () => {
-    //         window.open(
-    //             'https://www.saltwire.com/atlantic-canada/news/a-new-way-to-send-files-100716476/',
-    //             '_blank'
-    //         )
-    //     },
-    // },
     {
         titleStart: 'Satisfying',
         titleEnd: 'Customers',
@@ -69,17 +51,18 @@ const featuredContent = {
 }
 
 const MdiumPage = () => {
+    const navigate = useNavigate()
+
     return (
         <section className={styles.container}>
             <PageIntroduction
                 titleStart="Send Files"
                 titleEnd="Anywhere"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                // content={<TrioAppScreenshots screenshots={screenshotItems} />}
                 content={<img src={mdiumLogo} alt="Mdium Logo" />}
                 description="Transfer large files through emails, links, and short-lived codes."
                 buttonLabel={'Contact Me'}
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
@@ -98,25 +81,12 @@ const MdiumPage = () => {
                             <h3 className={styles.title} aria-label="Step One">
                                 Step 1
                             </h3>
-                            {/* <div className={styles.titleDrawing}>
-                                <AnimatedDrawing
-                                    drawing={problemSolverPhraseDrawing}
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    strokeColor={'var(--color-text-primary)'}
-                                />
-                            </div> */}
                         </div>
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
                             alt="Mdium Screenshot 1"
                         />
-                        {/* <p className="smallDescription">
-                            Add your large files
-                            <br />
-                            on the Mdium web app.
-                        </p> */}
                     </div>
                     <p className={styles.stepArrow}>➡</p>
                     <div className={styles.screenshotContainer}>
@@ -124,25 +94,12 @@ const MdiumPage = () => {
                             <h3 className={styles.title} aria-label="Step Two">
                                 Step 2
                             </h3>
-                            {/* <div className={styles.titleDrawing}>
-                                <AnimatedDrawing
-                                    drawing={problemSolverPhraseDrawing}
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    strokeColor={'var(--color-text-primary)'}
-                                />
-                            </div> */}
                         </div>
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
                             alt="Mdium Screenshot 2"
                         />
-                        {/* <p className="smallDescription">
-                            Share through email,
-                            <br />
-                            links, or a short-lived code.
-                        </p> */}
                     </div>
                     <p className={styles.stepArrow}>➡</p>
                     <div className={styles.screenshotContainer}>
@@ -150,25 +107,12 @@ const MdiumPage = () => {
                             <h3 className={styles.title} aria-label="Step Three">
                                 Step 3
                             </h3>
-                            {/* <div className={styles.titleDrawing}>
-                                <AnimatedDrawing
-                                    drawing={problemSolverPhraseDrawing}
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    strokeColor={'var(--color-text-primary)'}
-                                />
-                            </div> */}
                         </div>
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
                             alt="Mdium Screenshot 3"
                         />
-                        {/* <p className="smallDescription">
-                            Access the shared files
-                            <br />
-                            from any device's browser.
-                        </p> */}
                     </div>
                 </div>
                 <section
@@ -261,18 +205,8 @@ const MdiumPage = () => {
                             </p>
                         </div>
                     </div>
-                    {/* <button className={`secondaryButton ${styles.button}`} onClick={() => {}}>
-                        {featuredContent.buttonLabel}
-                    </button> */}
                 </section>
             </div>
-            {/* <div className={styles.experienceDivider}>
-                <span className={styles.dividerLine} />
-                <div className={styles.experienceText}>
-                    <p className={styles.experienceMain}>Core Achievements</p>
-                </div>
-                <span className={styles.dividerLine} />
-            </div> */}
             <div className={styles.mainContentContainer}>
                 <section className={styles.mainContentLayout}>
                     <div className={styles.titleContainer}>
@@ -307,13 +241,6 @@ const MdiumPage = () => {
                 </section>
             </div>
 
-            {/* <div className={styles.experienceDivider}>
-                <span className={styles.dividerLine} />
-                <div className={styles.experienceText}>
-                    <p className={styles.experienceMain}>Core Achievements</p>
-                </div>
-                <span className={styles.dividerLine} />
-            </div> */}
             <div className={styles.pagePreviewsContainer}>
                 {MdiumPageContent.map(
                     (
@@ -323,7 +250,6 @@ const MdiumPage = () => {
                             titleEndDrawing,
                             description,
                             content,
-                            // subSections,
                             buttonLabel,
                             buttonAction,
                         }: PageSectionProps,

@@ -4,9 +4,9 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
-// import PageSection from '@/common/components/pages/PageSection/PageSection'
 import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+import { useNavigate } from 'react-router'
 
 const dmvSimulatorPageContent: PageSectionProps[] = [
     {
@@ -42,6 +42,8 @@ const dmvSimulatorPageContent: PageSectionProps[] = [
 ]
 
 const DmvSimulatorPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -51,7 +53,7 @@ const DmvSimulatorPage = () => {
                 content={<GraduationCard />}
                 description="Enjoy renewing your license in this humour-based story game."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />

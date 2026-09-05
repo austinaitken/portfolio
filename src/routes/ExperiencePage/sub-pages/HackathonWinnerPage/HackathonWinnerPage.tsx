@@ -4,6 +4,7 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
+import { useNavigate } from 'react-router'
 import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
 
 const hackathonPageContent: PageSectionProps[] = [
@@ -50,6 +51,8 @@ const hackathonPageContent: PageSectionProps[] = [
 ]
 
 const HackathonWinnerPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -59,13 +62,12 @@ const HackathonWinnerPage = () => {
                 content={<NasdaqVerafinGraphic />}
                 description="Won a hackathon by detecting high-risk animal trafficking activity."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />
                 <div className={styles.experienceText}>
                     <p className={styles.experienceMain}>Technical Overview</p>
-                    {/* <p className={styles.experienceMain}>Bachelor of Engineering (Computer)</p> */}
                     <p className={styles.experienceDate}>
                         * Technical details omitted due to NDA *
                     </p>
@@ -80,7 +82,6 @@ const HackathonWinnerPage = () => {
                         titleEndDrawing,
                         description,
                         content,
-                        // subSections,
                         buttonAction,
                         buttonLabel,
                     } = item
@@ -92,7 +93,6 @@ const HackathonWinnerPage = () => {
                             titleEndDrawing={titleEndDrawing}
                             description={description}
                             content={content}
-                            // subSections={subSections}
                             contentSide={index % 2 === 0 ? 'left' : 'right'}
                             buttonAction={buttonAction ?? (() => {})}
                             buttonLabel={buttonLabel ?? ''}

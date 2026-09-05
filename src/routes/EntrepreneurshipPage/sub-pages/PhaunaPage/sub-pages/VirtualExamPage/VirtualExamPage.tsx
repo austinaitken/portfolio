@@ -3,8 +3,11 @@ import styles from './VirtualExamPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
+import { useNavigate } from 'react-router'
 
 const VirtualExamPage = () => {
+    const navigate = useNavigate()
+
     return (
         <div className={styles.container}>
             <PageIntroduction
@@ -14,7 +17,7 @@ const VirtualExamPage = () => {
                 content={<img src={phaunaLogo} alt="Phauna Logo" />}
                 description="Assessing patients through video-based physical examinations."
                 buttonLabel="Contact Me"
-                buttonAction={() => {}}
+                buttonAction={() => void navigate('/contact-me')}
             />
             <div>
                 <div>

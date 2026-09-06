@@ -7,9 +7,10 @@ import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import StarRating from './components/StarRating/StarRating'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
-import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
+import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg?format=webp'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const MdiumPageContent: PageSectionProps[] = [
     {
@@ -51,6 +52,8 @@ const featuredContent = {
 }
 
 const MdiumPage = () => {
+    usePageTitle('Mdium Inc.')
+
     const navigate = useNavigate()
 
     return (
@@ -85,6 +88,10 @@ const MdiumPage = () => {
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
+                            width={1170}
+                            height={2532}
+                            loading="lazy"
+                            decoding="async"
                             alt="Mdium Screenshot 1"
                         />
                     </div>
@@ -98,6 +105,10 @@ const MdiumPage = () => {
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
+                            width={1170}
+                            height={2532}
+                            loading="lazy"
+                            decoding="async"
                             alt="Mdium Screenshot 2"
                         />
                     </div>
@@ -111,6 +122,10 @@ const MdiumPage = () => {
                         <img
                             className={styles.screenshot}
                             src={phaunaScreenshot1}
+                            width={1170}
+                            height={2532}
+                            loading="lazy"
+                            decoding="async"
                             alt="Mdium Screenshot 3"
                         />
                     </div>

@@ -2,10 +2,11 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './RealtimePaymentFraudPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const realtimeFraudPageContent: PageSectionProps[] = [
     {
@@ -15,7 +16,15 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         description:
             'Engineered a production REST API for real-time fraud risk analysis of payment transactions.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -25,7 +34,15 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         description:
             'Enhanced sub-second fraud screening of payment transactions through AWS Lambda-based filtering.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -35,7 +52,15 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         description:
             'Developed a Java-based ECS Fargate service for fraud analysis using cross-institutional intelligence.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -45,12 +70,22 @@ const realtimeFraudPageContent: PageSectionProps[] = [
         description:
             'Achieved sub-second decision latency by precomputing fraud evidence and avoiding expensive runtime queries.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
 ]
 
 const RealtimePaymentFraudPage = () => {
+    usePageTitle('Real-Time Fraud Analysis')
+
     const navigate = useNavigate()
 
     return (

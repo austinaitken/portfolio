@@ -3,9 +3,10 @@ import styles from './BigDataPipelinePage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const bigDataPipelinePageContent: PageSectionProps[] = [
     {
@@ -15,7 +16,15 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         description:
             'Engineered Scala-based Spark queries over data lakes on AWS EMR to compute fraud evidence.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -25,7 +34,15 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         description:
             'Orchestrated EMR jobs via AWS Step Functions and persisted fraud evidence in production RDS.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -35,7 +52,15 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         description:
             'Reduced fraud evaluation runtime by over 90% compared to PostgreSQL-based workflows.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -45,12 +70,22 @@ const bigDataPipelinePageContent: PageSectionProps[] = [
         description:
             'Implemented real-time monitoring and alerting with AWS CloudWatch for pipeline reliability and data integrity.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
 ]
 
 const BigDataPipelinePage = () => {
+    usePageTitle('Big Data Pipeline')
+
     const navigate = useNavigate()
 
     return (

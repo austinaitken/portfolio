@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# Austin Aitken - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site showcasing software engineering experience, entrepreneurship, qualifications, and resources. Built as a single-page application with per-route code splitting, so the initial bundle stays small and each page loads its own chunk on demand.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React 19](https://react.dev/) with the [React Compiler](https://react.dev/learn/react-compiler) (enabled via `babel-plugin-react-compiler`)
+- [TypeScript 5.9](https://www.typescriptlang.org/)
+- [Vite 7](https://vite.dev/) with [vite-imagetools](https://github.com/vcarl/imagetools) for on-demand WebP transcoding (`?format=webp` imports)
+- [React Router 7](https://reactrouter.com/) - all 19 routes are lazy-loaded (`React.lazy` + `Suspense`)
+- [react-pdf](https://react-pdf.org/) and [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter), isolated to the routes that use them
+- [Vitest 5](https://vitest.dev/) + [Testing Library](https://testing-library.com/) for component and route tests
+- [ESLint 9](https://eslint.dev/) (flat config, type-aware, `eslint-plugin-react-x`/`react-dom`) + [Prettier](https://prettier.io/)
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Node.js **22** (pinned in `.nvmrc`; `nvm use` or `fnm use` picks it up automatically).
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-    globalIgnores(['dist']),
-    {
-        files: ['**/*.{ts,tsx}'],
-        extends: [
-            // Other configs...
-
-            // Remove tseslint.configs.recommended and replace with this
-            tseslint.configs.recommendedTypeChecked,
-            // Alternatively, use this for stricter rules
-            tseslint.configs.strictTypeChecked,
-            // Optionally, add this for stylistic rules
-            tseslint.configs.stylisticTypeChecked,
-
-            // Other configs...
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-])
+```sh
+nvm use        # Node 22
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Script                 | Purpose                                               |
+| ---------------------- | ----------------------------------------------------- |
+| `npm run dev`          | Start the Vite dev server with HMR                    |
+| `npm run build`        | Type-check (`tsc -b`) and build the production bundle |
+| `npm run preview`      | Serve the production build locally                    |
+| `npm run lint`         | ESLint over the whole repo (type-aware)               |
+| `npm run typecheck`    | TypeScript project-reference build (`tsc -b`)         |
+| `npm run test`         | Run the Vitest suite once (jsdom)                     |
+| `npm run test:watch`   | Run Vitest in watch mode                              |
+| `npm run format`       | Prettier over the whole repo (`--write`)              |
+| `npm run format:check` | Prettier check only (used by CI)                      |
 
-export default defineConfig([
-    globalIgnores(['dist']),
-    {
-        files: ['**/*.{ts,tsx}'],
-        extends: [
-            // Other configs...
-            // Enable lint rules for React
-            reactX.configs['recommended-typescript'],
-            // Enable lint rules for React DOM
-            reactDom.configs.recommended,
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-])
+## Project Structure
+
 ```
+src/
+  common/            # Shared building blocks (components, context, hooks, constants)
+    components/      #   AnimatedDrawing, ErrorBoundary, GraduationCard, PageLoader, pages/*
+    context/         #   GlobalContext (mobile nav state)
+    hooks/           #   usePageTitle
+  routes/            # One folder per route, lazily imported from routes/routes.ts
+    routes.ts        #   APP_ROUTES registry + nav/parent/child route helpers
+    UnknownRoute/    #   Real 404 page for unmatched paths
+  top-level/         # Header + mobile NavMenu shell
+  App.tsx            # Router wiring: lazy routes, Suspense, ErrorBoundary, catch-all
+```
+
+Every route renders a `PageIntroduction` with an `aria-label`ed heading and sets `document.title` via `usePageTitle`. Images are imported through vite-imagetools (`?format=webp`) with explicit `width`/`height` attributes to avoid layout shift.
+
+## Testing
+
+The Vitest suite (jsdom) covers route registration and helpers, per-route rendering smoke tests for all 19 routes plus the 404, the PDF viewer's loading/error/retry/ready states (react-pdf is mocked), header and mobile-nav behavior, and shared components. Browser-only APIs (`ResizeObserver`, `scrollTo`, `scrollIntoView`) are stubbed in `src/test/setup.ts`.
+
+## Deployment
+
+- **CI** - `.github/workflows/ci.yml` runs lint, typecheck, tests, build, and format check on Node 22 for pushes to `main`/`dev` and all pull requests.
+- **Hosting** - [AWS Amplify Hosting](https://docs.aws.amazon.com/amplify/latest/userguide/hosting-frontend.html) using the build spec in `amplify.yml` (npm ci -> npm run build -> publish `dist/`). Amplify's built-in SPA rewrite serves `index.html` for unknown deep links; the app renders its own 404 for unmatched routes. Set the Node runtime to **22** in the Amplify console to match CI.

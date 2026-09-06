@@ -15,8 +15,11 @@ import {
 import snomedCtExample from '@/assets/images/phauna/snomed-ct-example.png'
 import databaseArch from '@/assets/images/phauna/database-arch-dark.svg'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const ClinicalDataPage = () => {
+    usePageTitle('Clinical Data')
+
     const navigate = useNavigate()
 
     return (

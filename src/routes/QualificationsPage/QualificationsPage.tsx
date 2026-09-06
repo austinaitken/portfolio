@@ -2,11 +2,14 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './QualificationsPage.module.css'
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
-import trophyImage from '@/assets/images/university/Work_Term_Award.png'
+import trophyImage from '@/assets/images/university/Work_Term_Award.png?format=webp'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const QualificationsPage = () => {
+    usePageTitle('Qualifications')
+
     const navigate = useNavigate()
 
     return (
@@ -40,6 +43,10 @@ const QualificationsPage = () => {
                         <img
                             className={styles.trophyImage}
                             src={trophyImage}
+                            width={2434}
+                            height={3521}
+                            loading="lazy"
+                            decoding="async"
                             alt="The trophy for the Director's Award for Exemplary Work Terms"
                         />
                     }

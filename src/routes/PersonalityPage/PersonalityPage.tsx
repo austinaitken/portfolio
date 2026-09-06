@@ -1,22 +1,25 @@
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import styles from './PersonalityPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
-import austinBeard from '@/assets/images/AustinBeard.png'
+import austinBeard from '@/assets/images/AustinBeard.png?format=webp'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
 
-import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
+import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg?format=webp'
+import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg?format=webp'
+import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg?format=webp'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const screenshotItems = [
-    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
-    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2' },
-    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
+    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1', width: 1170, height: 2532 },
+    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2', width: 1170, height: 2532 },
+    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3', width: 1170, height: 2532 },
 ]
 
 const PersonalityPage = () => {
+    usePageTitle('Personality')
+
     const navigate = useNavigate()
     return (
         <div className={styles.container}>
@@ -24,7 +27,14 @@ const PersonalityPage = () => {
                 titleStart="A Light in the"
                 titleEnd="Dark"
                 titleEndDrawing={problemSolverPhraseDrawing}
-                content={<img src={austinBeard} alt="Austin Aitken's profile picture" />}
+                content={
+                    <img
+                        src={austinBeard}
+                        width={1489}
+                        height={1364}
+                        alt="Austin Aitken's profile picture"
+                    />
+                }
                 description="Crafting joy in the world through humour and software."
                 buttonLabel="View Personality"
                 buttonAction={() => {}}

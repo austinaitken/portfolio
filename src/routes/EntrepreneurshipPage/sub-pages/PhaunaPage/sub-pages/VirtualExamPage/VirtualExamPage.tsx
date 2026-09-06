@@ -4,8 +4,11 @@ import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const VirtualExamPage = () => {
+    usePageTitle('Virtual Exams')
+
     const navigate = useNavigate()
 
     return (

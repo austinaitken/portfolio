@@ -1,0 +1,12 @@
+version: 1
+app:
+    build:
+        install: npm ci
+        build: npm run build
+    artifacts:
+        baseDirectory: dist
+        files:
+            - '**/*'
+    caches:
+        paths:
+            - node_modules/**

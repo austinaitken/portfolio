@@ -3,8 +3,6 @@ import AnimatedDrawing, {
 } from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import styles from './NasdaqVerafinGraphic.module.css'
 
-// import nasdaqLogo from '@/assets/images/verafin/NDAQ.svg'
-
 const nasdaqDrawing: AnimatedDrawingData = {
     viewBox: '0 0 1550 1325',
     paths: [
@@ -18,18 +16,12 @@ const nasdaqDrawing: AnimatedDrawingData = {
 const NasdaqVerafinGraphic = () => {
     return (
         <div className={styles.container}>
-            {/* <div className={styles.logoWrapper}>
-                <img className={styles.logo} src={nasdaqLogo} alt="Nasdaq Logo" />
-            </div> */}
             <AnimatedDrawing
                 strokeColor="#0090ba"
                 fillColor="#0090ba"
                 fillRule="evenodd"
                 drawing={nasdaqDrawing}
             />
-
-            {/* <p className={styles.label}>Nasdaq Verafin</p> */}
-            {/* <img src={nasdaqTextLogo} alt="Nasdaq Text Logo" /> */}
         </div>
     )
 }

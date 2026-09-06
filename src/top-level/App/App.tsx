@@ -1,3 +1,6 @@
+import { useLocation } from 'react-router'
+
+import ErrorBoundary from '@/common/components/ErrorBoundary/ErrorBoundary'
 import { useGlobalContext } from '@/common/context/useGlobalContext'
 
 import Header from '@/top-level/Header/Header'
@@ -9,6 +12,7 @@ import styles from './App.module.css'
 
 const App = () => {
     const { isNavOpen } = useGlobalContext()
+    const { pathname } = useLocation()
 
     return (
         <div
@@ -16,7 +20,9 @@ const App = () => {
         >
             <Header />
             <div className={styles.contentArea}>
-                <MainContent />
+                <ErrorBoundary key={pathname}>
+                    <MainContent />
+                </ErrorBoundary>
                 <div className={`${styles.navOverlay} ${isNavOpen ? styles.navOverlayOpen : ''}`}>
                     <NavMenu />
                 </div>

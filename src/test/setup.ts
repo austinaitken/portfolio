@@ -13,9 +13,8 @@ window.scrollTo = vi.fn()
 Element.prototype.scrollIntoView = vi.fn()
 
 // jsdom has no ResizeObserver (PdfDocument constructs one in an effect)
-globalThis.ResizeObserver =
-    class ResizeObserverMock {
-        observe(): void {}
-        unobserve(): void {}
-        disconnect(): void {}
-    } as unknown as typeof ResizeObserver
+globalThis.ResizeObserver = class ResizeObserverMock {
+    observe(): void {}
+    unobserve(): void {}
+    disconnect(): void {}
+} as unknown as typeof ResizeObserver

@@ -1,10 +1,12 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
 
+import PageLoader from '@/common/components/PageLoader/PageLoader'
 import { APP_ROUTES } from '@/routes/routes'
-import HomePage from '@/routes/HomePage/HomePage'
 
 import styles from './MainContent.module.css'
+
+const UnknownRoute = lazy(() => import('@/routes/UnknownRoute/UnknownRoute'))
 
 const MainContent = () => {
     const { pathname } = useLocation()
@@ -15,12 +17,14 @@ const MainContent = () => {
 
     return (
         <main className={styles.container}>
-            <Routes>
-                {APP_ROUTES.map(({ path, component: PageComponent }) => (
-                    <Route key={path} path={path} element={<PageComponent />} />
-                ))}
-                <Route path="*" element={<HomePage />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+                <Routes>
+                    {APP_ROUTES.map(({ path, component: PageComponent }) => (
+                        <Route key={path} path={path} element={<PageComponent />} />
+                    ))}
+                    <Route path="*" element={<UnknownRoute />} />
+                </Routes>
+            </Suspense>
         </main>
     )
 }

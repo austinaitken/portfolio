@@ -1,5 +1,5 @@
 import styles from './GraduationCard.module.css'
-import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png'
+import graduationCard from '@/assets/images/university/Austin_Aitken_Graduation_Trading_Card.png?format=webp'
 
 const GraduationCard = () => {
     return (
@@ -10,6 +10,10 @@ const GraduationCard = () => {
                         <img
                             className={`${styles.image} ${styles.sceneImage}`}
                             src={graduationCard}
+                            width={1235}
+                            height={1733}
+                            loading="lazy"
+                            decoding="async"
                             alt="Austin Aitken's Graduation Trading Card"
                         />
                     </div>
@@ -17,6 +21,10 @@ const GraduationCard = () => {
                         <img
                             className={`${styles.image} ${styles.sceneImage}`}
                             src={graduationCard}
+                            width={1235}
+                            height={1733}
+                            loading="lazy"
+                            decoding="async"
                             alt="Austin Aitken's Graduation Trading Card"
                         />
                     </div>

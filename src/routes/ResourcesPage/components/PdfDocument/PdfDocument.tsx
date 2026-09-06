@@ -15,11 +15,25 @@ interface PdfDocumentProps {
     file: string
 }
 
+type LoadState = 'loading' | 'ready' | 'error'
+
 const PdfDocument = ({ file }: PdfDocumentProps) => {
-    const [numPages, setNumPages] = useState<number>()
-    const [pageNumber, setPageNumber] = useState<number>(1)
+    const [loadState, setLoadState] = useState<LoadState>('loading')
+    const [numPages, setNumPages] = useState(0)
+    const [pageNumber, setPageNumber] = useState(1)
     const [containerWidth, setContainerWidth] = useState<number>()
+    const [retryCount, setRetryCount] = useState(0)
     const containerRef = useRef<HTMLDivElement>(null)
+
+    // Reset document state during render when the file or a retry changes
+    const [previousKey, setPreviousKey] = useState({ file, retryCount })
+
+    if (previousKey.file !== file || previousKey.retryCount !== retryCount) {
+        setPreviousKey({ file, retryCount })
+        setLoadState('loading')
+        setNumPages(0)
+        setPageNumber(1)
+    }
 
     useEffect(() => {
         const element = containerRef.current
@@ -42,6 +56,15 @@ const PdfDocument = ({ file }: PdfDocumentProps) => {
 
     const onDocumentLoadSuccess = ({ numPages }: { numPages: number }): void => {
         setNumPages(numPages)
+        setLoadState('ready')
+    }
+
+    const onDocumentLoadError = (): void => {
+        setLoadState('error')
+    }
+
+    const handleRetry = (): void => {
+        setRetryCount((count) => count + 1)
     }
 
     const previousPage = (): void => {
@@ -51,30 +74,68 @@ const PdfDocument = ({ file }: PdfDocumentProps) => {
     }
 
     const nextPage = (): void => {
-        if (pageNumber < (numPages || 0)) {
+        if (pageNumber < numPages) {
             setPageNumber(pageNumber + 1)
         }
     }
 
     return (
         <div className={styles.container} ref={containerRef}>
-            <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
-                {containerWidth ? <Page pageNumber={pageNumber} width={containerWidth} /> : null}
-            </Document>
-            {numPages && numPages > 1 && (
-                <p>
-                    Page {pageNumber} of {numPages}
-                </p>
-            )}
-            {numPages && numPages > 1 && (
-                <div>
-                    <button onClick={previousPage} disabled={pageNumber <= 1}>
-                        Last Page
-                    </button>
-                    <button onClick={nextPage} disabled={pageNumber >= (numPages || 0)}>
-                        Next Page
+            {loadState === 'error' ? (
+                <div className={styles.stateContainer}>
+                    <p role="alert">
+                        This document failed to load. Please check your connection and try again.
+                    </p>
+                    <button type="button" onClick={handleRetry} aria-label="Retry loading document">
+                        Try Again
                     </button>
                 </div>
+            ) : (
+                <>
+                    <Document
+                        key={retryCount}
+                        file={file}
+                        onLoadSuccess={onDocumentLoadSuccess}
+                        onLoadError={onDocumentLoadError}
+                    >
+                        {loadState === 'ready' && containerWidth ? (
+                            <Page pageNumber={pageNumber} width={containerWidth} />
+                        ) : null}
+                    </Document>
+                    {loadState !== 'ready' || !containerWidth ? (
+                        <div className={styles.stateContainer} role="status">
+                            <p>Loading document...</p>
+                        </div>
+                    ) : (
+                        <>
+                            {numPages > 1 && (
+                                <p aria-live="polite">
+                                    Page {pageNumber} of {numPages}
+                                </p>
+                            )}
+                            {numPages > 1 && (
+                                <div className={styles.controls}>
+                                    <button
+                                        type="button"
+                                        onClick={previousPage}
+                                        disabled={pageNumber <= 1}
+                                        aria-label="Go to previous page"
+                                    >
+                                        Last Page
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={nextPage}
+                                        disabled={pageNumber >= numPages}
+                                        aria-label="Go to next page"
+                                    >
+                                        Next Page
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    )}
+                </>
             )}
         </div>
     )

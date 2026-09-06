@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 60vh;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.message {
+    color: var(--color-text-secondary);
+    max-width: 40ch;
+}
+
+.backLink {
+    color: var(--color-button-bg);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}

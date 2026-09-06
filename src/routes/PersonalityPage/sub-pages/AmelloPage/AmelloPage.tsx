@@ -3,11 +3,12 @@ import styles from './AmelloPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const amelloPageContent: PageSectionProps[] = [
     {
@@ -17,7 +18,15 @@ const amelloPageContent: PageSectionProps[] = [
         description:
             'Be matched in a 4-person video call with an active game based on interests such as improv and debate.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -27,7 +36,15 @@ const amelloPageContent: PageSectionProps[] = [
         description:
             'Built with React, GraphQL, and WebRTC, Amello delivers a seamless and engaging user experience.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
 ]
@@ -41,6 +58,8 @@ const featuredContent = {
 }
 
 const AmelloPage = () => {
+    usePageTitle('Amello')
+
     const navigate = useNavigate()
 
     return (

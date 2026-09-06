@@ -5,7 +5,8 @@ import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqV
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 
 const hackathonPageContent: PageSectionProps[] = [
     {
@@ -15,7 +16,15 @@ const hackathonPageContent: PageSectionProps[] = [
         description:
             'Engineered a fraud detection agent to identify animal trafficking risk using financial and online data.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -25,7 +34,15 @@ const hackathonPageContent: PageSectionProps[] = [
         description:
             'Designed financial indicators to detect patterns consistent with illicit animal trafficking activity.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -35,7 +52,15 @@ const hackathonPageContent: PageSectionProps[] = [
         description:
             'Integrated news and online marketplaces to identify potential animal trafficking affiliates.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -45,12 +70,22 @@ const hackathonPageContent: PageSectionProps[] = [
         description:
             'Built the fraud detection agent prototype in one week to win first place in the hackathon.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
 ]
 
 const HackathonWinnerPage = () => {
+    usePageTitle('Hackathon Winner')
+
     const navigate = useNavigate()
 
     return (

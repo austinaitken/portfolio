@@ -5,8 +5,11 @@ import PdfDocument from './components/PdfDocument/PdfDocument'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import AnimatedDrawing from '@/common/components/AnimatedDrawing/AnimatedDrawing'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const ResourcesPage = () => {
+    usePageTitle('Resources')
+
     const navigate = useNavigate()
     const resumePdfSrc = '/pdfs/Austin_Aitken_Resume.pdf'
     const transcriptPdfSrc = '/pdfs/Austin_Aitken_Transcript.pdf'

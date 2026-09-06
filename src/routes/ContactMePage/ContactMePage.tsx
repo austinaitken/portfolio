@@ -3,11 +3,10 @@ import styles from './ContactMePage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import ContactMeGraphic from './components/ContactMeGraphic/ContactMeGraphic'
 import { CONTACT_INFO } from '@/common/constants/contact'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const ContactMePage = () => {
-    const handlePhoneCall = () => {
-        window.location.href = `tel:${CONTACT_INFO.phone}`
-    }
+    usePageTitle('Contact Me')
 
     return (
         <section id="contact" className={styles.container}>
@@ -18,7 +17,9 @@ const ContactMePage = () => {
                 content={<ContactMeGraphic />}
                 description="Let's discuss the impact I can bring to your team and organization."
                 buttonLabel="Call Me"
-                buttonAction={handlePhoneCall}
+                buttonAction={() => {
+                    window.location.href = `tel:${CONTACT_INFO.phone}`
+                }}
             />
             <div className={styles.experienceDivider}>
                 <span className={styles.dividerLine} />

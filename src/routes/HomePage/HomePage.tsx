@@ -1,12 +1,13 @@
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import type { PagePreviewProps } from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 
-import headshotImage from '@/assets/images/ProfilePicNoBackground.png'
+import headshotImage from '@/assets/images/ProfilePicNoBackground.png?format=webp'
 import mdiumNewspaperHeadshotImage from '@/assets/images/mdium/Mdium_Newspaper_Headshot.png'
-import austinBeard from '@/assets/images/AustinBeard.png'
+import austinBeard from '@/assets/images/AustinBeard.png?format=webp'
 
 import styles from './HomePage.module.css'
 import ResourcePreviewGraphic from '@/routes/ResourcesPage/components/ResourcePreviewGraphic/ResourcePreviewGraphic'
@@ -28,6 +29,8 @@ type HomePagePreview = PagePreviewProps & {
 }
 
 const HomePage = () => {
+    usePageTitle('Overview')
+
     const navigate = useNavigate()
 
     const pagePreviews: HomePagePreview[] = [
@@ -77,6 +80,8 @@ const HomePage = () => {
                 <img
                     style={{ borderRadius: '25px' }}
                     src={austinBeard}
+                    width={1489}
+                    height={1364}
                     alt="Austin Aitken's profile picture"
                 />
             ),
@@ -116,6 +121,8 @@ const HomePage = () => {
                     <img
                         style={{ borderRadius: '25px' }}
                         src={headshotImage}
+                        width={1080}
+                        height={1032}
                         alt="Austin Aitken's profile picture"
                     />
                 }

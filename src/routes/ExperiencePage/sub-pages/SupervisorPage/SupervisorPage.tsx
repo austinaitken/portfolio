@@ -3,9 +3,10 @@ import styles from './SupervisorPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '@/routes/HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const supervisorPageContent: PageSectionProps[] = [
     {
@@ -15,7 +16,15 @@ const supervisorPageContent: PageSectionProps[] = [
         description:
             'Led onboarding and mentorship to ramp developers into production-ready contributions.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -25,7 +34,15 @@ const supervisorPageContent: PageSectionProps[] = [
         description:
             'Co-designed and reviewed software architectures with the developers before implementation.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -35,7 +52,15 @@ const supervisorPageContent: PageSectionProps[] = [
         description:
             'Served as the primary code reviewer for developer production changes, approving all releases.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -45,12 +70,22 @@ const supervisorPageContent: PageSectionProps[] = [
         description:
             'Drove developer growth through structured feedback, performance reviews, and development planning.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
 ]
 
 const SupervisorPage = () => {
+    usePageTitle('Supervisorship')
+
     const navigate = useNavigate()
 
     return (

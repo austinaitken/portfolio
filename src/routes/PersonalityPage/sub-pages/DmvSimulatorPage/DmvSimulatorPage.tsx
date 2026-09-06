@@ -3,10 +3,11 @@ import styles from './DmvSimulatorPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import GraduationCard from '@/common/components/GraduationCard/GraduationCard'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import YouTubeVideo from '@/common/components/YouTubeVideo/YouTubeVideo'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const dmvSimulatorPageContent: PageSectionProps[] = [
     {
@@ -16,7 +17,15 @@ const dmvSimulatorPageContent: PageSectionProps[] = [
         description:
             'Enjoy 40 minutes of gameplay with 3 alternative endings based on in-game decisions.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -26,7 +35,15 @@ const dmvSimulatorPageContent: PageSectionProps[] = [
         description:
             'Built on the Unity Engine with C#, DMV Simulator delivers an engaging and humorous gaming experience.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
     },
     {
@@ -42,6 +59,8 @@ const dmvSimulatorPageContent: PageSectionProps[] = [
 ]
 
 const DmvSimulatorPage = () => {
+    usePageTitle('DMV Simulator')
+
     const navigate = useNavigate()
 
     return (

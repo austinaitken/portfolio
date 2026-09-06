@@ -2,22 +2,25 @@ import PageIntroduction from '@/common/components/pages/PageIntroduction/PageInt
 import styles from './PhaunaPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import TrioAppScreenshots from '@/common/components/TrioAppScreenshots/TrioAppScreenshots'
-import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg'
-import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg'
+import phaunaScreenshot1 from '@/assets/images/App_Screenshot.jpeg?format=webp'
+import phaunaScreenshot2 from '@/assets/images/App_Screenshot.jpeg?format=webp'
+import phaunaScreenshot3 from '@/assets/images/App_Screenshot.jpeg?format=webp'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const screenshotItems = [
-    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1' },
-    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2' },
-    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3' },
+    { src: phaunaScreenshot1, alt: 'Phauna App Screenshot 1', width: 1170, height: 2532 },
+    { src: phaunaScreenshot2, alt: 'Phauna App Screenshot 2', width: 1170, height: 2532 },
+    { src: phaunaScreenshot3, alt: 'Phauna App Screenshot 3', width: 1170, height: 2532 },
 ]
 
 const PhaunaPage = () => {
+    usePageTitle('Phauna Technologies Inc.')
+
     const navigate = useNavigate()
 
     const phaunaPageContent: PageSectionProps[] = [
@@ -27,7 +30,15 @@ const PhaunaPage = () => {
             titleEndDrawing: problemSolverPhraseDrawing,
             description: 'Assessing patients through video-based physical examinations.',
             content: (
-                <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+                <img
+                    className={styles.goldMedal}
+                    src={goldMedal}
+                    width={555}
+                    height={555}
+                    loading="lazy"
+                    decoding="async"
+                    alt="Verafin Hackathon Winner"
+                />
             ),
             buttonLabel: 'View Exam',
             buttonAction: () => void navigate('/entrepreneurship/phauna/virtual-exams'),
@@ -36,9 +47,18 @@ const PhaunaPage = () => {
             titleStart: 'Driven By',
             titleEnd: 'Clinical Data',
             titleEndDrawing: problemSolverPhraseDrawing,
-            description: 'Building auditable clinical data models for cross-domain interoperability.',
+            description:
+                'Building auditable clinical data models for cross-domain interoperability.',
             content: (
-                <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+                <img
+                    className={styles.goldMedal}
+                    src={goldMedal}
+                    width={555}
+                    height={555}
+                    loading="lazy"
+                    decoding="async"
+                    alt="Verafin Hackathon Winner"
+                />
             ),
             buttonAction: () => {},
             buttonLabel: 'View Data Design',
@@ -49,7 +69,15 @@ const PhaunaPage = () => {
             titleEndDrawing: problemSolverPhraseDrawing,
             description: 'Turning clinical data into diagnostic and treatment recommendations.',
             content: (
-                <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+                <img
+                    className={styles.goldMedal}
+                    src={goldMedal}
+                    width={555}
+                    height={555}
+                    loading="lazy"
+                    decoding="async"
+                    alt="Verafin Hackathon Winner"
+                />
             ),
             buttonAction: () => {},
             buttonLabel: 'View System',
@@ -58,9 +86,18 @@ const PhaunaPage = () => {
             titleStart: 'Automated',
             titleEnd: 'History Collection',
             titleEndDrawing: problemSolverPhraseDrawing,
-            description: 'Automating the collection of patient history for virtual veterinary care.',
+            description:
+                'Automating the collection of patient history for virtual veterinary care.',
             content: (
-                <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+                <img
+                    className={styles.goldMedal}
+                    src={goldMedal}
+                    width={555}
+                    height={555}
+                    loading="lazy"
+                    decoding="async"
+                    alt="Verafin Hackathon Winner"
+                />
             ),
             buttonAction: () => {},
             buttonLabel: 'View Automation',

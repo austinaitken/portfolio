@@ -1,29 +1,56 @@
-import type { ComponentType } from 'react'
+import { lazy, type ComponentType, type LazyExoticComponent } from 'react'
 
-import HomePage from '@/routes/HomePage/HomePage'
-import ExperiencePage from '@/routes/ExperiencePage/ExperiencePage'
-import EntrepreneurshipPage from '@/routes/EntrepreneurshipPage/EntrepreneurshipPage'
-import QualificationsPage from '@/routes/QualificationsPage/QualificationsPage'
-import PersonalityPage from '@/routes/PersonalityPage/PersonalityPage'
-import ResourcesPage from './ResourcesPage/ResourcesPage'
-import MdiumPage from './EntrepreneurshipPage/sub-pages/MdiumPage/MdiumPage'
-import PhaunaPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/PhaunaPage'
-import AmelloPage from './PersonalityPage/sub-pages/AmelloPage/AmelloPage'
-import DmvSimulatorPage from './PersonalityPage/sub-pages/DmvSimulatorPage/DmvSimulatorPage'
-import ContactMePage from './ContactMePage/ContactMePage'
-import RealtimePaymentFraudPage from './ExperiencePage/sub-pages/RealtimePaymentFraudPage/RealtimePaymentFraudPage'
-import BigDataPipelinePage from './ExperiencePage/sub-pages/BigDataPipelinePage/BigDataPipelinePage'
-import SupervisorPage from './ExperiencePage/sub-pages/SupervisorPage/SupervisorPage'
-import HackathonWinnerPage from './ExperiencePage/sub-pages/HackathonWinnerPage/HackathonWinnerPage'
-import VirtualExamPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/VirtualExamPage/VirtualExamPage'
-import ClinicalDecisionSupportPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDecisionSupportPage/ClinicalDecisionSupportPage'
-import EvidenceCollectionPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/EvidenceCollectionPage/EvidenceCollectionPage'
-import ClinicalDataPage from './EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDataPage/ClinicalDataPage'
+const HomePage = lazy(() => import('@/routes/HomePage/HomePage'))
+const ExperiencePage = lazy(() => import('@/routes/ExperiencePage/ExperiencePage'))
+const EntrepreneurshipPage = lazy(
+    () => import('@/routes/EntrepreneurshipPage/EntrepreneurshipPage')
+)
+const QualificationsPage = lazy(() => import('@/routes/QualificationsPage/QualificationsPage'))
+const PersonalityPage = lazy(() => import('@/routes/PersonalityPage/PersonalityPage'))
+const ResourcesPage = lazy(() => import('@/routes/ResourcesPage/ResourcesPage'))
+const MdiumPage = lazy(() => import('@/routes/EntrepreneurshipPage/sub-pages/MdiumPage/MdiumPage'))
+const PhaunaPage = lazy(
+    () => import('@/routes/EntrepreneurshipPage/sub-pages/PhaunaPage/PhaunaPage')
+)
+const AmelloPage = lazy(() => import('@/routes/PersonalityPage/sub-pages/AmelloPage/AmelloPage'))
+const DmvSimulatorPage = lazy(
+    () => import('@/routes/PersonalityPage/sub-pages/DmvSimulatorPage/DmvSimulatorPage')
+)
+const ContactMePage = lazy(() => import('@/routes/ContactMePage/ContactMePage'))
+const RealtimePaymentFraudPage = lazy(
+    () =>
+        import('@/routes/ExperiencePage/sub-pages/RealtimePaymentFraudPage/RealtimePaymentFraudPage')
+)
+const BigDataPipelinePage = lazy(
+    () => import('@/routes/ExperiencePage/sub-pages/BigDataPipelinePage/BigDataPipelinePage')
+)
+const SupervisorPage = lazy(
+    () => import('@/routes/ExperiencePage/sub-pages/SupervisorPage/SupervisorPage')
+)
+const HackathonWinnerPage = lazy(
+    () => import('@/routes/ExperiencePage/sub-pages/HackathonWinnerPage/HackathonWinnerPage')
+)
+const VirtualExamPage = lazy(
+    () =>
+        import('@/routes/EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/VirtualExamPage/VirtualExamPage')
+)
+const ClinicalDecisionSupportPage = lazy(
+    () =>
+        import('@/routes/EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDecisionSupportPage/ClinicalDecisionSupportPage')
+)
+const EvidenceCollectionPage = lazy(
+    () =>
+        import('@/routes/EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/EvidenceCollectionPage/EvidenceCollectionPage')
+)
+const ClinicalDataPage = lazy(
+    () =>
+        import('@/routes/EntrepreneurshipPage/sub-pages/PhaunaPage/sub-pages/ClinicalDataPage/ClinicalDataPage')
+)
 
 export type AppRoute = {
     path: string
     label: string
-    component: ComponentType
+    component: LazyExoticComponent<ComponentType>
     showInNav: boolean
 }
 
@@ -150,7 +177,7 @@ export const getChildRoutes = (parentPath: string) => {
     const prefix = `${parentPath}/`
 
     return APP_ROUTES.filter(({ path }) => {
-        if (path === '/contact-me' || path === parentPath || !path.startsWith(prefix)) {
+        if (path === parentPath || !path.startsWith(prefix)) {
             return false
         }
 

@@ -1,5 +1,6 @@
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 import styles from './EntrepreneurshipPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
@@ -9,6 +10,8 @@ import mdiumLogo from '@/assets/images/mdium/Mdium_Logo.png'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 
 const EntrepreneurshipPage = () => {
+    usePageTitle('Entrepreneurship')
+
     const navigate = useNavigate()
 
     return (

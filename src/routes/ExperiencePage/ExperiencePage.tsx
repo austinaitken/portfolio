@@ -1,11 +1,12 @@
 import styles from './ExperiencePage.module.css'
-import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png'
+import goldMedal from '@/assets/images/verafin/Gold_Medal_Only.png?format=webp'
 import PageIntroduction from '@/common/components/pages/PageIntroduction/PageIntroduction'
 import type { PageSectionProps } from '@/common/components/pages/PageSection/PageSection'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import NasdaqVerafinGraphic from '../HomePage/NasdaqVerafinGraphic/NasdaqVerafinGraphic'
 import PagePreview from '@/common/components/pages/PagePreview/PagePreview'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 type ExperiencePreviewProps = PageSectionProps & {
     routePath: string
@@ -18,7 +19,15 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleEndDrawing: problemSolverPhraseDrawing,
         description: 'Pioneered real-time fraud detection of payment services like FedNow.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
         routePath: '/experience/real-time-fraud-analysis',
         buttonLabel: 'Learn More',
@@ -29,7 +38,15 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleEndDrawing: problemSolverPhraseDrawing,
         description: 'Developed a big data pipeline to analyze fraud for ~3k institutions.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
         routePath: '/experience/big-data-pipeline',
         buttonLabel: 'Learn More',
@@ -40,7 +57,15 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleEndDrawing: problemSolverPhraseDrawing,
         description: 'Supervised new software developers to become top performers.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
         routePath: '/experience/supervisor',
         buttonLabel: 'Learn More',
@@ -51,7 +76,15 @@ const experiencePageContent: ExperiencePreviewProps[] = [
         titleEndDrawing: problemSolverPhraseDrawing,
         description: 'Won a hackathon by detecting high-risk animal trafficking activity.',
         content: (
-            <img className={styles.goldMedal} src={goldMedal} alt="Verafin Hackathon Winner" />
+            <img
+                className={styles.goldMedal}
+                src={goldMedal}
+                width={555}
+                height={555}
+                loading="lazy"
+                decoding="async"
+                alt="Verafin Hackathon Winner"
+            />
         ),
         routePath: '/experience/hackathon-winner',
         buttonLabel: 'Learn More',
@@ -59,6 +92,8 @@ const experiencePageContent: ExperiencePreviewProps[] = [
 ]
 
 const ExperiencePage = () => {
+    usePageTitle('Experience')
+
     const navigate = useNavigate()
 
     return (

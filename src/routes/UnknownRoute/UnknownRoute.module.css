@@ -12,3 +12,14 @@
     text-align: center;
     margin: 0px;
 }
+
+.backLink {
+    color: var(--color-button-bg);
+    font-weight: 500;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}

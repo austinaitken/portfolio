@@ -3,8 +3,11 @@ import styles from './ClinicalDecisionSupportPage.module.css'
 import { problemSolverPhraseDrawing } from '@/common/constants/animated-drawings'
 import phaunaLogo from '@/assets/images/phauna/Phauna_Logo.png'
 import { useNavigate } from 'react-router'
+import { usePageTitle } from '@/common/hooks/usePageTitle'
 
 const ClinicalDecisionSupportPage = () => {
+    usePageTitle('Clinical Decision Support')
+
     const navigate = useNavigate()
 
     return (

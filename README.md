@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-**[View Architecture Decision Records →](../../wiki)**
+**[View Architecture Decision Records](https://austinaitken.notion.site/Architecture-Decision-Records-23d2a799da134c819bcc4a7a6e414d28)**
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

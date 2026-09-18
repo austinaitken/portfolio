@@ -29,7 +29,7 @@ const MdiumPageContent: PageSectionProps[] = [
         buttonLabel: 'View Article',
         buttonAction: () => {
             window.open(
-                'https://www.saltwire.com/atlantic-canada/news/a-new-way-to-send-files-100716476/',
+                'https://www.saltwire.com/nova-scotia/st-johns-startup-focused-on-secure-online-transfer-of-large-files-545266',
                 '_blank'
             )
         },

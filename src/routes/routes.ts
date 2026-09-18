@@ -129,19 +129,19 @@ export const APP_ROUTES: readonly AppRoute[] = [
         component: QualificationsPage,
         showInNav: true,
     },
-    { path: '/personality', label: 'Personality', component: PersonalityPage, showInNav: true },
-    {
-        path: '/personality/amello',
-        label: 'Amello',
-        component: AmelloPage,
-        showInNav: false,
-    },
-    {
-        path: '/personality/dmv-simulator',
-        label: 'DMV Simulator',
-        component: DmvSimulatorPage,
-        showInNav: false,
-    },
+    // { path: '/personality', label: 'Personality', component: PersonalityPage, showInNav: true },
+    // {
+    //     path: '/personality/amello',
+    //     label: 'Amello',
+    //     component: AmelloPage,
+    //     showInNav: false,
+    // },
+    // {
+    //     path: '/personality/dmv-simulator',
+    //     label: 'DMV Simulator',
+    //     component: DmvSimulatorPage,
+    //     showInNav: false,
+    // },
     { path: '/resources', label: 'Resources', component: ResourcesPage, showInNav: true },
     { path: '/contact-me', label: 'Contact Me', component: ContactMePage, showInNav: false },
 ]

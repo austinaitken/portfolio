@@ -71,24 +71,24 @@ const HomePage = () => {
             buttonLabel: 'View Qualifications',
             buttonAction: () => void navigate('/qualifications'),
         },
-        {
-            key: 'personality',
-            titleStart: 'A Light in the',
-            titleEnd: 'Dark',
-            titleEndDrawing: problemSolverPhraseDrawing,
-            content: (
-                <img
-                    style={{ borderRadius: '25px' }}
-                    src={austinBeard}
-                    width={1489}
-                    height={1364}
-                    alt="Austin Aitken's profile picture"
-                />
-            ),
-            description: 'Crafting joy in the world through humour and software.',
-            buttonLabel: 'View Personality',
-            buttonAction: () => void navigate('/personality'),
-        },
+        // {
+        //     key: 'personality',
+        //     titleStart: 'A Light in the',
+        //     titleEnd: 'Dark',
+        //     titleEndDrawing: problemSolverPhraseDrawing,
+        //     content: (
+        //         <img
+        //             style={{ borderRadius: '25px' }}
+        //             src={austinBeard}
+        //             width={1489}
+        //             height={1364}
+        //             alt="Austin Aitken's profile picture"
+        //         />
+        //     ),
+        //     description: 'Crafting joy in the world through humour and software.',
+        //     buttonLabel: 'View Personality',
+        //     buttonAction: () => void navigate('/personality'),
+        // },
         {
             key: 'resources',
             titleStart: 'Explore',
@@ -99,16 +99,16 @@ const HomePage = () => {
             buttonLabel: 'View Resources',
             buttonAction: () => void navigate('/resources'),
         },
-        {
-            key: 'contact',
-            titleStart: 'Contact Me',
-            titleEnd: 'Today',
-            titleEndDrawing: problemSolverPhraseDrawing,
-            content: <ContactMeGraphic />,
-            description: "Let's discuss the impact I can bring to your team and organization.",
-            buttonLabel: 'Contact Me',
-            buttonAction: () => void navigate('/contact-me'),
-        },
+        // {
+        //     key: 'contact',
+        //     titleStart: 'Contact Me',
+        //     titleEnd: 'Today',
+        //     titleEndDrawing: problemSolverPhraseDrawing,
+        //     content: <ContactMeGraphic />,
+        //     description: "Let's discuss the impact I can bring to your team and organization.",
+        //     buttonLabel: 'Contact Me',
+        //     buttonAction: () => void navigate('/contact-me'),
+        // },
     ]
 
     return (
